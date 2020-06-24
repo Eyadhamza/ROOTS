@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/aboutus', 'aboutController@index')->name('home');
+
+Route::get('/tracks', 'TracksController@index')->name('tracks');
+Route::get('/tracks/create', 'TracksController@create');
+Route::post('/tracks', 'TracksController@store');
+
