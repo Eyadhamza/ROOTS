@@ -31,16 +31,17 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-        @include('_header')
-        @include('_banner')
-        @include('_featured')
-        @include('_tracks')
-        @include('_search-tracks')
-        @include('_events')
-        @include('_achievement')
-        @include('_instructors')
-        @include('_articles')
-        @include('_footer')
+            {{$slot}}
+        @include('views._header')
+        @include('views._banner')
+        @include('views._featured')
+        @include('views._tracks')
+        @include('views._search-tracks')
+        @include('views._events')
+        @include('views._achievement')
+        @include('views._instructors')
+        @include('views._articles')
+
 
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
