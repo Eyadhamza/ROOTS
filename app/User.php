@@ -15,9 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded=[];
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -46,10 +45,11 @@ class User extends Authenticatable
     }
     public function committees()
     {
-        return $this->belongsToMany(Committee::class);
+        return $this->belongsToMany(Committee::class,'committee_user','user_id','committee_id');
     }
     public function gallery()
     {
         return $this->hasMany(Gallery::class);
     }
+
 }

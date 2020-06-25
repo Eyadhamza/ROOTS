@@ -100,7 +100,7 @@
 
 /*-------- Start Banner Area ------------*/
 .banner-area {
-    background: url(../img/banner-bg.jpg) right;
+    background: url(/storage/images/logoo.png) right;
     background-size: cover;
     .overlay-bg {
         background-color: rgba(#04091e, .8);
@@ -159,7 +159,7 @@
 }
 
 .single-feature{
-    text-align: center;    
+    text-align: center;
     .title{
         background:rgba(#fff,.15);
         padding:20px 0px;
@@ -246,8 +246,8 @@
     .meta{
         margin-top: -26px;
         z-index: 2;
-        position: inherit; 
-        padding:0px 10px;  
+        position: inherit;
+        padding:0px 10px;
         p{
             font-size:12px;
             font-weight:300;
@@ -260,16 +260,16 @@
         h4{
             color:$white;
         }
-    } 
+    }
     .details{
         h4{
             @include transition();
-            margin:20px 0px; 
+            margin:20px 0px;
             &:hover{
                 color:$primary-color!important;
             }
         }
-    }  
+    }
     @media(max-width:576px){
         margin:15px;
     }
@@ -301,14 +301,14 @@
             @media(max-width:991px){
                 font-size:30px;
             }
-        } 
+        }
         p{
             font-size:12px;
-        }   
+        }
         @media(max-width:991px){
             padding-top:120px;
             margin-bottom:40px;
-        }   
+        }
     }
     .search-course-right{
         background:rgba(#fff,.10);
@@ -317,7 +317,7 @@
             .form-control{
                 margin-bottom:5px;
                 border-radius:0px;
-                padding: 0.675rem 0.75rem;                
+                padding: 0.675rem 0.75rem;
                 font-size:13px;
                 font-weight:300;
             }
@@ -327,7 +327,7 @@
             }
             .form-select .nice-select .list .option{
                 padding-left:15px;
-            }            
+            }
             .primary-btn{
                 width:100%;
                 margin-top:5px;
@@ -352,7 +352,7 @@
                 h4{
                     font-size:12px;
                 }
-            }             
+            }
         }
     }
 }
@@ -389,12 +389,12 @@
     .owl-dot.active {
         @include transition;
         background:$primary-color;
-    } 
+    }
     @media(max-width:1024px){
         .owl-controls{
             display:none;
         }
-    }   
+    }
 }
 
 .single-carusel{
@@ -476,7 +476,7 @@
     .owl-dot.active {
         @include transition;
         background:$primary-color;
-    }   
+    }
 }
 
 
@@ -496,7 +496,7 @@
         padding:15px;
     }
 
-}   
+}
 
 /*-------- End review Area -------------*/
 
@@ -577,7 +577,7 @@
             background: $primary-color;
             box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
         }
-    }   
+    }
 }
 
 /*-------- End Latest blog Style   -------------*/
@@ -594,10 +594,10 @@
     }
     p{
         max-width:670px;
-        margin:20px 0px; 
+        margin:20px 0px;
         @media(max-width:576px){
             padding:0% 5%;
-        }        
+        }
     }
     .overlay-bg{
         background:rgba(#04091e,.20);

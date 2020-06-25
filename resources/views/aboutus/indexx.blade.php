@@ -10,6 +10,7 @@
 							<img class="img-fluid" src="storage/images/te4gJL31FdFH7q6dxbuM9oVBmx0VqI4aVZY2AmOL.jpeg" alt="" style=width:500px; height:250px;>
 						</div>
 						<div class="col-lg-6 info-area-right">
+                            <h1 class="p-4">Our Story</h1>
 							<p style="line-height:2 ; font-size: 24px ;">
 							Like most beautiful stories..
 
@@ -40,8 +41,8 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Goals to Achieve for the leadership</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<h1 class="mb-10">Our Goals ..</h1>
+								<p>The goal is our dream .. </p>
 							</div>
 						</div>
 					</div>
@@ -54,32 +55,40 @@
                                     <a href="">Success</a>
                                 </dt>
                                 <dd>
-                                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam.
+                                   we aim to create a community of people who are passionate about our dreams , through the help of our wonderful heroes whom we call instructors and mentors !
                                 </dd>
                                 <dt>
-                                    <a href="">Info</a>
+                                    <a href="">Working in teams </a>
                                 </dt>
                                 <dd>
-                                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. leo quam aliquet diam, congue laoreet elit metus eget diam.
+                                   Working with other people is like sharing each other brain , each will share his knowledge ..
+                                    his skills , and also his passion !
+                                    all companies would ask you if you ever worked in teams ..
+                                    this would be a great point to put in your cv !
+
                                 </dd>
                                 <dt>
-                                    <a href="">Danger</a>
+                                    <a href="">experience in the actual market!</a>
                                 </dt>
                                 <dd>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
+                                   one of our main goals is to make you a one step close to the market , to stay and get in touch with companies and clients , to know the requirements of the market and set a foot in it !
                                 </dd>
                                 <dt>
-                                    <a href="">Warning</a>
+                                    <a href="">encouraging each other </a>
                                 </dt>
                                 <dd>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
+                                    everybody must have started something and eventually quit everything and stop ..
+                                    why ?
+                                    because its the human nature , it loses passion ..
+                                    but what if you have someone who encourages you every now and then ?
+
                                 </dd>
                             </dl>
                             <!-- accordion 2 end-->
                         </div>
-                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
-                        	<div class="overlay overlay-bg"></div>
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="../../../public/assets/education/img/play.png" alt=""></a>
+                        <div class="col-md-6  justify-content-center align-items-center d-flex relative">
+                        	<div class=""></div>
+							<img class="img-fluid mx-auto w-75" src="storage/images/roo.jpg" alt="" >
                         </div>
                     </div>
 				</div>

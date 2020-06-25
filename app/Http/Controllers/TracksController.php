@@ -46,6 +46,6 @@ class TracksController extends Controller
     public function index()
     {
         $tracks=Track::all();
-        return view('tracks.index',compact('tracks'));
+        return view('tracks.indexx',compact('tracks'));
     }
 }

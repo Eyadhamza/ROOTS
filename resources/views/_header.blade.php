@@ -7,15 +7,15 @@
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">My Profile</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/profile/{{auth()->user()->id}}">My Profile</a></li>
                     <li><a href="/aboutus">About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
                     <li class="menu-has-children"><a href="">Blog</a>
                         <ul>
-                            <li><a href="blog-home.html">Articles</a></li>
+                            <li><a href="/articles">Articles</a></li>
                             <li><a href="blog-single.html">Achievements</a></li>
                         </ul>
                     </li>
