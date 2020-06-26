@@ -1,8 +1,4 @@
 
-
-<x-app>
-    @include('_header')
-    @include('_banner')
     @if($user->role =='member')
     @include('_MemberProfile')
     @elseif($user->role =='instructor')
@@ -11,5 +7,5 @@
     @include('_RRProfile')
     @else
     @include('_ERROR404')
-@endif
-</x-app>
+    @endif
+

@@ -10,6 +10,10 @@ class Committee extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class,'committee_user','user_id','committee_id');
+        return $this->belongsToMany(User::class);
+    }
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
     }
 }
