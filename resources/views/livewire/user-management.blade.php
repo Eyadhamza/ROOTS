@@ -25,19 +25,20 @@
         <tr>
             <td>ID</td>
             <td>NAME</td>
-            <td>PHONE</td>
+            <td>Committees</td>
             <td>ACTION</td>
         </tr>
-
-        @dump($data)
-        @foreach($data as $row)
+        @foreach($data as $user)
             <tr>
-                <td>{{@$row->id}}</td>
-                <td>{{@$row->name}}</td>
-                <td>{{@$row->phone}}</td>
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+
+                    @foreach($user->committees as $committee)
+                    <td>{{$committee->name}},</td>
+                @endforeach
                 <td width="100">
-                    <button wire:click="edit({{@$row->id}})" class="btn btn-xs btn-warning">Edit</button>
-                    <button wire:click="destroy({{@$row->id}})" class="btn btn-xs btn-danger">Del</button>
+                    <button wire:click="edit({{$user->id}})" class="btn btn-xs btn-warning">Edit</button>
+                    <button wire:click="destroy({{$user->id}})" class="btn btn-xs btn-danger">Del</button>
                 </td>
             </tr>
         @endforeach

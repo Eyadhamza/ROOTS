@@ -6,9 +6,9 @@ use App\Committee;
 use Livewire\Component;
 use App\User;
 
-class UserManagement extends Component
+class SingleUserEdit extends Component
 {
-    public $data=[], $name, $phone, $email ,$password,$role, $selected_id;
+    public $data, $name, $phone, $email ,$password,$role, $selected_id,$id1,$id2 ;
     public $updateMode = false;
 
     public function render()
@@ -19,11 +19,13 @@ class UserManagement extends Component
         foreach ($committees as $committee)
         {
             $committee_name = $committee->name;
-            $this->data = $committee->users ;
+            $committee_users = $committee->users ;
+            $this->data=$committee_users;
+            return view('livewire.single-user-edit');
         }
 
 
-        return view('livewire.user-management');
+
     }
 
     private function resetInput()
@@ -40,18 +42,21 @@ class UserManagement extends Component
             'role'=>'required',
             'email'=>'required',
             'password'=>'required',
-
+            'id1'=>'required',
+            'id2'=>'optional'
         ]);
 
-       $user= User::create([
+        $user= User::create([
             'name' => $this->name,
             'role'=>$this->role,
             'email'=>$this->email,
             'password'=>$this->password,
 
         ]);
-       dd(request('committees'));
-        $user->committees()->createMany();
+
+        $committee= Committee::find([$this->id1,$this->id2]);
+        $user->committees()->attach($committee);
+
         $this->resetInput();
     }
 

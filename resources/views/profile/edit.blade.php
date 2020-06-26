@@ -1,4 +1,5 @@
-<x-app>
+<x-master>
 
-    @livewire('user-management')
-</x-app>
+    @livewire('single-user-edit')
+
+</x-master>
