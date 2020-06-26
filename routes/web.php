@@ -28,3 +28,6 @@ Route::post('/tracks', 'TracksController@store');
 Route::get('/articles', 'ArticlesController@index');
 Route::get('/gallery', 'GalleryController@index');
 Route::get('/profile/{user}','ProfileController@show');
+Route::get('/profile/{user}/edit','ProfileController@edit');
+
+Route::get('/committees/{committee}','CommitteesController@show');

@@ -45,7 +45,7 @@ class User extends Authenticatable
     }
     public function committees()
     {
-        return $this->belongsToMany(Committee::class,'committee_user','user_id','committee_id');
+        return $this->belongsToMany(Committee::class);
     }
     public function gallery()
     {
