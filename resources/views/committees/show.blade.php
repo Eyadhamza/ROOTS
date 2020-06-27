@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        @livewire('user-management', ['committee' => $committee])
+        @livewire('committee-edit', ['committee' => $committee])
     </div>
 </section>
 

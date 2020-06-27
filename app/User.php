@@ -51,5 +51,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Gallery::class);
     }
-
+    public function getAvatarAttribute($value)
+    {
+        return asset('storage/' . $value);
+    }
 }

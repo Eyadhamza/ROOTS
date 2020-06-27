@@ -29,6 +29,8 @@ Route::get('/articles', 'ArticlesController@index');
 Route::get('/gallery', 'GalleryController@index');
 Route::get('/profile/{user}','ProfileController@show');
 Route::get('/profile/{user}/edit','ProfileController@edit');
+Route::patch('/profile/{user}','ProfileController@update');
+
 Route::get('/profile/edit/all','ProfileController@index');
 
 Route::get('/committees/{committee}','CommitteesController@show');

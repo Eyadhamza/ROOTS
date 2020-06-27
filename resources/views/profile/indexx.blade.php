@@ -2,6 +2,6 @@
 
 
 
-@livewire('all-users-edit')
+    @livewire('all-users-edit')
 
 </x-master>

@@ -1,4 +1,6 @@
 <div>
+    <div class="title">Laravel - Livewire CRUD</div>
+
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -11,13 +13,15 @@
         </div>
     @endif
 
+
+
         @include('livewire.create')
 
 
 
     <table class="table table-bordered table-condensed">
 
-        @foreach($users as $user)
+        @foreach($data as $user)
             <tr>
                 <td>ID</td>
                 <td>NAME</td>
@@ -28,9 +32,9 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>
-                @foreach($user->committees as $committee)
-                    {{$committee->name}},
-                @endforeach
+                    @foreach($user->committees as $committee)
+                        {{$committee->name}},
+                    @endforeach
                 </td>
                 <td width="300">
                     <button wire:click="edit({{$user->id}})" class="btn btn-xs btn-warning w-100">Edit</button>
@@ -56,7 +60,8 @@
             </tr>
 
         @endforeach
-            {{$users->links()}}
+
     </table>
+
 
 </div>

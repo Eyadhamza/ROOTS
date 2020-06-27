@@ -47,7 +47,7 @@
                                     </ul>
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane active">
-                                            <form class="form" novalidate="" method="POST" action="/profile/{{$user->id}}" enctype="multipart/form-data">
+                                            <form class="form" novalidate="" method="POST" action="/profile/{{$user->id}}">
                                                 @method('PATCH')
                                                 @csrf
                                                 <div class="row">
@@ -72,30 +72,6 @@
                                                                     <label>Email</label>
                                                                     <input class="form-control" type="text" placeholder="user@example.com" name="email" value="{{$user->email}}">
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="row">
-
-                                                                <label for="avatar " class="block mb-2 uppercase font-bold text-sm text-white">
-                                                                    avatar
-
-                                                                </label>
-                                                                <input type="file" name="avatar" class="border border-gray-300 p-2 w-full" id="avatar" >
-
-
-                                                                @error('avatar')
-                                                                <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
-                                                                @enderror
-
-                                                                <img
-                                                                    src="{{$user->avatar}}"
-                                                                    alt="eee"
-                                                                    class="rounded-full mr-4 "
-                                                                    style="width:50px; height: 50px "
-
-                                                                >
-
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -170,6 +146,3 @@
     </div>
 
 </x-profile>
-
-
-
