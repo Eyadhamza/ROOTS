@@ -6,40 +6,42 @@
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>Learn Online Courses</h4>
+                        <h4>See our Articles </h4>
                     </div>
-                    <div class="desc-wrap">
+                    <div class="desc-wrap bg-dark text-white">
                         <p>
-                            Usage of the Internet is becoming more common due to rapid advancement
-                            of technology.
+                          Here you can see some articles in different subjects , you may benefit from these ..
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="/articles">GO THERE !</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>No.1 of universities</h4>
+                        <h4>See our achievement</h4>
                     </div>
-                    <div class="desc-wrap">
+                    <div class="desc-wrap bg-dark text-white">
                         <p>
-                            For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
+                            We have achieved some very important achievements here ..
+                            go raise your passion!
+
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="/achievements">Dive in ..</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>Huge Library</h4>
+                        <h4>Tracks and Roadmaps </h4>
                     </div>
-                    <div class="desc-wrap">
+                    <div class="desc-wrap bg-dark text-white">
                         <p>
-                            If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+                        Here you can see how to start in most fields of computer science..
+
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="/tracks">CHOOSE YOUR PATH !</a>
                     </div>
                 </div>
             </div>

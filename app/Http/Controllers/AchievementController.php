@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
+use App\Achievement;
 use Illuminate\Http\Request;
 
-class ArticlesController extends Controller
+class AchievementController extends Controller
 {
     public function index()
     {
-        $articles=Article::paginate(10);
-        return view('articles.indexx',compact('articles'));
+        $achievements=Achievement::paginate(10);
+        return view('achievements.indexx',compact('achievements'));
     }
 
     public function create()
     {
-        return view('articles.create');
+        return view('achievements.create');
     }
     public function store(Request $request)
     {
@@ -33,22 +33,22 @@ class ArticlesController extends Controller
             $imagepath =request('image')->store('/images','public');
 
         }
-        $article= Article::create([
+        $achievement= Achievement::create([
             'user_id'=>auth()->user()->id,
-            'committee_id'=>'1',
+
             'description'=>$attributes['description'],
             'image'=>$imagepath,
             'title'=>$attributes['title'],
         ]);
-            $article->committee()->associate($attributes['committee']);
+        $achievement->committee()->associate($attributes['committee']);
 
 
 
-        return redirect('/articles');
+        return redirect('/achievements');
 
     }
-    public function show(Article $article)
+    public function show(Achievement $achievement)
     {
-        return view('articles.show',compact('article'));
+        return view('achievement.show',compact('achievement'));
     }
 }

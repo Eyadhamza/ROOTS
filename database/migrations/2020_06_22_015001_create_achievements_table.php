@@ -15,9 +15,11 @@ class CreateAchievementsTable extends Migration
     {
         Schema::create('achievements', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
             $table->foreignId('user_id');
+            $table->foreignId('committee_id')->nullable();
+            $table->string('title');
+            $table->string('image');
+            $table->string('description');
             $table->timestamps();
         });
     }

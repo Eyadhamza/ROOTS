@@ -12,11 +12,13 @@
                     <li><a href="/aboutus">About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="/events">Events</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
                     <li class="menu-has-children"><a href="">Blog</a>
                         <ul>
                             <li><a href="/articles">Articles</a></li>
-                            <li><a href="blog-single.html">Achievements</a></li>
+                            <li><a href="/articles/create">Create Article</a></li>
+                            <li><a href="/achievements">Achievements</a></li>
+                            <li><a href="/achievements/create">Post an Achievement</a></li>
+
                         </ul>
                     </li>
 {{--                    <li class="menu-has-children"><a href="">Pages</a>--}}

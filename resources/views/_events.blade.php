@@ -10,11 +10,12 @@
                 </div>
             </div>
         </div>
-        @foreach($events as $event1)
-            <div class="row">
-                <div class="active-popular-carusel">
 
-                    <div class="single-popular-carusel">
+            <div class="row">
+
+                <div class="active-popular-carusel">
+                    @foreach($events as $event1)
+                    <div class="single-popular-carusel m-3">
                         <div class="thumb-wrap relative">
                             <div class="thumb relative">
                                 <div class="overlay overlay-bg"></div>
@@ -24,7 +25,7 @@
 
                             </div>
                         </div>
-                        <div class="details">
+                        <div class="details p-4">
                             <a href="#">
                                 <h4>
                                     {{$event1->name}}
@@ -35,9 +36,11 @@
                             </p>
                         </div>
                     </div>
+                    @endforeach
                 </div>
+
             </div>
-        @endforeach
+
     </div>
 </section>
 <!-- End popular-course Area -->

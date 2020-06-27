@@ -16,4 +16,10 @@ class Article extends Model
     {
         return $this->belongsTo(Committee::class);
     }
+    public function getImageAttribute($value)
+    {
+
+        return "storage/". $value;
+    }
+
 }

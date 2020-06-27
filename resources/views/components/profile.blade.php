@@ -54,7 +54,7 @@
 <!--/ Nav End /-->
 
 <!--/ Intro Skew Star /-->
-<div id="home" class="intro route bg-image" style="background-image: url(../../storage/images/logoo.png)">
+<div id="home" class="intro route bg-image" style="background-image: url(../../storage/images/cover.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
         <div class="table-cell">

@@ -7,7 +7,7 @@
 
 
 <section class="post-content-area">
-    @foreach($articles as $article)
+    @foreach($achievements as $achievement)
     <div class="container">
         <div class="row">
             <div class="col-lg-8 posts-list">
@@ -15,9 +15,9 @@
                     <div class="col-lg-3  col-md-3 meta-details">
 
                         <div class="user-details row">
-                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{@$article->user->name}}</a> <span class="lnr lnr-user"></span></p>
-                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">{{$article->created_at}}</a> <span class="lnr lnr-calendar-full"></span></p>
-                            @foreach($article->user->committees as $committee)
+                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{@$achievement->user->name}}</a> <span class="lnr lnr-user"></span></p>
+                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">{{$achievement->created_at}}</a> <span class="lnr lnr-calendar-full"></span></p>
+                            @foreach($achievement->user->committees as $committee)
                             <p class="view col-lg-12 col-md-12 col-6"><a href="#" class="btn btn-dark w-75 text-white">
 
                                         {{$committee->name}}
@@ -27,13 +27,13 @@
                     </div>
                     <div class="col-lg-9 col-md-9 ">
                         <div class="feature-img">
-                            <img class="img-fluid" src="{{$article->image}}" alt="">
+                            <img class="img-fluid" src="{{$achievement->image}}" alt="">
                         </div>
-                        <a class="posts-title" href="blog-single.html"><h3>{{$article->title}}</h3></a>
+                        <a class="posts-title" href="blog-single.html"><h3>{{$achievement->title}}</h3></a>
                         <p class="excert">
-                            {{$article->description}}
+                            {{$achievement->description}}
                         </p>
-                        <a href="/article/{{$article->id}}" class="primary-btn">View More</a>
+                        <a href="/achievement/{{$achievement->id}}" class="primary-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -46,23 +46,23 @@
                         </form>
                     </div>
                     <div class="single-sidebar-widget user-info-widget">
-                        <img src="{{$article->user->avatar}}" alt="">
-                        <a href="#"><h4> {{$article->user->name}}</h4></a>
+                        <img src="{{$achievement->user->avatar}}" alt="">
+                        <a href="#"><h4> {{$achievement->user->name}}</h4></a>
                         <p>
-                            {{$article->user->role}} of @foreach($article->user->committees as $committee)
+                            {{$achievement->user->role}} of @foreach($achievement->user->committees as $committee)
                             <p class="view col-lg-12 col-md-12 col-6"><a href="#">
                                     {{$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>
                             @endforeach
                         </p>
                         <ul class="social-links">
-                            <li><a href="  {{$article->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="{{$article->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="  {{$achievement->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{$achievement->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
                         <p>
-                            {{$article->user->bio}}
+                            {{$achievement->user->bio}}
                         </p>
                     </div>
                     <div class="single-sidebar-widget popular-post-widget">
