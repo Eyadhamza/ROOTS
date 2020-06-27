@@ -20,10 +20,7 @@
                             <div class="overlay overlay-bg"></div>
                             <img class="img-fluid" src="/storage/{{($track1->image)}}" alt="">
                         </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
+
                     </div>
                     <div class="details">
                         <a href="#">

@@ -1,6 +1,7 @@
 <x-app>
 
 @include('_header')
+    @include('_banner')
     <!-- Start popular-course Area -->
     <section class="popular-course-area section-gap">
         <div class="container">

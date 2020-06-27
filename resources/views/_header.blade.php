@@ -11,7 +11,7 @@
                     <li><a href="/profile/{{auth()->user()->id}}">My Profile</a></li>
                     <li><a href="/aboutus">About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="/events">Events</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li class="menu-has-children"><a href="">Blog</a>
                         <ul>

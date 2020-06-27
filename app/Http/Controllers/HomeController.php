@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use App\Track;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $tracks= Track::all();
+
+
         return view('home',compact('tracks'));
     }
 }

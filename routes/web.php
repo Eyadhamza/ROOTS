@@ -34,3 +34,7 @@ Route::patch('/profile/{user}','ProfileController@update');
 Route::get('/profile/edit/all','ProfileController@index');
 
 Route::get('/committees/{committee}','CommitteesController@show');
+
+Route::get('/events', 'EventController@index')->name('events');
+Route::get('/events/create', 'EventController@create');
+Route::post('/events', 'EventController@store');

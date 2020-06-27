@@ -1,11 +1,12 @@
 <x-app>
-    @include('_header')
+@include('_header')
     @include('_banner')
-    <form  method="POST" action="/tracks" enctype="multipart/form-data" class="inline-flex justify-content-center p-5 text-white bg-dark" >
+    @include('_featured')
+    <form  method="POST" action="/events" enctype="multipart/form-data" class="inline-flex justify-content-center p-5 text-white bg-dark" >
         @csrf
 
 
-        <div class="mb-6">
+        <div class="mb-6 form-group  justify-content-center">
             <label for="name " class="block mb-2 uppercase font-bold text-sm text-white">
                 Name
 
@@ -74,4 +75,5 @@
         </div>
 
     </form>
+@include('_search-tracks')
 </x-app>
