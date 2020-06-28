@@ -8,17 +8,22 @@
             <nav id="nav-menu-container text-dark">
                 <ul class="nav-menu ">
                     <li><a href="/home">Home</a></li>
+                    @auth()
                     <li><a href="/profile/{{auth()->user()->id}}">My Profile</a></li>
+                    @endauth
                     <li ><a href="/aboutus" >About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="/events">Events</a></li>
                     <li class="menu-has-children"><a href="">Blog</a>
                         <ul>
                             <li><a href="/articles">Articles</a></li>
+                            @auth
                             <li><a href="/articles/create">Create Article</a></li>
+                            @endauth
                             <li><a href="/achievements">Achievements</a></li>
+                            @auth
                             <li><a href="/achievements/create">Post an Achievement</a></li>
-
+                            @endauth
                         </ul>
                     </li>
 {{--                    <li class="menu-has-children"><a href="">Pages</a>--}}

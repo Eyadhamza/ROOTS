@@ -1,6 +1,6 @@
 <x-app>
 @include('_header')
-@include('_banner')
+
 
 <ul class="list-group">
     <li class="list-group-item"></li>

@@ -46,7 +46,7 @@
                         </form>
                     </div>
                     <div class="single-sidebar-widget user-info-widget">
-                        <img src="{{$achievement->user->avatar}}" alt="">
+                        <img src="{{$achievement->user->avatar}}" style="width:70px; height: 70px;border-radius: 100% " alt="">
                         <a href="#"><h4> {{$achievement->user->name}}</h4></a>
                         <p>
                             {{$achievement->user->role}} of @foreach($achievement->user->committees as $committee)

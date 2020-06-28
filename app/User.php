@@ -55,4 +55,17 @@ class User extends Authenticatable
     {
         return asset('storage/' . $value);
     }
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+    public function AssignRole($role)
+    {
+
+        $this->roles()->sync($role,false);
+    }
+    public function abilities()
+    {
+        return $this->roles->map->abilities->flatten()->pluck('name')->unique();
+    }
 }

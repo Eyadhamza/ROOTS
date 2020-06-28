@@ -17,10 +17,10 @@
                         <div class="user-details row">
                             <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{@$article->user->name}}</a> <span class="lnr lnr-user"></span></p>
                             <p class="date col-lg-12 col-md-12 col-6"><a href="#">{{$article->created_at}}</a> <span class="lnr lnr-calendar-full"></span></p>
-                            @foreach($article->user->committees as $committee)
+                            @foreach(@$article->user->committees as $committee)
                             <p class="view col-lg-12 col-md-12 col-6"><a href="#" class="btn btn-dark w-75 text-white">
 
-                                        {{$committee->name}}
+                                        {{@$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>
                             @endforeach
                         </div>
@@ -46,23 +46,24 @@
                         </form>
                     </div>
                     <div class="single-sidebar-widget user-info-widget">
-                        <img src="{{$article->user->avatar}}" alt="">
-                        <a href="#"><h4> {{$article->user->name}}</h4></a>
+                        <img src="{{@$article->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
+                        <a href="#"><h4> {{@$article->user->name}}</h4></a>
+
                         <p>
-                            {{$article->user->role}} of @foreach($article->user->committees as $committee)
+                            {{@$article->user->role}} of @foreach(@$article->user->committees as $committee)
                             <p class="view col-lg-12 col-md-12 col-6"><a href="#">
-                                    {{$committee->name}}
+                                    {{@$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>
                             @endforeach
                         </p>
                         <ul class="social-links">
-                            <li><a href="  {{$article->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="{{$article->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="  {{@$article->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{@$article->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
                         <p>
-                            {{$article->user->bio}}
+                            {{@$article->user->bio}}
                         </p>
                     </div>
                     <div class="single-sidebar-widget popular-post-widget">

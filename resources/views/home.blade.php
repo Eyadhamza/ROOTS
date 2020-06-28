@@ -1,8 +1,9 @@
 <x-app>
+    @can('edit_forum')
     @include('_header')
     @include('_banner')
     @include('_featured')
-
+    @endcan
     <section class="popular-course-area section-gap">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -54,4 +55,7 @@
     @include('_events')
     @include('_achievements')
     @include('_articles')
+    @guest
+    @include('_instructors')
+    @endguest
 </x-app>
