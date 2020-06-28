@@ -1,5 +1,5 @@
 <!-- Start gallery Area -->
-<x-master>
+<x-app>
     <section class="gallery-area section-gap">
         <div class="container">
             <div class="row">
@@ -77,4 +77,4 @@
         </div>
     </section>
     <!-- End gallery Area -->
-</x-master>
+</x-app>

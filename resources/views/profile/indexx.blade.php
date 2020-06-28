@@ -1,7 +1,7 @@
-<x-master>
+<x-app>
 
 
 
-    @livewire('all-users-edit')
+    @livewire('edit-all')
 
-</x-master>
+</x-app>

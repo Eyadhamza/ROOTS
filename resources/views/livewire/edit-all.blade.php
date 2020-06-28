@@ -11,7 +11,7 @@
         </div>
     @endif
 
-        @include('livewire.create')
+    @include('livewire.create')
 
 
 
@@ -28,9 +28,9 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>
-                @foreach($user->committees as $committee)
-                    {{$committee->name}},
-                @endforeach
+                    @foreach($user->committees as $committee)
+                        {{$committee->name}},
+                    @endforeach
                 </td>
                 <td width="300">
                     <button wire:click="edit({{$user->id}})" class="btn btn-xs btn-warning w-100">Edit</button>
@@ -56,7 +56,7 @@
             </tr>
 
         @endforeach
-            {{$users->links()}}
+        {{$users->links()}}
     </table>
 
 </div>

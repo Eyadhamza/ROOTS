@@ -1,6 +1,6 @@
 <x-app>
 @include('_header')
-    @include('_banner')
+@include('_banner')
 
 <ul class="list-group">
     <li class="list-group-item"></li>
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        @livewire('committee-edit', ['committee' => $committee])
+        @livewire('edit-committee', ['committee' => $committee])
     </div>
 </section>
 

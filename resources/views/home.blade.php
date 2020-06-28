@@ -1,4 +1,7 @@
-<x-master>
+<x-app>
+    @include('_header')
+    @include('_banner')
+    @include('_featured')
 
     <section class="popular-course-area section-gap">
         <div class="container">
@@ -48,5 +51,7 @@
 
 
     </section>
+    @include('_events')
     @include('_achievements')
-</x-master>
+    @include('_articles')
+</x-app>

@@ -1,8 +1,4 @@
-<x-master>
 
-        @include('_tracks')
-
-</x-master>
 <x-app>
 
 @include('_header')

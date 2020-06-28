@@ -20,8 +20,9 @@
                         <a href="/article/{{$article->id}}"><h4> {{$article->title }}</h4></a>
 
                     </div>
-                    <p>Written by :  {{$article->user->name}}</p>
-
+                    @if(@$article->user->name)
+                    <p>Written by :  {{@$article->user->name}}</p>
+                    @endif
                     <p style=" ;
                      width: 200px;
                      height: fit-content;
