@@ -16,9 +16,16 @@
             </div>
             @foreach($events as $event1)
 
+
                 <div class="row justify-content-center">
 
                     <div class="justify-content-center">
+                        <a href="#">
+                            <h4 class="text-dark">
+                                Event Name :      {{$event1->name}}
+                            </h4>
+
+                        </a>
                         <div class="thumb-wrap relative justify-content-center">
                             <div class="thumb relative justify-content-center">
                                 <div class="overlay overlay-bg"></div>
@@ -29,12 +36,7 @@
                         <div class=" ">
 
                             <div class="details justify-content-center">
-                                <a href="#">
-                                    <h4 >
-                                        {{$event1->name}}
-                                    </h4>
-
-                                </a>
+                                Event Details :
                                 <p>
                                     {{$event1->description}}
                                 </p>
@@ -42,12 +44,13 @@
                         </div>
                     </div>
                 </div>
+                <hr>
             @endforeach
         </div>
     </section>
     <!-- End popular-course Area -->
     @include('_search-tracks')
     @include('_instructors')
-    @include('_articles')
+
 
 </x-app>

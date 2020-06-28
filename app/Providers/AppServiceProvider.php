@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Achievement;
+use App\Article;
 use App\Event;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->share('events',Event::all());
+        view()->share('articles',Article::all());
+        view()->share('achievements',Achievement::all());
 
     }
 }

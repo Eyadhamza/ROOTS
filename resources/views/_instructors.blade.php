@@ -6,9 +6,13 @@
             <div class="wrap">
                 <h1 class="text-white">Become an instructor</h1>
                 <p>
-                    There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
+                   Have you ever thought about helping people ?
+                    if you have enough knowledge and you would like to leave a great impact behind you , you can contact us and tell us
+                    what you can help us with , you will be responsible of a small group where you will be their mentor during their journey..
+                    the community offers you the chance and facilitates that for you ..
+
                 </p>
-                <a class="primary-btn wh" href="#">Apply for the post</a>
+                <a class="primary-btn wh" href="/contact">Contact us if you are interested !</a>
             </div>
         </div>
     </div>

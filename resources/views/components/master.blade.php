@@ -10,8 +10,8 @@
 {{--        @include('_tracks')--}}
         @include('_search-tracks')
         @include('_events')
-        @include('_achievement')
-        @include('_instructors')
         @include('_articles')
+        @include('_instructors')
+
 
 </x-app>

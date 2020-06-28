@@ -53,6 +53,6 @@
     <!-- End popular-course Area -->
 @include('_search-tracks')
 @include('_instructors')
-@include('_articles')
+@include('_achievements')
 
 </x-app>

@@ -10,7 +10,7 @@
     img{
         width:100%;
     }
-  }  
+  }
   .info-area-right{
     padding-left:80px;
     h1{
@@ -25,7 +25,7 @@
         h1{
             font-size:23px;
         }
-    }    
+    }
     @media(max-width:1024px){
         padding-left:15px;
     }
@@ -36,8 +36,8 @@
     }
     @media(max-width:991px){
         margin-top:50px;
-    }    
-  }  
+    }
+  }
 }
 
 /*--------  End Info area Style  -------------*/
@@ -66,7 +66,7 @@
 .accordion > dt > a.active {
     color: #fff;
     border-color: #ddd;
-    background:$primary-color;
+    background:black;
     cursor: default;
 }
 
@@ -183,7 +183,7 @@ dl.accordion.time-line:before {
 
 .accordion.time-line > dt > a:hover,
 .accordion.time-line > dt > a.active {
-    background: none !important;
+    background: black;
 }
 
 .toggle > dt {
@@ -207,8 +207,8 @@ dl.accordion.time-line:before {
 }
 
 .toggle > dt > a.active {
-    color: $primary-color;
-    border-color: $primary-color;
+    color: black;
+    border-color: black;
 }
 
 .toggle > dt > a:after {
@@ -235,7 +235,7 @@ dl.accordion.time-line:before {
 .toggle > dt > a.active:after,
 .toggle > dt > a.active:hover:after {
     content: "\f106";
-    color: $primary-color;
+    color: black;
 }
 
 .toggle > dt > a:hover:after {
@@ -315,7 +315,7 @@ dl.toggle.time-line:before {
 
 .toggle.time-line > dt > a:hover,
 .toggle.time-line > dt > a.active {
-    background: none !important;
+    background: black;
 }
 
 .jq-tab-menu .jq-tab-title:first-child {

@@ -51,3 +51,8 @@ Route::post('/achievements', 'AchievementController@store');
 Route::get('/events', 'EventController@index')->name('events');
 
 Route::post('/events', 'EventController@store');
+
+Route::get('/contact',function ()
+{
+    return view('contact.indexx');
+});

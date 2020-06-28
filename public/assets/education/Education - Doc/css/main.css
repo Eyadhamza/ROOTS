@@ -32,9 +32,6 @@ h3 { font-size: 18px;}
 h5 { font-size: 16px;}
 h6 { font-size: 14px;}
 
-strong {
-  letter-s;;Dacing: 1px;
-}
 
 code {
   background-color: #ddd;
@@ -133,7 +130,7 @@ section p {
 }
 
 .left-nav ul li a:hover, .left-nav ul li .current {
-    background-color: #f7631b;
+    background-color: black;
     color: #fff;
 }
 

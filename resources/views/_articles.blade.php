@@ -1,16 +1,43 @@
-
-<!-- Start blog Area -->
-<section class="blog-area section-gap" id="blog">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">Latest posts from our Blog</h1>
-                    <p>In the history of modern astronomy there is.</p>
-                </div>
-            </div>
+<div class="row d-flex justify-content-center">
+    <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+            <h1 class="mb-10">latest Articles from our Blog.. </h1>
+            <p>learn while you are here  !</p>
         </div>
     </div>
-</section>
-<!-- End blog Area -->
+</div>
+<!-- Start review Area -->
+<section class="review-area section-gap relative">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="active-review-carusel" >
+                @foreach($articles as $article)
+                <div class="single-review item">
 
+
+                    <div class="title justify-content-start d-flex">
+                        <a href="/article/{{$article->id}}"><h4> {{$article->title }}</h4></a>
+
+                    </div>
+                    <p>Written by :  {{$article->user->name}}</p>
+
+                    <p style=" ;
+                     width: 200px;
+                     height: fit-content;
+                     word-break: break-all;
+                    ">
+                        {{$article->description}}
+                    </p>
+                </div>
+                    <div class="thumb relative" style="width: 200px;height: 200px">
+
+                        <div class="overlay overlay-bg"></div>
+                        <img class="img-fluid" src="{{($article->image)}}" alt="" style="width: 200px;height: 200px">
+                    </div>
+                @endforeach
+            </div>
+       </div>
+    </div>
+</section>
+<!-- End review Area -->

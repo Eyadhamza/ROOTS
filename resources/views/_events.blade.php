@@ -31,7 +31,7 @@
                                     {{$event1->name}}
                                 </h4>
                             </a>
-                            <p>
+                            <p style="width:200px; height: fit-content;  word-break: break-all;">
                                 {{$event1->description}}
                             </p>
                         </div>
