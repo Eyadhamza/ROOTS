@@ -37,7 +37,7 @@
 
                             <div class="details justify-content-center">
                                 Event Details :
-                                <p>
+                                <p style="width: 400px">
                                     {{$event1->description}}
                                 </p>
                             </div>

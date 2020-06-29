@@ -1,5 +1,5 @@
 
-<section class="">
+<section class="cta-one-area relative section-gap">
           <div class="row d-flex justify-content-center">
                <div class="menu-content pb-70 col-lg-8">
                   <div class="title text-center">

@@ -22,28 +22,28 @@
 
                 <div class="active-popular-carusel">
                     @foreach($tracks as $track1)
-                    <div class="single-popular-carusel">
+                        <div class="single-popular-carusel">
 
-                        <div class="thumb-wrap relative">
-                            <div class="thumb relative w-50 h-50">
-                                <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid  " src="{{$track1->image}}" alt="">
+                            <div class="thumb-wrap relative">
+                                <div class="thumb relative w-50 h-50">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="img-fluid  " src="{{$track1->image}}" alt="">
+                                </div>
+                                <div class="meta d-flex justify-content-between">
+
+                                </div>
                             </div>
-                            <div class="meta d-flex justify-content-between">
-
+                            <div class="details">
+                                <a href="#">
+                                    <h4 class="p-4">
+                                        {{$track1->name}}
+                                    </h4>
+                                </a>
+                                <p style="width:200px; height: fit-content;  word-break: break-all;">
+                                    {{$track1->description}}
+                                </p>
                             </div>
                         </div>
-                        <div class="details">
-                            <a href="#">
-                                <h4 class="p-4">
-                                    {{$track1->name}}
-                                </h4>
-                            </a>
-                            <p style="width:200px; height: fit-content;  word-break: break-all;">
-                               {{$track1->description}}
-                            </p>
-                        </div>
-                    </div>
                     @endforeach
                 </div>
 
@@ -57,6 +57,6 @@
     @include('_achievements')
     @include('_articles')
     @guest
-    @include('_instructors')
+        @include('_instructors')
     @endguest
 </x-app>

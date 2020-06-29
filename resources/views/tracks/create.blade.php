@@ -68,7 +68,7 @@
 
         <div>
 
-            <button type="submit" class="btn btn-dark p-2 bg-white text-black">submit</button>
+            <button type="submit" class="btn btn-dark p-2 bg-white text-dark">submit</button>
 
 
         </div>
