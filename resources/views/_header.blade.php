@@ -3,7 +3,7 @@
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
             <div id="logo">
-                <a href="index.html"><img src="img/logo1.png" alt="" title="" style="width: 52px; height: 48px ;border-radius: 100%" /></a> <strong class="bold">ROOTS</strong>
+                <a href="index.html"><img src="../../../../img/logo1.png" alt="" title="" style="width: 52px; height: 48px ;border-radius: 100%" /></a> <strong class="bold">ROOTS</strong>
             </div>
             <nav id="nav-menu-container text-dark">
                 <ul class="nav-menu ">

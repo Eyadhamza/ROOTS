@@ -1,11 +1,16 @@
+<x-profile :user="$user">
 
-    @if($user->role =='member')
-    @include('_MemberProfile')
-    @elseif($user->role =='instructor')
-    @include('_InstructorProfile')
-    @elseif($user->role =='RR')
-    @include('_RRProfile')
-    @else
-    @include('_ERROR404')
+    @if($user->all_roles()->contains('Member'))
+         @include('_MemberProfile')
     @endif
 
+    @if($user->all_roles()->contains('Instructor'))
+
+            @include('_InstructorProfile')
+    @endif
+
+    @if($user->all_roles()->contains('RR'))
+            @include('_RRProfile')
+    @endif
+
+</x-profile>

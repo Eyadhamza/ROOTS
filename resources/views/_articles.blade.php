@@ -7,7 +7,7 @@
     </div>
 </div>
 <!-- Start review Area -->
-<section class="review-area section-gap relative">
+<section class="">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row">

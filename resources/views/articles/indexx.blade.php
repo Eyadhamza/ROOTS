@@ -50,7 +50,12 @@
                         <a href="#"><h4> {{@$article->user->name}}</h4></a>
 
                         <p>
-                            {{@$article->user->role}} of @foreach(@$article->user->committees as $committee)
+                            @foreach(@$article->user->roles as $role)
+                                {{$role->name}} Member,
+
+                            @endforeach
+
+                            of @foreach(@$article->user->committees as $committee)
                             <p class="view col-lg-12 col-md-12 col-6"><a href="#">
                                     {{@$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>

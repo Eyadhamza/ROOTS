@@ -16,4 +16,10 @@ class Committee extends Model
     {
         return $this->hasMany(Article::class);
     }
+    public function getImageAttribute($value)
+    {
+
+        return "storage/". $value;
+    }
+
 }

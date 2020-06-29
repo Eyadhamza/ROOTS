@@ -59,6 +59,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+    public function all_roles()
+    {
+        return $this->roles->pluck('name')->unique();
+    }
     public function AssignRole($role)
     {
 

@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->foreignId('committee_id')->nullable();
             $table->string('title');
             $table->string('image');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

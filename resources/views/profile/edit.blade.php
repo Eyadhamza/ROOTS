@@ -23,7 +23,13 @@
                                         <div class="col-12 col-sm-auto mb-3">
                                             <div class="mx-auto" style="width: 140px;">
                                                 <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;"><img
+                                                            src="{{$user->avatar}}"
+                                                            alt="eee"
+                                                            class="rounded-full mr-4 "
+                                                            style="width:150px; height: 140px "
+
+                                                        ></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,10 +154,10 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <div class="px-xl-3">
-                                    <button class="btn btn-block btn-secondary">
+                                    <a href=" /logout" class="btn btn-block btn-secondary text-white" >
                                         <i class="fa fa-sign-out"></i>
                                         <span>Logout</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +165,7 @@
                             <div class="card-body">
                                 <h6 class="card-title font-weight-bold">Support</h6>
                                 <p class="card-text">Get fast, free help from our friendly assistants.</p>
-                                <button type="button" class="btn btn-primary">Contact Us</button>
+                                <a href="/contact"><button type="button" class="btn btn-primary">Contact Us</button></a>
                             </div>
                         </div>
                     </div>

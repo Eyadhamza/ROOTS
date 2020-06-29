@@ -18,9 +18,14 @@ class UserPolicy
     {
         //
     }
-
-
-
+    public function update(User $current_user,User $user)
+    {
+        return $current_user->is($user);
+    }
+    public function edit(User $current_user,User $user)
+    {
+        return $current_user->is($user);
+    }
 
 
 

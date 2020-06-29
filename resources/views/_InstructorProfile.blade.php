@@ -1,6 +1,60 @@
-<x-profile :user="$user">
-    @if($user->id==auth()->user()->id)
-        <section id="work" class="portfolio-mf sect-pt4 route">
+<section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                      <div class="p-4 " style="font-size: 50px ">
+                        My Instructor Profile
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img src="{{$user->avatar}}" class="img-fluid rounded b-shadow-a" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-7">
+                                    <div class="about-info">
+                                        <p><span class="title-s">Name: </span> <span>{{$user->name}}</span></p>
+                                        <p><span class="title-s">Committee: </span> <span>@foreach($user->committees as $committee)
+                                                    {{$committee->name}},
+                                                @endforeach</span></p>
+                                        <p><span class="title-s">Email: </span> <span>{{$user->email}}</span></p>
+                                        <p><span class="title-s">Phone: </span> <span>{{$user->number}}</span></p>
+                                        @can('edit',$user)
+                                            <a href="/profile/{{$user->id}}/edit" class="btn btn-primary a-btn-slide-text w-75">
+                                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                <span><strong>Edit</strong></span>
+                                            </a>
+                                        @endcan
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-me pt-4 pt-md-0">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        About me
+                                    </h5>
+                                </div>
+                                <p class="lead">
+                                    {{$user->bio}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="work" class="portfolio-mf sect-pt4 route">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -9,7 +63,7 @@
                                 My Members
                             </h3>
                             <p class="subtitle-a">
-                                This list presents all users who are currently in my committee
+                               I'M AN INSTRUCTOR OF ..
                             </p>
                             <div class="line-mf"></div>
                         </div>
@@ -29,5 +83,3 @@
                         @endforeach
                     </div>
         @endforeach
-    @endif
-</x-profile>
