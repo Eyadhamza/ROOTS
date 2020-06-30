@@ -29,6 +29,8 @@
                         <div class="feature-img">
                             <img class="img-fluid" src="{{$article->image}}" alt="">
                         </div>
+                        <iframe width="420" height="315" src="//https://www.youtube.com/watch?v=ex0o2eRhtp4" frameborder="0" allowfullscreen></iframe>
+
                         <a class="posts-title" href="blog-single.html"><h3>{{$article->title}}</h3></a>
                         <p class="excert">
                             {{$article->description}}

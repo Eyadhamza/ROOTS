@@ -47,4 +47,8 @@ class ProfileController extends Controller
         $users= User::all();
         return view('profile.indexx',compact('users'));
     }
+    public function duty(User $user)
+    {
+        return view('profile.duty',compact('user'));
+    }
 }

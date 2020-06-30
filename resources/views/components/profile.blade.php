@@ -76,6 +76,9 @@
         </div>
     </div>
 </div>
+{{--@livewire('notifications')--}}
+
+
 {{$slot}}
 @include('_profile-committees_news')
 @include('_profile-articles')

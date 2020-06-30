@@ -103,6 +103,5 @@
         @endforeach
 
     </div>
-    @livewire('edit-all')
 
 </section>

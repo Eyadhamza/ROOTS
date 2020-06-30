@@ -31,6 +31,8 @@ Route::post('/tracks', 'TracksController@store')->middleware('auth')->middleware
 
 // i did the auth in the controller
 Route::get('/profile/{user}','ProfileController@show');
+Route::get('/profile/{user}/duty','ProfileController@duty');
+
 Route::get('/profile/{user}/edit','ProfileController@edit')->middleware('auth')->middleware('can:edit,user');
 Route::patch('/profile/{user}','ProfileController@update')->middleware('auth')->middleware('can:edit,user');
 //authrize
@@ -63,3 +65,7 @@ Route::post('/events', 'EventController@store')->middleware('auth')->middleware(
 
 Route::get('/contact','ContactController@index');
 Route::post('/contact','ContactController@store');
+
+Route::get('/notifications','NotificationController@create');
+
+Route::post('/notifications','NotificationController@store');
