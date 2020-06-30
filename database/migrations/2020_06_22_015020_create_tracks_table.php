@@ -16,6 +16,7 @@ class CreateTracksTable extends Migration
         Schema::create('tracks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('committee_id')->nullable();
             $table->string('instructors')->nullable();
             $table->string('image');
             $table->longText('description');

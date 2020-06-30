@@ -16,6 +16,10 @@ class Committee extends Model
     {
         return $this->hasMany(Article::class);
     }
+    public function track()
+    {
+        return $this->belongsTo(Track::class);
+    }
     public function getImageAttribute($value)
     {
 

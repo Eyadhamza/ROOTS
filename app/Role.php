@@ -16,7 +16,14 @@ class Role extends Model
     {
         return $this->belongsToMany(User::class);
     }
-
+    public function all_users()
+    {
+        return $this->users->pluck('name')->unique();
+    }
+    public function instructors()
+    {
+        return $this->where('name','Instructor')->with('users')->get()->unique();
+    }
     public function AllowAbility($ability)
     {
 

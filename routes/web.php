@@ -61,7 +61,5 @@ Route::post('/events', 'EventController@store')->middleware('auth')->middleware(
 
 
 
-Route::get('/contact',function ()
-{
-    return view('contact.indexx');
-});
+Route::get('/contact','ContactController@index');
+Route::post('/contact','ContactController@store');

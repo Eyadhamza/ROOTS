@@ -23,7 +23,7 @@
 
     <!-- Main Stylesheet File -->
     <link href=../../../css/style.css rel="stylesheet">
-
+    @livewireStyles
 </head>
 
 <body id="page-top">
@@ -118,7 +118,7 @@
 
 <!-- Template Main Javascript File -->
 <script src="../../../../../assets2/js/main.js"></script>
-
+@livewireScripts
 </body>
 </html>
 

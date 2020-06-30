@@ -23,10 +23,7 @@
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$track1->image}}" alt="">
                             </div>
-                            <div class="meta d-flex justify-content-between">
-                                <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                                <h4>$150</h4>
-                            </div>
+
                         </div>
                         <div class="single-popular-carusel">
 
@@ -35,10 +32,7 @@
                                     <h4>
                                         {{$track1->name}}
                                     </h4>
-                                    <h4>
-                                        Under supervision of:
-                                        {{$track1->instructors}}
-                                    </h4>
+
                                 </a>
                                 <p>
                                     {{$track1->description}}

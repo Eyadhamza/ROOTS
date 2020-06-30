@@ -12,7 +12,7 @@
     @endif
 
     @include('livewire.create')
-
+        @livewire('search')
 
 
     <table class="table table-bordered table-condensed">

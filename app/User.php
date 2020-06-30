@@ -47,6 +47,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Committee::class);
     }
+    public function all_committees()
+    {
+        return $this->committees->pluck('name')->unique();
+    }
     public function gallery()
     {
         return $this->hasMany(Gallery::class);
@@ -63,6 +67,7 @@ class User extends Authenticatable
     {
         return $this->roles->pluck('name')->unique();
     }
+
     public function AssignRole($role)
     {
 
@@ -72,4 +77,5 @@ class User extends Authenticatable
     {
         return $this->roles->map->abilities->flatten()->pluck('name')->unique();
     }
+
 }

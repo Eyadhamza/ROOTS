@@ -5,7 +5,9 @@ namespace App\Http\Livewire;
 
 
 use App\Committee;
+use App\Role;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
 abstract class Edit  extends Component
@@ -30,16 +32,15 @@ abstract class Edit  extends Component
 
         $user = User::create([
             'name' => $this->name,
-            'role' => $this->role,
             'email' => $this->email,
-            'password' => $this->password,
+            'password' => bcrypt($this->password),
 
         ]);
 
         $allcommittees = Committee::whereIn('name', [$this->id1, $this->id2])->get();
-
+        $all_roles = Role::where('name', $this->role)->get();
         $user->committees()->attach($allcommittees);
-
+        $user->roles()->attach($allcommittees);
         $this->resetInput();
     }
 
@@ -51,8 +52,11 @@ abstract class Edit  extends Component
         $this->name = $record->name;
         $this->phone = $record->phone;
         $this->email = $record->email;
-        $this->password = $record->password;
-        $this->role = $record->role;
+        $this->password =bcrypt($record->password);
+        $allcommittees = Committee::whereIn('name', [$this->id1, $this->id2])->get();
+        $all_roles = Role::where('name', $this->role)->get();
+        $record->committees()->attach($allcommittees);
+        $record->roles()->attach($all_roles);
         $this->updateMode = true;
     }
 

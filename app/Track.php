@@ -12,4 +12,8 @@ class Track extends Model
 
         return "storage/". $value;
     }
+    public function committees()
+    {
+        return $this->hasMany(Committee::class);
+    }
 }

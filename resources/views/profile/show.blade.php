@@ -1,5 +1,8 @@
 <x-profile :user="$user">
 
+    @if($user->all_roles()->contains('Admin'))
+        @include('_admin-profile')
+    @endif
     @if($user->all_roles()->contains('Member'))
          @include('_MemberProfile')
     @endif

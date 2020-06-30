@@ -25,10 +25,15 @@
 
                 <input wire:model="password" type="password" class="form-control input-sm">
             </div>
+            @livewire('search-committee')
+            Important note!
+            <p>please search available committees before you type ! </p>
+
             First Committee
             <div class="input-group m-3">
 
                 <input wire:model="id1" type="text" class="form-control input-sm">
+
             </div>
             Second Committee
             <div class="input-group m-3">

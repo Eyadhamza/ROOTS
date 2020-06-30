@@ -1,5 +1,9 @@
+<x-app>
+    @include('_header')
+    @include('_banner')
+    @include('_featured')
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Contact V17</title>
@@ -33,18 +37,19 @@
 
 <div class="container-contact100">
     <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
+        <form class="contact100-form validate-form" method="post" action="/contact">
+            @csrf
 				<span class="contact100-form-title">
 					Send Us A Message
 				</span>
 
             <label class="label-input100" for="first-name">Tell us your name *</label>
             <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                <input id="first-name" class="input100" type="text" name="first_name" placeholder="First name">
                 <span class="focus-input100"></span>
             </div>
             <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                <input class="input100" type="text" name="last-name" placeholder="Last name">
+                <input class="input100" type="text" name="last_name" placeholder="Last name">
                 <span class="focus-input100"></span>
             </div>
 
@@ -209,3 +214,4 @@
 </script>
 </body>
 </html>
+</x-app>

@@ -56,6 +56,7 @@
     @include('_events')
     @include('_achievements')
     @include('_articles')
+    @include('_search-tracks')
     @guest
         @include('_instructors')
     @endguest
