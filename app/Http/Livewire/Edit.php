@@ -14,7 +14,7 @@ abstract class Edit  extends Component
 {
 
 
-    public $data, $name, $phone, $email, $password, $role, $selected_id, $id1, $id2;
+    public $data, $name, $phone, $email, $password, $role1 ,$role2 , $selected_id, $id1, $id2 ,$committees,$roles;
     public $updateMode = false;
 
 
@@ -37,10 +37,12 @@ abstract class Edit  extends Component
 
         ]);
 
-        $allcommittees = Committee::whereIn('name', [$this->id1, $this->id2])->get();
-        $all_roles = Role::where('name', $this->role)->get();
+        $allcommittees = Committee::whereIn('id', [$this->id1, $this->id2])->get();
+
         $user->committees()->attach($allcommittees);
-        $user->roles()->attach($allcommittees);
+
+        $all_roles = Role::whereIn('id', [$this->role1,$this->role2])->get();
+        $user->roles()->attach($all_roles);
         $this->resetInput();
     }
 
@@ -53,10 +55,9 @@ abstract class Edit  extends Component
         $this->phone = $record->phone;
         $this->email = $record->email;
         $this->password =bcrypt($record->password);
-        $allcommittees = Committee::whereIn('name', [$this->id1, $this->id2])->get();
-        $all_roles = Role::where('name', $this->role)->get();
-        $record->committees()->attach($allcommittees);
-        $record->roles()->attach($all_roles);
+        $allcommittees = Committee::whereIn('id', [$this->id1, $this->id2])->get();
+        $all_roles = Role::where('id', [$this->role1,$this->role2])->get();
+
         $this->updateMode = true;
     }
 
@@ -65,7 +66,8 @@ abstract class Edit  extends Component
 
         $this->validate([
             'name' => 'required',
-            'role' => 'required',
+            'role1' => 'required',
+            'role2' => 'nullable',
             'email' => 'required',
             'password' => 'required',
             'id1' => 'nullable',
@@ -84,14 +86,17 @@ abstract class Edit  extends Component
             $record = User::find($this->selected_id);
             $record->update([
                 'name' => $this->name,
-                'role' => $this->role,
+
                 'email' => $this->email,
                 'password' => $this->password,
             ]);
 
-            $allcommittees = Committee::whereIn('name', [$this->id1, $this->id2])->get();
+            $allcommittees = Committee::whereIn('id', [$this->id1, $this->id2])->get();
+            $record->committees()->sync($allcommittees);
+            $all_roles = Role::whereIn('id', [$this->role1,$this->role2])->get();
+            $record->roles()->sync($all_roles);
 
-            $record->committees()->attach($allcommittees);
+
             $this->resetInput();
             $this->updateMode = false;
         }
