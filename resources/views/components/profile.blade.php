@@ -42,8 +42,12 @@
                     <a class="nav-link js-scroll active" href="/profile/{{auth()->user()->id}}">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link js-scroll" href="/profile/{{auth()->user()->id}}/duty">Your Duty ..</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll" href="/home">Back to Website</a>
                 </li>
+
                 <li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="/logout">Logout</a>

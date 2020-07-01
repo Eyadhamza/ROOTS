@@ -25,6 +25,6 @@
         </div>
     </section>
 
-
+    @livewire('edit-committee', ['committee' => $committee])
 
 </x-app>

@@ -1,5 +1,5 @@
 
-<div class="relativ ">
+<div class="relative ">
     <div class="m-4" style="font-size: 35px">
         Here you can search the available committees :
     </div>
@@ -35,4 +35,28 @@
             @endif
         </div>
     @endif
+    <div class="flex m-4">
+        <h2 class="font-weight-bold p-4">you can find and modify Committees Here..</h2>
+        @foreach($all_committees as $committee)
+
+            <li class=" border-bottom bg-gray text-dark ">
+                <a href="/committees/{{$committee->id}}" class="w-full font-bold text-dark">
+                    <h5 class="text-dark"> Name : {{$committee->name}}</h5>
+                    <h5 class="text-dark">ID :  {{$committee->id}}
+
+                    </h5>
+
+                </a>
+                <a  href="/committees/{{$committee->id}}/edit" class="w-full font-bold text-white btn btn-dark">
+                    Edit
+                </a>
+                <a  href="/committees/{{$committee->id}}" class="w-full font-bold text-white btn btn-dark">
+                    View
+                </a>
+            </li>
+
+
+        @endforeach
+    </div>
+
 </div>

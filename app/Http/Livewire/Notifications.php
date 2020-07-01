@@ -15,13 +15,8 @@ class Notifications extends Component
     public function render()
     {
         return view('livewire.notifications', [
-            'notifications' => Auth::user()->notifications()->paginate(5),
+            'notifications' => Auth::user()->notifications()->latest()->paginate(5),
         ]);
     }
-    public function markAsRead(string $notificationId)
-    {
 
-
-        Auth::user()->unreadNotifications()->update(['read_at' => now()]);
-    }
 }

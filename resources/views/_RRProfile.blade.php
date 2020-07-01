@@ -95,12 +95,12 @@
                 @foreach($user->committees as $committee)
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action active">
-                            MY MEMBERS
+                            MY MEMBERS OF {{$committee->name}}
                         </a>
 
                         @foreach($committee->users as $user)
                             <a href="/profile/{{$user->id}}" class="list-group-item list-group-item-action">{{$user->name}}</a>
                         @endforeach
                     </div>
-        @endforeach
+                @endforeach
 

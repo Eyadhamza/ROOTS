@@ -33,7 +33,7 @@
                     @endforeach
                 </td>
                 <td width="300">
-                    <button wire:click="edit({{$user->id}})" class="btn btn-xs btn-warning w-100">Edit</button>
+                    <button wire:click="edit({{$user->id}})" class="btn btn-xs btn-dark w-100 text-white">Edit</button>
                     @if($updateMode && $selected_id==$user->id)
                         @include('livewire.update')
 

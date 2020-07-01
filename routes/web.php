@@ -66,6 +66,9 @@ Route::post('/events', 'EventController@store')->middleware('auth')->middleware(
 Route::get('/contact','ContactController@index');
 Route::post('/contact','ContactController@store');
 
-Route::get('/notifications','NotificationController@create');
+Route::get('/notifications','NotificationController@createTask');
+Route::post('/notifications/all','NotificationController@storeTask');
 
-Route::post('/notifications','NotificationController@store');
+Route::get('/notifications/{user2}','NotificationController@createOneTask');
+Route::post('/notifications/{user2}','NotificationController@storeOneTask');
+

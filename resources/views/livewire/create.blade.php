@@ -1,9 +1,9 @@
 <div class=" bg-dark  ">
     <div class="panel-heading ">
-        <h3 class="panel-title text-white flex justify-content-center">Here you can create a new User</h3>
+        <h3 class="panel-title text-white d-flex justify-content-center">Here you can create a new User</h3>
     </div>
 
-    <div class="flex justify-content-center p-5 text-white  ">
+    <div class="d-flex justify-content-center p-5 text-white  ">
         <div class="form-group lg-flex justify-content-center ">
             Name
             <div class="input-group m-3">
@@ -58,8 +58,9 @@
 
 {{--                <input wire:model="id2" type="text" class="form-control input-sm">--}}
 {{--            </div>--}}
+            <label class="inline-block w-32 font-bold">Committee1:</label>
             <div class="mb-8">
-                <label class="inline-block w-32 font-bold">Committee1:</label>
+
                 <select name="committee1" wire:model="id1" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
                     @foreach($committees as $committee)
@@ -67,8 +68,9 @@
                     @endforeach
                 </select>
             </div>
+            <label class="inline-block w-32 font-bold">Committee2:</label>
             <div class="mb-8">
-                <label class="inline-block w-32 font-bold">Committee2:</label>
+
                 <select name="committee2" wire:model="id2" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
                     @foreach($committees as $committee)

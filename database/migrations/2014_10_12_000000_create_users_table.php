@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('interaction_performance')->default(0);
             $table->string('knowledge_performance')->default(0);
             $table->string('google_id')->nullable();
+            $table->string('telegram_url')->nullable();
+
             $table->string('facebook_id')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

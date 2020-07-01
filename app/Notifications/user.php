@@ -7,21 +7,24 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class user extends Notification
+class user extends Notification  implements ShouldQueue
 {
     use Queueable;
-    protected $task;
+    public $user_message;
+    public $title;
 
     /**
      * Create a new notification instance.
      *
-     * @return void
+     * @param $title
+     * @param $user_message
      */
 
-    public function __construct($task)
+    public function __construct($title, $user_message)
     {
-        //
-        $this->task = $task;
+        $this->title=$title;
+
+        $this->user_message = $user_message;
     }
 
     /**
@@ -44,10 +47,10 @@ class user extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('you just received a new task ! ')
-            ->line($this->task)
-            ->action('Notification Action', url('/home'))
-            ->line('Thank you for using our application!');
+            ->line('you just received a new Message ! ')
+            ->line($this->title)
+            ->line($this->user_message)
+            ->action('Notification Action', url('/home'));
     }
 
     /**
@@ -59,8 +62,8 @@ class user extends Notification
     public function toArray($notifiable)
     {
         return [
-
-            'task'=>$this->task
+            'title'=>$this->title,
+            'user_message'=>$this->user_message
         ];
     }
 }

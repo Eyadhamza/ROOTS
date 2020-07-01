@@ -29,7 +29,8 @@ class SearchCommittee extends Component
 
     public function render()
     {
-        return view('livewire.search-committee');
+        $all_committees =Committee::all();
+        return view('livewire.search-committee',compact('all_committees'));
     }
 
 
