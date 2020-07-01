@@ -63,6 +63,7 @@
                 <br>
                 <button wire:click="update()" class="btn btn-default ">Update</button>
             </div>
+
         </div>
     </div>
 

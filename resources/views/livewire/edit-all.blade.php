@@ -1,5 +1,13 @@
 <div>
-    @if (count($errors) > 0)
+
+
+    @include('livewire.create')
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+      @if (count($errors) > 0)
         <div class="alert alert-danger">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <strong>Sorry!</strong> invalid input.<br><br>
@@ -9,9 +17,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
-
-    @include('livewire.create')
+       @endif
     @livewire('search')
 
 
@@ -50,7 +56,7 @@
                             </ul>
                         </div>
                     @endif
-                    <button wire:click="destroy({{$user->id}})" class="btn btn-xs btn-danger w-100">Delete</button>
+                    <button onclick="confirm('Confirm delete?') || event.stopImmediatePropagation()" wire:click="destroy({{$user->id}})" class="btn btn-xs btn-danger w-100">Delete</button>
                 </td>
 
             </tr>

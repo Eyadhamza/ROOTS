@@ -20,7 +20,7 @@
                 <a  href="/profile/{{$user->id}}" class=" font-bold text-white btn btn-dark">
                     View
                 </a>
-                <a  href="/profile/{{$user->id}}" class=" font-bold text-white btn btn-dark">
+                <a  href="/notifications/{{$user->id}}" class=" font-bold text-white btn btn-dark">
                     Give A Warning
                 </a>
             </div>

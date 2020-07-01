@@ -30,7 +30,7 @@ class ProgressCounter extends Component
                 'knowledge_performance'=>$this->knowledge_performance,
 
           ]);
-
+        session()->flash('message', 'Performance Successfully Updated.');
     }
 
 

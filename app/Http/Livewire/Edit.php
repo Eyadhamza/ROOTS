@@ -44,6 +44,8 @@ abstract class Edit  extends Component
         $all_roles = Role::whereIn('id', [$this->role1,$this->role2])->get();
         $user->roles()->attach($all_roles);
         $this->resetInput();
+        session()->flash('message', 'User Successfully Added.');
+
     }
 
     public function edit($id)
@@ -100,6 +102,7 @@ abstract class Edit  extends Component
             $this->resetInput();
             $this->updateMode = false;
         }
+        session()->flash('message', 'User Details Successfully Updated.');
 
     }
 
@@ -108,6 +111,8 @@ abstract class Edit  extends Component
         if ($id) {
             $record = User::where('id', $id);
             $record->delete();
+            session()->flash('message', 'User Successfully Deleted.');
+
         }
     }
 }

@@ -31,7 +31,7 @@ Route::post('/tracks', 'TracksController@store')->middleware('auth')->middleware
 
 // i did the auth in the controller
 Route::get('/profile/{user}','ProfileController@show');
-Route::get('/profile/{user}/duty','ProfileController@duty');
+Route::get('/profile/{user}/duty','ProfileController@duty')->middleware('auth')->middleware('can:edit,user');
 
 Route::get('/profile/{user}/edit','ProfileController@edit')->middleware('auth')->middleware('can:edit,user');
 Route::patch('/profile/{user}','ProfileController@update')->middleware('auth')->middleware('can:edit,user');

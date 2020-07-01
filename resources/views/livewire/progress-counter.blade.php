@@ -41,5 +41,9 @@
     <div class="d-flex justify-content-center m-4">
         <button wire:click="update()" class="btn btn-dark ">Update</button>
     </div>
-
+    @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
 </div>
