@@ -1,13 +1,13 @@
 
 <x-app>
 
-@include('_header')
-    @include('_banner')
+@include('_MainWebsitePartials._header')
+    @include('_MainWebsitePartials._banner')
 <!-- Start popular-course Area -->
     <section class="popular-course-area section-gap ">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-70 col-lg-8">
+        <div class="container mx-auto sm:px-4">
+            <div class="flex flex-wrap  flex justify-center">
+                <div class="menu-content pb-70 lg:w-2/3 pr-4 pl-4">
                     <div class="title text-center">
                         <h1 class="mb-10">Our Events .. </h1>
                         <p>it's all about the first move !</p>
@@ -17,25 +17,25 @@
             @foreach($events as $event1)
 
 
-                <div class="row justify-content-center">
+                <div class="flex flex-wrap  justify-center">
 
-                    <div class="justify-content-center">
+                    <div class="justify-center">
                         <a href="#">
-                            <h4 class="text-dark">
+                            <h4 class="text-gray-900">
                                 Event Name :      {{$event1->name}}
                             </h4>
 
                         </a>
-                        <div class="thumb-wrap relative justify-content-center">
-                            <div class="thumb relative justify-content-center">
+                        <div class="thumb-wrap relative justify-center">
+                            <div class="thumb relative justify-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="{{$event1->image}}" alt="">
+                                <img class="max-w-full h-auto" src="{{$event1->image}}" alt="">
                             </div>
 
                         </div>
                         <div class=" ">
 
-                            <div class="details justify-content-center">
+                            <div class="details justify-center">
                                 Event Details :
                                 <p style="width: 400px">
                                     {{$event1->description}}
@@ -63,7 +63,7 @@
         </div>
     </section>
     <!-- End popular-course Area -->
-    @include('_instructors')
+    @include('_MainWebsitePartials._instructors')
 
 
 </x-app>

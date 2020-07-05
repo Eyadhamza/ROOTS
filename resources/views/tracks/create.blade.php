@@ -1,22 +1,22 @@
 <x-app>
-    @include('_header')
-    @include('_banner')
-    @include('_featured')
+    @include('_MainWebsitePartials._header')
+    @include('_MainWebsitePartials._banner')
+    @include('_MainWebsitePartials._featured')
 
-    <div class="d-flex justify-content-center">
-    <form  method="POST" action="/tracks" enctype="multipart/form-data" class=" p-5 text-white bg-dark ">
+    <div class="flex justify-center">
+    <form  method="POST" action="/tracks" enctype="multipart/form-data" class=" p-12 text-white bg-gray-900 ">
         @csrf
 
-            <h4 class=" d-flex justify-content-center ">Name of the track</h4>
-            <div class="m-5 d-flex justify-content-center " >
+            <h4 class=" flex justify-center ">Name of the track</h4>
+            <div class="m-12 flex justify-center " >
                 <input type="text" name="name" class="border border-gray-300 p-2 w-full" id="name">
                 @error('name')
                 <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
                 @enderror
 
             </div>
-            <h4  class=" d-flex justify-content-center ">Description</h4>
-            <div class="m-5 d-flex justify-content-center " >
+            <h4  class=" flex justify-center ">Description</h4>
+            <div class="m-12 flex justify-center " >
 
             <textarea type="text" name="description" class="border border-gray-300 p-2 w-full" id="description" style="width: 800px"
                       required></textarea>
@@ -28,8 +28,8 @@
                 @enderror
 
             </div>
-        <h4  class=" d-flex justify-content-center ">Embed a Video url</h4>
-            <div class="m-5 d-flex justify-content-center">
+        <h4  class=" flex justify-center ">Embed a Video url</h4>
+            <div class="m-12 flex justify-center">
                 <input type="text" name="embedVideo" class="border border-gray-300 p-2 w-full" id="instructors"
                        required>
                 @error('bio')
@@ -37,8 +37,8 @@
                 @enderror
 
             </div>
-            <h4 class="d-flex justify-content-center">Embed an image </h4>
-            <div class="m-5 text-white d-flex justify-content-center">
+            <h4 class="flex justify-center">Embed an image </h4>
+            <div class="m-12 text-white flex justify-center">
                 <div class="">
 
                     <input type="file" name="image" class="border border-gray-300 p-2 w-full" id="image" >
@@ -52,9 +52,9 @@
 
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div class="flex justify-center">
 
-                <button type="submit" class="btn btn-dark p-2 bg-white text-dark d-flex justify-content-center">SUBMIT</button>
+                <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 p-2 bg-white text-gray-900 flex justify-center">SUBMIT</button>
 
 
             </div>

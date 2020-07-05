@@ -25,6 +25,6 @@ class HomeController extends Controller
         $tracks= Track::all();
 
 
-        return view('home',compact('tracks'));
+        return view('Home.home',compact('tracks'));
     }
 }

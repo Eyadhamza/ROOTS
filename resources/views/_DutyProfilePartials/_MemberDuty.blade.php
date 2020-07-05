@@ -1,4 +1,4 @@
-<div class="font-bold text-dark bg-white fullwidth p-4 d-flex justify-content-center " style="font-size: 60px;">
+<div class="font-bold text-gray-900 bg-white fullwidth p-6 flex justify-center " style="font-size: 60px;">
     My Duty as a Member
 </div>
 
@@ -26,22 +26,22 @@
 
 </div>
 
-<a href="#" class="font-bold text-dark bg-white d-flex justify-content-center" style="font-size: 60px">
+<a href="#" class="font-bold text-gray-900 bg-white flex justify-center" style="font-size: 60px">
     My Instructors
 </a>
 @foreach($user->committees as $committee)
     @foreach($committee->users as $user)
         @if($user->all_roles()->contains('Instructor'))
-    <div class="list-group border-bottom">
+    <div class="flex flex-col pl-0 mb-0 border rounded border-gray-300 border-b">
 
-        <a href="/profile/{{$user->id}}" class=" font-bold text-black btn btn-gray " style="font-size: 30px">Name :  {{$user->name}}</a>
-        <a  href="{{$user->telegram_url}}" class=" font-bold text-white btn btn-dark">
+        <a href="/profile/{{$user->id}}" class=" font-bold text-black inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-gray " style="font-size: 30px">Name :  {{$user->name}}</a>
+        <a  href="{{$user->telegram_url}}" class=" font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">
             Send direct Message
         </a>
-        <a  href="/profile/{{$user->id}}" class=" font-bold text-white btn btn-dark">
+        <a  href="/profile/{{$user->id}}" class=" font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">
             View Profile
         </a>
-        <a  href="/notifications/{{$user->id}}" class=" font-bold text-white btn btn-dark">
+        <a  href="/notifications/{{$user->id}}" class=" font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">
             deliver Task
         </a>
 

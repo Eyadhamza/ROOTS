@@ -1,8 +1,8 @@
 <!-- Start cta-one Area -->
 <section class="cta-one-area relative section-gap">
-    <div class="container">
+    <div class="container mx-auto sm:px-4">
         <div class="overlay overlay-bg"></div>
-        <div class="row justify-content-center">
+        <div class="flex flex-wrap  justify-center">
             <div class="wrap">
                 <h1 class="text-white">Become an instructor</h1>
                 <p>

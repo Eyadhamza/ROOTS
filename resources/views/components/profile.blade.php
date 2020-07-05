@@ -12,7 +12,6 @@
     <!-- Favicons -->
     <link href="../../../../../assets2/img/favicon.png" rel="icon">
     <!-- Bootstrap CSS File -->
-    <link href="../../../../../assets2/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
     <link href="../../../../../assets2/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -23,48 +22,52 @@
 
     <!-- Main Stylesheet File -->
     <link href=../../../css/style.css rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     @livewireStyles
 </head>
 
 <body id="page-top">
 
-<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll" href="#page-top">Personal Profile </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="/profile/{{auth()->user()->id}}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll" href="/profile/{{auth()->user()->id}}/duty">Your Duty ..</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll" href="/home">Back to Website</a>
-                </li>
+        <nav class="flex items-center justify-between flex-wrap bg-teal-200 p-10" id="mainNav">
+                <div class="flex items-center flex-shrink-0 text-white mr-6">
+                    <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a>
+                    <span class="ml-2 font-semibold text-xl tracking-tight text-blue-900 ">Personal Profile</span>
+                </div>
+                <div class="block lg:hidden">
+                    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-white">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                    </button>
 
-                <li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll" href="/logout">Logout</a>
-                </li>
+                </div>
+                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto flex justify-center">
+                    <div class="text-sm lg:flex-grow flex justify-end">
+                        <a href="/profile/{{auth()->user()->id}}" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900 font-bold ml-10 text-2xl  hover:text-black mr-4">
+                            Home
+                        </a>
 
-            </ul>
-        </div>
-    </div>
-</nav>
+                        <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900 font-bold ml-10 text-2xl  hover:text-black">
+                            Duty
+                        </a>
+
+                        <a href="/home" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900  font-bold ml-10 text-2xl hover:text-black m-4">
+                            Back to Website
+                        </a>
+                        <a href="/logout" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900  font-bold ml-10 text-2xl  hover:text-black m-4">
+                            logout
+                        </a>
+                    </div>
+
+                </div>
+        </nav>
+
 
 
 <div id="home" class="intro route bg-image" style="background-image: url(../../storage/images/cover.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
         <div class="table-cell">
-            <div class="container">
+            <div class="container mx-auto sm:px-4">
                 <p class="display-6 color-d">Hello, world!</p>
                 <h1 class="intro-title mb-4">I am {{$user->name}}</h1>
                 <p class="intro-subtitle"><span class="text-slider-items">
@@ -87,13 +90,13 @@
 {{$slot}}
 
 <div id="app">
-    @include('flash-message')
+    @include('_MainWebsitePartials.flash-message')
 
 
 </div>
 
-@include('_profile-committees_news')
-@include('_profile-articles')
+@include('_MainProfilePartials._profile-committees_news')
+@include('_MainProfilePartials._profile-articles')
 
 <!--/ Nav Star /-->
 
@@ -111,7 +114,7 @@
 <!--/ Section Blog Star /-->
 
 <!--/ Section Blog End /-->
-@include('_profile-qoute')
+@include('_MainProfilePartials._profile-qoute')
 
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

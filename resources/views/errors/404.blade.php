@@ -1,3 +1,3 @@
 @extends('errors::minimal')
 
-@include('_ERROR404')
+@include('_MainWebsitePartials._ERROR404')

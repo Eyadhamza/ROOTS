@@ -1,7 +1,7 @@
 <x-app>
-    @include('_header')
-    @include('_banner')
-    @include('_featured')
+    @include('_MainWebsitePartials._header')
+    @include('_MainWebsitePartials._banner')
+    @include('_MainWebsitePartials._featured')
 
     <!DOCTYPE html>
 <html lang="en">

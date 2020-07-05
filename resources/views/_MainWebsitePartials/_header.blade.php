@@ -1,7 +1,7 @@
 <header id="header" id="home">
 
-    <div class="container main-menu">
-        <div class="row align-items-center justify-content-between d-flex">
+    <div class="container mx-auto sm:px-4 main-menu">
+        <div class="flex flex-wrap  items-center justify-between flex">
             <div id="logo">
                 <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a> <strong class="bold" style="color: white">ROOTS</strong>
             </div>

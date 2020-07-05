@@ -1,23 +1,23 @@
 <x-app>
-    @include('_header')
+    @include('_MainWebsitePartials._header')
 
 
-    <ul class="list-group">
-        <li class="list-group-item"></li>
+    <ul class="flex flex-col pl-0 mb-0 border rounded border-gray-300">
+        <li class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline"></li>
 
 
 
 
     </ul>
     <section class="blog-area section-gap" id="blog">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-70 col-lg-8">
+        <div class="container mx-auto sm:px-4">
+            <div class="flex flex-wrap  flex justify-center">
+                <div class="menu-content pb-70 lg:w-2/3 pr-4 pl-4">
                     <div class="title text-center">
 
                         <h1 class="mb-10">{{$committee->name}} members </h1>   <h3>@livewire('search')</h3>
                         @foreach(@$committee->users as $user)
-                            <a href="/profile/{{@$user->id}}" class="list-group-item list-group-item-action">{{@$user->name}}</a>
+                            <a href="/profile/{{@$user->id}}" class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline w-fill">{{@$user->name}}</a>
                         @endforeach
                     </div>
                 </div>

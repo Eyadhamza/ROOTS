@@ -1,16 +1,16 @@
-<div class="panel panel-default bg-dark">
+<div class="panel panel-default bg-gray-900">
     <div class="panel-heading">
-        <h3 class="panel-title text-white flex justify-content-center">Edit User</h3>
+        <h3 class="panel-title text-white flex justify-center">Edit User</h3>
     </div>
-    <div class="flex justify-content-center p-5 text-white  ">
+    <div class="flex justify-center p-12 text-white  ">
         <input type="hidden" wire:model="selected_id">
-        <div class="form-group lg-flex justify-content-center ">
+        <div class="mb-4 lg-flex justify-center ">
             Name
-            <div class="input-group m-3">
+            <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="name" type="text" class="form-control input-sm">
+                <input wire:model="name" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
             </div>
-            <div class="m-3">
+            <div class="m-6">
 
                 <select name="role1" wire:model="role1" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Role</option>
@@ -20,7 +20,7 @@
                 </select>
             </div>
             <label class="inline-block w-32 font-bold">Role1:</label>
-            <div class="m-3">
+            <div class="m-6">
 
                 <select name="role2" wire:model="role2" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Role</option>
@@ -30,17 +30,17 @@
                 </select>
             </div>
             email
-            <div class="input-group m-3">
+            <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="email" type="text" class="form-control input-sm">
+                <input wire:model="email" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
             </div>
             password
-            <div class="input-group m-3">
+            <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="password" type="password" class="form-control input-sm">
+                <input wire:model="password" type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
             </div>
             First Committee
-            <div class="m-3">
+            <div class="m-6">
                 <label class="inline-block w-32 font-bold">Committee1:</label>
                 <select name="committee1" wire:model="id1" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
@@ -49,7 +49,7 @@
                     @endforeach
                 </select>
             </div>
-            <div class="m-3">
+            <div class="m-6">
                 <label class="inline-block w-32 font-bold">Committee2:</label>
                 <select name="committee2" wire:model="id2" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
@@ -59,9 +59,9 @@
                 </select>
             </div>
 
-            <div class="input-group flex justify-content-center m-3">
+            <div class="relative flex items-stretch w-full flex justify-center m-6">
                 <br>
-                <button wire:click="update()" class="btn btn-default ">Update</button>
+                <button wire:click="update()" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default ">Update</button>
             </div>
 
         </div>

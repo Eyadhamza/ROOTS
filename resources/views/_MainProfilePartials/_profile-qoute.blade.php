@@ -1,16 +1,16 @@
 <div class="testimonials paralax-mf bg-image" style="background-image: url(../../../assets2/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="container mx-auto sm:px-4">
+        <div class="flex flex-wrap ">
+            <div class="md:w-full pr-4 pl-4">
                 <div id="testimonial-mf" class="owl-carousel owl-theme">
                     <div class="testimonial-box">
                         <div class="author-test">
-                            <img src="img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
+                            <img src="img/testimonial-2.jpg" alt="" class="rounded-full b-shadow-a">
                             <span class="author">Quote you believe in !</span>
                         </div>
                         <div class="content-test">
-                            <p class="description lead">
+                            <p class="description text-xl font-light">
                                 I believe , whatever doesnt kill you , simply makes you ..
 
                             </p>

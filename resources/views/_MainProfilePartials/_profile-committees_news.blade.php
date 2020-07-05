@@ -1,8 +1,8 @@
 <!--/ Section Services Star /-->
 <section id="service" class="services-mf route">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
+    <div class="container mx-auto sm:px-4">
+        <div class="flex flex-wrap ">
+            <div class="sm:w-full pr-4 pl-4">
                 <div class="title-box text-center">
                     <h3 class="title-a">
                         My Committees..
@@ -15,10 +15,10 @@
             </div>
         </div>
         @foreach($user->committees as $committee)
-            <div class="col-md-4">
+            <div class="md:w-1/3 pr-4 pl-4">
                 <div class="service-box">
                     <div class="work-img">
-                        <img src="/../../{{$committee->image}}" alt="" class="img-fluid " style="height: 250px;width: 300px;">
+                        <img src="/../../{{$committee->image}}" alt="" class="max-w-full h-auto " style="height: 250px;width: 300px;">
                     </div>
                     <div class="service-content">
                         <h2 class="s-title">{{$committee->name}}</h2>
