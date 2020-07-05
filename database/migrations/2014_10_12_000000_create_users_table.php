@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->nullable();
             $table->string('avatar')->nullable();
-            $table->string('role')->nullable();
             $table->string('bio')->nullable();
             $table->bigInteger('number')->nullable();
             $table->string('tasks_performance')->default(0);
@@ -26,7 +25,6 @@ class CreateUsersTable extends Migration
             $table->string('knowledge_performance')->default(0);
             $table->string('google_id')->nullable();
             $table->string('telegram_url')->nullable();
-
             $table->string('facebook_id')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

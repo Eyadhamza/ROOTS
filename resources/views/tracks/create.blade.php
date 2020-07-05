@@ -1,77 +1,65 @@
 <x-app>
     @include('_header')
     @include('_banner')
-    <form  method="POST" action="/tracks" enctype="multipart/form-data" class="inline-flex justify-content-center p-5 text-white bg-dark" >
+    @include('_featured')
+
+    <div class="d-flex justify-content-center">
+    <form  method="POST" action="/tracks" enctype="multipart/form-data" class=" p-5 text-white bg-dark ">
         @csrf
 
-
-        <div class="mb-6">
-            <label for="name " class="block mb-2 uppercase font-bold text-sm text-white">
-                Name
-
-            </label>
-            <input type="text" name="name" class="border border-gray-300 p-2 w-full" id="name">
-
-
-
-            @error('name')
-            <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
-            @enderror
-
-        </div>
-        <div class="mb-6">
-            <label for="description " class="block mb-2 uppercase font-bold text-sm text-white">
-                description
-
-            </label>
-            <input type="text" name="description" class="border border-gray-300 p-2 w-full" id="description"
-                   required>
-
-
-
-            @error('description')
-            <p class="text-red-500 text-sm mt-2">{{$message}} </p>
-            @enderror
-
-        </div>
-        <div class="mb-6">
-            <label for="instructors " class="block mb-2 uppercase font-bold text-sm text-white">
-                instructors
-
-            </label>
-            <input type="text" name="instructors" class="border border-gray-300 p-2 w-full" id="instructors"
-                   required>
-
-            @error('bio')
-            <p class="text-red-500 text-sm mt-2">{{$message}} </p>
-            @enderror
-
-        </div>
-
-        <div class="mb-6 text-white">
-            <div class="flex">
-
-                <label for="image " class="block mb-2 uppercase font-bold text-sm text-white">
-                    image
-
-                </label>
-                <input type="file" name="image" class="border border-gray-300 p-2 w-full" id="image" >
-
-
-                @error('image')
+            <h4 class=" d-flex justify-content-center ">Name of the track</h4>
+            <div class="m-5 d-flex justify-content-center " >
+                <input type="text" name="name" class="border border-gray-300 p-2 w-full" id="name">
+                @error('name')
                 <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
                 @enderror
 
             </div>
+            <h4  class=" d-flex justify-content-center ">Description</h4>
+            <div class="m-5 d-flex justify-content-center " >
 
-        </div>
-
-        <div>
-
-            <button type="submit" class="btn btn-dark p-2 bg-white text-dark">submit</button>
+            <textarea type="text" name="description" class="border border-gray-300 p-2 w-full" id="description" style="width: 800px"
+                      required></textarea>
 
 
-        </div>
+
+                @error('description')
+                <p class="text-red-500 text-sm mt-2">{{$message}} </p>
+                @enderror
+
+            </div>
+        <h4  class=" d-flex justify-content-center ">Embed a Video url</h4>
+            <div class="m-5 d-flex justify-content-center">
+                <input type="text" name="embedVideo" class="border border-gray-300 p-2 w-full" id="instructors"
+                       required>
+                @error('bio')
+                <p class="text-red-500 text-sm mt-2">{{$message}} </p>
+                @enderror
+
+            </div>
+            <h4 class="d-flex justify-content-center">Embed an image </h4>
+            <div class="m-5 text-white d-flex justify-content-center">
+                <div class="">
+
+                    <input type="file" name="image" class="border border-gray-300 p-2 w-full" id="image" >
+
+
+                    @error('image')
+                    <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
+                    @enderror
+
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-center">
+
+                <button type="submit" class="btn btn-dark p-2 bg-white text-dark d-flex justify-content-center">SUBMIT</button>
+
+
+            </div>
 
     </form>
+
+    </div>
 </x-app>

@@ -10,7 +10,7 @@
 
                 <input wire:model="name" type="text" class="form-control input-sm">
             </div>
-            <div class="mb-8">
+            <div class="m-3">
 
                 <select name="role1" wire:model="role1" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Role</option>
@@ -20,7 +20,7 @@
                 </select>
             </div>
             <label class="inline-block w-32 font-bold">Role1:</label>
-            <div class="mb-8">
+            <div class="m-3">
 
                 <select name="role2" wire:model="role2" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Role</option>
@@ -40,7 +40,7 @@
                 <input wire:model="password" type="password" class="form-control input-sm">
             </div>
             First Committee
-            <div class="mb-8">
+            <div class="m-3">
                 <label class="inline-block w-32 font-bold">Committee1:</label>
                 <select name="committee1" wire:model="id1" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
@@ -49,7 +49,7 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-8">
+            <div class="m-3">
                 <label class="inline-block w-32 font-bold">Committee2:</label>
                 <select name="committee2" wire:model="id2" class="border shadow p-2 bg-white">
                     <option value=''>Choose a Committee</option>
@@ -59,7 +59,7 @@
                 </select>
             </div>
 
-            <div class="input-group flex justify-content-center">
+            <div class="input-group flex justify-content-center m-3">
                 <br>
                 <button wire:click="update()" class="btn btn-default ">Update</button>
             </div>

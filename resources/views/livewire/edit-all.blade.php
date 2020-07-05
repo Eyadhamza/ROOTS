@@ -7,7 +7,7 @@
                 {{ session('message') }}
             </div>
         @endif
-      @if (count($errors) > 0)
+        @if (count($errors) > 0)
         <div class="alert alert-danger">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <strong>Sorry!</strong> invalid input.<br><br>
@@ -28,6 +28,7 @@
                 <td>ID</td>
                 <td>NAME</td>
                 <td>Committees</td>
+                <td>Roles</td>
                 <td>ACTION</td>
             </tr>
             <tr>
@@ -36,6 +37,11 @@
                 <td>
                     @foreach($user->committees as $committee)
                         {{$committee->name}},
+                    @endforeach
+                </td>
+                <td>
+                    @foreach($user->roles as $role)
+                        {{$role->name}},
                     @endforeach
                 </td>
                 <td width="300">

@@ -24,6 +24,7 @@ class Role extends Model
     {
         return $this->where('name','Instructor')->with('users')->get()->unique();
     }
+
     public function AllowAbility($ability)
     {
 

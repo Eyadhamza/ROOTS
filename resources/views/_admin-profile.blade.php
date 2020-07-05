@@ -20,6 +20,7 @@
                                     <div class="about-info">
                                         <p><span class="title-s">Name: </span> <span>{{$user->name}}</span></p>
                                         <p><span class="title-s">Committee: All Committees </span></p>
+                                        <p><span class="title-s">Telegram: </span> <span>{{$user->telegram_url}}</span></p>
                                         <p><span class="title-s">Email: </span> <span>{{$user->email}}</span></p>
                                         <p><span class="title-s">Phone: </span> <span>{{$user->number}}</span></p>
                                         @can('edit',$user)
@@ -81,7 +82,7 @@
                         My Members
                     </h3>
                     <p class="subtitle-a">
-                        This list presents all users whom i supervise as RR
+                        This list presents all users whom i supervise as An Admin
                     </p>
                     <div class="line-mf"></div>
                 </div>
@@ -90,10 +91,10 @@
         {{--                            my members --}}
 
 
-        @foreach($user->committees as $committee)
+        @foreach(\App\Committee::all() as $committee)
             <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action active">
-                    MY MEMBERS
+                    MY MEMBERS OF {{$committee->name}}
                 </a>
 
                 @foreach($committee->users as $user)

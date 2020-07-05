@@ -16,7 +16,7 @@
 
                 <div class="single-popular-carusel">
                     <div class="thumb-wrap relative">
-                        <div class="thumb relative">
+                        <div class="thumb relative"  style="width: 300px; height: 300px">
                             <div class="overlay overlay-bg"></div>
                             <img class="img-fluid" src="/storage/{{($track1->image)}}" alt="">
                         </div>

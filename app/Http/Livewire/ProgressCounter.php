@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class ProgressCounter extends Component
 {
-    public $user, $selected_id ,$tasks_performance ,$interaction_performance , $knowledge_performance;
+    public $user, $selected_id ,$tasks_performance ,$interaction_performance , $knowledge_performance , $updateMode;
 
 
     public function render()
@@ -33,7 +33,18 @@ class ProgressCounter extends Component
         session()->flash('message', 'Performance Successfully Updated.');
     }
 
+    public function Performance()
+    {
+        if ($this->updateMode==false)
+        {
+            $this->updateMode=true;
 
+        }
+        else
+        {
+            $this->updateMode=false;
+        }
+    }
 
     public function increament_tasks_performance()
     {

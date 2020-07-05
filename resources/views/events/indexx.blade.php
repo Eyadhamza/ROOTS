@@ -44,12 +44,25 @@
                         </div>
                     </div>
                 </div>
+                @if($event1->embedVideo)
+                    <div class="single-popular-carusel" >
+                        <div class="fb-video" data-href="{{$event1->embedVideo}}" data-width="1000" data-show-text="false">
+                            <div class="fb-xfbml-parse-ignore">
+                                <blockquote cite="{{$event1->embedVideo}}">
+                                    <a href="{{$event1->embedVideo}}">How to Share With Just Friends</a>
+                                    <p>How to share with just friends.</p>
+                                    Posted by <a href="https://www.facebook.com/rootscommunity1">Roots</a> on April 2020
+                                </blockquote>
+                            </div>
+                        </div>
+
+                    </div>
+                @endif
                 <hr>
             @endforeach
         </div>
     </section>
     <!-- End popular-course Area -->
-    @include('_search-tracks')
     @include('_instructors')
 
 

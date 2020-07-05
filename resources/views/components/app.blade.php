@@ -40,9 +40,15 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="GEPTbm7y"></script>
 
-{{$slot}}
 
+<div id="app">
+    {{$slot}}
+
+</div>
 <script src="../../../js/vendor/jquery-2.2.4.min.js"></script>
 <script src="../../../js/vendor/bootstrap.min.js"></script>
 <script src="../../../js/easing.min.js"></script>

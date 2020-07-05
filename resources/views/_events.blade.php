@@ -16,17 +16,19 @@
                 <div class="active-popular-carusel">
                     @foreach($events as $event1)
                     <div class="single-popular-carusel m-3">
+                        @if($event1->image)
                         <div class="thumb-wrap relative">
-                            <div class="thumb relative">
+                            <div class="thumb relative" style="width: 300px; height: 300px">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="{{($event1->image)}}" alt="">
+                                <img class="img-fluid" src="{{($event1->image)}}" alt="" >
                             </div>
                             <div class="meta d-flex justify-content-between">
 
                             </div>
                         </div>
+                        @endif
                         <div class="details p-4">
-                            <a href="#">
+                            <a href="/events">
                                 <h4>
                                     {{$event1->name}}
                                 </h4>

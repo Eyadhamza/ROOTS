@@ -21,5 +21,8 @@ class Achievement extends Model
 
         return "storage/". $value;
     }
-
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

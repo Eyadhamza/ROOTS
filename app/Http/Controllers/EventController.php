@@ -19,6 +19,7 @@ class EventController extends Controller
             'description'=>'required',
             'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name'=>'required',
+            'embedVideo'=>'required'
         ]);
         $imagepath=null;
         if (\request('image'))
@@ -30,7 +31,7 @@ class EventController extends Controller
             'description'=>$attributes['description'],
             'image'=>$imagepath,
             'name'=>$attributes['name'],
-
+            'embedVideo'=>$attributes['embedVideo']
         ]);
 
 

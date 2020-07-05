@@ -17,6 +17,10 @@ class AchievementController extends Controller
     {
         return view('achievements.create');
     }
+    public function show(Achievement $achievement)
+    {
+        return view('achievements.show',compact('achievement'));
+    }
     public function store(Request $request)
     {
 
@@ -47,8 +51,5 @@ class AchievementController extends Controller
         return redirect('/achievements');
 
     }
-    public function show(Achievement $achievement)
-    {
-        return view('achievement.show',compact('achievement'));
-    }
+
 }

@@ -5,6 +5,7 @@
         <div class="contact-image">
             <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
         </div>
+        @include('flash-message')
 
         <form action="/notifications/all" method="post">
             <h3>Here you can send a task to all Your Members</h3>

@@ -25,3 +25,27 @@
     </div>
 
 </div>
+
+<a href="#" class="font-bold text-dark bg-white d-flex justify-content-center" style="font-size: 60px">
+    My Instructors
+</a>
+@foreach($user->committees as $committee)
+    @foreach($committee->users as $user)
+        @if($user->all_roles()->contains('Instructor'))
+    <div class="list-group border-bottom">
+
+        <a href="/profile/{{$user->id}}" class=" font-bold text-black btn btn-gray " style="font-size: 30px">Name :  {{$user->name}}</a>
+        <a  href="{{$user->telegram_url}}" class=" font-bold text-white btn btn-dark">
+            Send direct Message
+        </a>
+        <a  href="/profile/{{$user->id}}" class=" font-bold text-white btn btn-dark">
+            View Profile
+        </a>
+        <a  href="/notifications/{{$user->id}}" class=" font-bold text-white btn btn-dark">
+            deliver Task
+        </a>
+
+    </div>
+    @endif
+@endforeach
+@endforeach

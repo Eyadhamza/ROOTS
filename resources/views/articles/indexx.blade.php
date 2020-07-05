@@ -29,9 +29,8 @@
                         <div class="feature-img">
                             <img class="img-fluid" src="{{$article->image}}" alt="">
                         </div>
-                        <iframe width="420" height="315" src="//https://www.youtube.com/watch?v=ex0o2eRhtp4" frameborder="0" allowfullscreen></iframe>
 
-                        <a class="posts-title" href="blog-single.html"><h3>{{$article->title}}</h3></a>
+                        <a class="posts-title" href="article/{{$article->id}}"><h3>{{$article->title}}</h3></a>
                         <p class="excert">
                             {{$article->description}}
                         </p>
@@ -42,14 +41,11 @@
             <div class="col-lg-4 sidebar-widgets">
                 <div class="widget-wrap">
                     <div class="single-sidebar-widget search-widget">
-                        <form class="search-form" action="#">
-                            <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+
                     </div>
                     <div class="single-sidebar-widget user-info-widget">
                         <img src="{{@$article->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
-                        <a href="#"><h4> {{@$article->user->name}}</h4></a>
+                        <a href="#"><h4 style="color: #1b1e21"> {{@$article->user->name}}</h4></a>
 
                         <p>
                             @foreach(@$article->user->roles as $role)
@@ -62,7 +58,6 @@
                                     {{@$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>
                             @endforeach
-                        </p>
                         <ul class="social-links">
                             <li><a href="  {{@$article->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="{{@$article->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
@@ -80,38 +75,21 @@
                                 <div class="thumb">
                                     <img class="img-fluid" src="" alt="">
                                 </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
+
+
+
+                                <ul>
+                                    <li>
+                                        @foreach(@$article->user->articles as $article)
+                                        <a href="/article/{{@$article->id}}"><h6>{{@$article->title}}</h6></a>
+                                        <p>{{@$article->created_at}}</p>
+                                        @endforeach
+                                    </li>
+
+                                </ul>
+
                             </div>
-                            <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="img/blog/pp2.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="img/blog/pp3.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="img/blog/pp4.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>Asteroids telescope</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
         </div>

@@ -48,10 +48,11 @@ Route::get('/committees/{committee}/edit','CommitteesController@edit')->middlewa
 
 Route::get('/articles', 'ArticlesController@index');
 Route::get('/articles/create', 'ArticlesController@create')->middleware('auth');
-Route::get('/articles/{article}', 'ArticlesController@show')->middleware('auth');
+Route::get('/article/{article}', 'ArticlesController@show')->middleware('auth');
 Route::post('/articles', 'ArticlesController@store')->middleware('auth');
 Route::get('/achievements', 'AchievementController@index');
 Route::get('/achievements/create', 'AchievementController@create')->middleware('auth');
+Route::get('/achievement/{achievement}', 'AchievemensController@show')->middleware('auth');
 
 //need to finish it
 Route::get('/achievement/{achievement}', 'AchievementController@show');
@@ -65,6 +66,9 @@ Route::post('/events', 'EventController@store')->middleware('auth')->middleware(
 
 Route::get('/contact','ContactController@index');
 Route::post('/contact','ContactController@store');
+
+Route::get('/notifications/rr','NotificationController@createRRTask');
+Route::post('/notifications/rr','NotificationController@storeRRTask');
 
 Route::get('/notifications','NotificationController@createTask');
 Route::post('/notifications/all','NotificationController@storeTask');

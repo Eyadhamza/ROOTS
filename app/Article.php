@@ -16,6 +16,10 @@ class Article extends Model
     {
         return $this->belongsTo(Committee::class);
     }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
     public function getImageAttribute($value)
     {
 

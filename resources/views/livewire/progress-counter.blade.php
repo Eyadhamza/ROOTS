@@ -1,7 +1,8 @@
 <div>
 
 
-    <p class="title-s d-flex justify-content-center">Performance</p>
+    <btn class="title-s d-flex justify-content-center btn btn-dark text-white" wire:click="Performance()">Performance</btn>
+    @if($updateMode)
     <div class="m-5">
         <span>Required Tasks</span><span class="pull-right">{{$tasks_performance}}%</span>
         <button type="button" wire:click="decreament_tasks_performance" class="btn btn-danger text-white" style="width: 50px;">-</button>
@@ -46,4 +47,6 @@
             {{ session('message') }}
         </div>
     @endif
+
+     @endif
 </div>

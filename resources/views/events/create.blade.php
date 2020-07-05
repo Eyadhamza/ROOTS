@@ -2,78 +2,65 @@
 @include('_header')
     @include('_banner')
     @include('_featured')
-    <form  method="POST" action="/events" enctype="multipart/form-data" class="inline-flex justify-content-center p-5 text-white bg-dark" >
-        @csrf
 
+        <div class="d-flex justify-content-center">
+            <form  method="POST" action="/events" enctype="multipart/form-data" class=" p-5 text-white bg-dark ">
+                @csrf
 
-        <div class="mb-6 form-group  justify-content-center">
-            <label for="name " class="block mb-2 uppercase font-bold text-sm text-white">
-                Name
+                <h4 class=" d-flex justify-content-center ">Name of the Event</h4>
+                <div class="m-5 d-flex justify-content-center " >
+                    <input type="text" name="name" class="border border-gray-300 p-2 w-full" id="name">
+                    @error('name')
+                    <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
+                    @enderror
 
-            </label>
-            <input type="text" name="name" class="border border-gray-300 p-2 w-full" id="name">
+                </div>
+                <h4  class=" d-flex justify-content-center ">Description</h4>
+                <div class="m-5 d-flex justify-content-center " >
 
-
-
-            @error('name')
-            <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
-            @enderror
-
-        </div>
-        <div class="mb-6">
-            <label for="description " class="block mb-2 uppercase font-bold text-sm text-white">
-                description
-
-            </label>
-            <input type="text" name="description" class="border border-gray-300 p-2 w-full" id="description"
-                   required>
+            <textarea type="text" name="description" class="border border-gray-300 p-2 w-full" id="description" style="width: 800px"
+                      required></textarea>
 
 
 
-            @error('description')
-            <p class="text-red-500 text-sm mt-2">{{$message}} </p>
-            @enderror
+                    @error('description')
+                    <p class="text-red-500 text-sm mt-2">{{$message}} </p>
+                    @enderror
 
-        </div>
-        <div class="mb-6">
-            <label for="instructors " class="block mb-2 uppercase font-bold text-sm text-white">
-                instructors
+                </div>
+                <h4  class=" d-flex justify-content-center ">Embed a Video url</h4>
+                <div class="m-5 d-flex justify-content-center">
+                    <input type="text" name="embedVideo" class="border border-gray-300 p-2 w-full" id="instructors"
+                           required>
+                    @error('bio')
+                    <p class="text-red-500 text-sm mt-2">{{$message}} </p>
+                    @enderror
 
-            </label>
-            <input type="text" name="instructors" class="border border-gray-300 p-2 w-full" id="instructors"
-                   required>
+                </div>
+                <h4 class="d-flex justify-content-center">Embed an image </h4>
+                <div class="m-5 text-white d-flex justify-content-center">
+                    <div class="">
 
-            @error('bio')
-            <p class="text-red-500 text-sm mt-2">{{$message}} </p>
-            @enderror
-
-        </div>
-
-        <div class="mb-6 text-white">
-            <div class="flex">
-
-                <label for="image " class="block mb-2 uppercase font-bold text-sm text-white">
-                    image
-
-                </label>
-                <input type="file" name="image" class="border border-gray-300 p-2 w-full" id="image" >
+                        <input type="file" name="image" class="border border-gray-300 p-2 w-full" id="image" >
 
 
-                @error('image')
-                <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
-                @enderror
+                        @error('image')
+                        <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
+                        @enderror
 
-            </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-center">
+
+                    <button type="submit" class="btn btn-dark p-2 bg-white text-dark d-flex justify-content-center">SUBMIT</button>
+
+
+                </div>
+
+            </form>
 
         </div>
 
-        <div>
-
-            <button type="submit" class="btn btn-dark p-2 bg-white text-black">submit</button>
-
-
-        </div>
-
-    </form>
-@include('_search-tracks')
 </x-app>

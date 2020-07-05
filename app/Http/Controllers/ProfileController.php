@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 class ProfileController extends Controller
 {
@@ -29,9 +31,10 @@ class ProfileController extends Controller
             'name'=>'required', 'string', 'max:255',
             'username'=>'required', 'string', 'max:255',
             'bio'=>'nullable',
-            'avatar'=>'file',
+            'telegram_url'=>'nullable',
+            'avatar'=>'file|image',
             'email'=>'required', 'string', 'email', 'max:255', 'unique:users',
-            'password'=>'required', 'string', 'min:8', 'confirmed'
+            'password'=>'nullable', 'string', 'min:8', 'confirmed'
         ]);
         if (\request('avatar'))
         {
@@ -40,7 +43,7 @@ class ProfileController extends Controller
         }
 
         $user->update($data);
-        return redirect('/profile/'.$user->id);
+        return redirect('/profile/'.$user->id)->with('success','Your Info was Updated successfully');
     }
     public function index()
     {
@@ -49,6 +52,16 @@ class ProfileController extends Controller
     }
     public function duty(User $user)
     {
-        return view('profile.duty',compact('user'));
+
+        $RRusers=[];
+        foreach (Role::all() as $role)
+            if ($role->name == 'RR')
+            {
+                $RRusers= $role->users;
+
+            }
+        return view('profile.duty',compact('user','RRusers'));
     }
+
+
 }

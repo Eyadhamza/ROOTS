@@ -81,6 +81,17 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Telegram</label>
+                                                                    <input class="form-control" type="text" placeholder="http://t.me" name="telegram_url" value="{{$user->telegram_url}}">
+                                                                </div>
+                                                            </div>
+                                                            @error('telegram_url')
+                                                            <p class="text-danger text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="row">
                                                             <div class="row">
 
                                                                 <label for="avatar " class="block mb-2 uppercase font-bold text-sm text-white">
@@ -91,7 +102,7 @@
 
 
                                                                 @error('avatar')
-                                                                <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
+                                                                <p class="text-danger text-sm mt-2 ">{{$message}}</p>
                                                                 @enderror
 
                                                                 <img

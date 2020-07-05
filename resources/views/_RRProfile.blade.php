@@ -103,4 +103,6 @@
                         @endforeach
                     </div>
                 @endforeach
+            </div>
+        </section>
 

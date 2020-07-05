@@ -18,7 +18,8 @@ class CreateTracksTable extends Migration
             $table->string('name');
             $table->foreignId('committee_id')->nullable();
             $table->string('instructors')->nullable();
-            $table->string('image');
+            $table->string('embedVideo')->nullable();
+            $table->string('image')->nullable();
             $table->longText('description');
             $table->timestamps();
         });

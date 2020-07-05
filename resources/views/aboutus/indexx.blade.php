@@ -6,8 +6,8 @@
 			<section class="info-area pb-120">
 				<div class="container-fluid">
 					<div class="row align-items-center">
-						<div class="col-lg-6 ">
-							<img class="img-fluid" src="storage/images/logo1.png" alt="" style=width:500px; height:250px;>
+						<div class="col-lg-6 d-flex justify-content-center">
+							<img class="img-fluid" src="storage/images/logo1.png" alt="" style=width:500px;>
 						</div>
 						<div class="col-lg-6 info-area-right">
                             <h1 class="p-4">Our Story</h1>
@@ -54,13 +54,13 @@
                                 <dt>
                                     <a href="">Success</a>
                                 </dt>
-                                <dd class="text-white">
+                                <dd class="text-dark">
                                    we aim to create a community of people who are passionate about our dreams , through the help of our wonderful heroes whom we call instructors and mentors !
                                 </dd>
                                 <dt>
                                     <a href="">Working in teams </a>
                                 </dt>
-                                <dd class="text-white">
+                                <dd class="text-dark">
                                    Working with other people is like sharing each other brain , each will share his knowledge ..
                                     his skills , and also his passion !
                                     all companies would ask you if you ever worked in teams ..
@@ -70,13 +70,13 @@
                                 <dt>
                                     <a href="">experience in the actual market!</a>
                                 </dt>
-                                <dd class="text-white">
+                                <dd class="text-dark">
                                    one of our main goals is to make you a one step close to the market , to stay and get in touch with companies and clients , to know the requirements of the market and set a foot in it !
                                 </dd>
                                 <dt>
                                     <a href="">encouraging each other </a>
                                 </dt>
-                                <dd class="text-white">
+                                <dd class="text-dark">
                                     everybody must have started something and eventually quit everything and stop ..
                                     why ?
                                     because its the human nature , it loses passion ..
@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-md-6  justify-content-center align-items-center d-flex relative">
                         	<div class=""></div>
-							<img class="img-fluid mx-auto w-75" src="storage/images/roo.jpg" alt="" >
+							<img class="img-fluid mx-auto w-75" src="storage/images/success1.png" alt="" >
                         </div>
                     </div>
 				</div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Committee;
 use App\Role;
 use App\User;
 use Illuminate\Database\Seeder;
@@ -22,8 +23,7 @@ class UserTableSeeder extends Seeder
        $AdminUser = User::firstOrCreate([
             'name'=>'eyad hamza 4',
             'avatar'=>'/images/me.jpg',
-            'role'=>'Admin',
-            'email'=>'eyaasdahamza000000100000@outlook.com',
+            'email'=>'eyadhamza0@outlook.com',
             'tasks_performance'=>$faker->numberBetween(0,100),
             'interaction_performance'=>$faker->numberBetween(0,100),
             'knowledge_performance'=>$faker->numberBetween(0,100),
@@ -32,7 +32,6 @@ class UserTableSeeder extends Seeder
         $RRUser = User::firstOrCreate([
             'name'=>'eyad hamza 3',
             'avatar'=>'/images/me.jpg',
-            'role'=>'RR',
             'email'=>'eyadhasdasdamza00100@outlook.com',
             'tasks_performance'=>$faker->numberBetween(0,100),
             'interaction_performance'=>$faker->numberBetween(0,100),
@@ -41,7 +40,6 @@ class UserTableSeeder extends Seeder
         ]);
         $InstructorUser = User::firstOrCreate([
             'name'=>'eyad Hamza',
-            'role'=>'instructor',
             'email'=>$faker->email,
             'avatar'=>'/images/me.jpg',
             'tasks_performance'=>$faker->numberBetween(0,100),
@@ -51,7 +49,6 @@ class UserTableSeeder extends Seeder
         ]);
         $MemberUser = User::firstOrCreate([
             'name'=>'eyad hamza 2',
-            'role'=>'member',
             'avatar'=>'/images/me.jpg',
             'email'=>'eyadhasdasdsddssaamza000000@outlook.com',
             'tasks_performance'=>$faker->numberBetween(0,100),
@@ -141,39 +138,46 @@ class UserTableSeeder extends Seeder
         ]);
 
 //seeding committees
-        DB::table('committees')->insert([
+            $committe1 =Committee::firstOrCreate([
             'name'=>'Security',
             'image'=>'/images/logo1.png',
             'description'=>$faker->paragraph,
 
         ]);
-        DB::table('committees')->insert([
+        $committe2 =Committee::firstOrCreate([
             'name'=>'Network',
 
             'image'=>'/images/logo1.png',
             'description'=>$faker->paragraph,
 
         ]);
-        DB::table('committees')->insert([
+        $committe3 =Committee::firstOrCreate([
             'name'=>'UI/UX',
 
             'image'=>'/images/logo1.png',
             'description'=>$faker->paragraph,
 
         ]);
-        DB::table('committees')->insert([
+        $committe4 =Committee::firstOrCreate([
             'name'=>'IOS',
 
             'image'=>'/images/logo1.png',
             'description'=>$faker->paragraph,
 
         ]);
-        DB::table('committees')->insert([
+        $committe5 =Committee::firstOrCreate([
             'name'=>'Android',
             'image'=>'/images/logo1.png',
             'description'=>$faker->paragraph,
 
         ]);
+
+        $AdminUser->AssignCommittee($committe1);
+        $MemberUser->AssignCommittee($committe2);
+        $RRUser->AssignCommittee($committe3);
+        $MemberUser->AssignCommittee($committe4);
+        $MemberUser->AssignCommittee($committe5);
+        $InstructorUser->AssignCommittee($committe1);
 
         //seeding tracks
         DB::table('tracks')->insert([

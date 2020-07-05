@@ -73,9 +73,15 @@ class User extends Authenticatable
 
         $this->roles()->sync($role,false);
     }
+    public function AssignCommittee($committee)
+    {
+
+        $this->committees()->sync($committee,false);
+    }
     public function abilities()
     {
         return $this->roles->map->abilities->flatten()->pluck('name')->unique();
     }
+
 
 }

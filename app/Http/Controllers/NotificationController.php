@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Notifications\user;
+use App\Role;
 use Illuminate\Http\Request;
 
 class NotificationController extends Controller
@@ -28,7 +29,29 @@ class NotificationController extends Controller
                 $user->notify(new user( \request('title') ,\request('user_message')));
             });
 
-        return redirect('/notifications');
+        return back()->with('success','Notifications and Messages sent successfully!');
+    }
+    public function createRRTask()
+    {
+        return view('notifications.createRRtask');
+    }
+    public function storeRRTask()
+    {
+        request()->validate([
+            'title'=>'required',
+            'user_message'=>'required'
+        ]);
+
+        foreach (Role::all() as $role)
+            if ($role->name =='RR')
+            {
+                foreach ($role->users as $user)
+                    $user->notify(new user(\request('title'), \request('user_message')));
+            }
+
+
+        return back()->with('success','Notifications and Messages sent successfully!');
+
     }
     public function storeOneTask(\App\User $user2)
     {
@@ -39,7 +62,7 @@ class NotificationController extends Controller
 
         $user2->notify(new user(\request('title') ,\request('user_message')));
 
-        return redirect('/notifications');
+        return back()->with('success','Notifications and Messages sent successfully!');
     }
 
 }

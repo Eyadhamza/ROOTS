@@ -3,7 +3,7 @@
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
             <div id="logo">
-                <a href="index.html"><img src="../../../../img/logo1.png" alt="" title="" style="width: 52px; height: 48px ;border-radius: 100%" /></a> <strong class="bold">ROOTS</strong>
+                <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a> <strong class="bold" style="color: white">ROOTS</strong>
             </div>
             <nav id="nav-menu-container text-dark">
                 <ul class="nav-menu ">
@@ -11,6 +11,10 @@
                     @auth()
                     <li><a href="/profile/{{auth()->user()->id}}">My Profile</a></li>
                     @endauth
+                    @guest()
+                        <li ><a href="/login" >Login</a></li>
+
+                    @endguest
                     <li ><a href="/aboutus" >About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="/events">Events</a></li>

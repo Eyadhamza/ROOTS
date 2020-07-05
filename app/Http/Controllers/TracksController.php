@@ -19,7 +19,7 @@ class TracksController extends Controller
             'description'=>'required',
             'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name'=>'required',
-            'instructors'=>'required'
+            'embedVideo'=>'required'
         ]);
         $imagepath=null;
         if (\request('image'))
@@ -31,7 +31,7 @@ class TracksController extends Controller
             'description'=>$attributes['description'],
             'image'=>$imagepath,
             'name'=>$attributes['name'],
-            'instructors'=>$attributes['instructors']
+            'embedVideo'=>$attributes['embedVideo']
         ]);
 
 
