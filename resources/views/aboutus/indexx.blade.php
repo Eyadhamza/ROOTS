@@ -7,7 +7,7 @@
 				<div class="container-fluid">
 					<div class="row align-items-center">
 						<div class="col-lg-6 d-flex justify-content-center">
-							<img class="img-fluid" src="storage/images/logo1.png" alt="" style=width:500px;>
+							<img class="img-fluid" src="storage/images/logo1111.png" alt="" >
 						</div>
 						<div class="col-lg-6 info-area-right">
                             <h1 class="p-4">Our Story</h1>
