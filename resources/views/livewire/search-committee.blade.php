@@ -1,16 +1,19 @@
 
-<div class="relative ">
-    <div class="m-6 flex justify-center" style="font-size: 35px">
-        Here you can search the available committees :
-    </div>
-    <div class="flex justify-center">
-        <input
-            type="text"
-            class="form-input p-6 m-6 "
-            placeholder="Search committees..."
-            wire:model="search"
+<div class="relative mx-auto">
 
-        />
+    <div class="p-8 w-1/2 mx-auto">
+        <p class ="mx-auto text-4xl text-blue-800 m-3">Search the available committees :</p>
+
+        <div class="bg-white flex items-center rounded-full shadow-xl">
+
+            <input wire:model="search" class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
+
+            <div class="p-4">
+                <button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
 
@@ -38,30 +41,30 @@
             @endif
         </div>
     @endif
-    <div class="flex m-6">
+
+
+
         <h2 class="font-bold p-6 flex justify-center">you can find and modify Committees Here..</h2>
         @foreach($all_committees as $committee)
-        <div class="flex justify-center">
-         <li class=" border-b bg-gray text-gray-900 ">
-        <a href="/committees/{{$committee->id}}" class="w-full font-bold text-gray-900 m-2">
-            <h5 class="text-gray-900"> Name : {{$committee->name}}</h5>
-            <h5 class="text-gray-900">ID :  {{$committee->id}}
 
-            </h5>
+            <div class="flex justify-around p-4 rounded-lg border-2 border-blue-300 w-3/4 mx-auto">
 
-        </a>
-        <a  href="/committees/{{$committee->id}}/edit" class="w-full font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-2">
-            Edit
-        </a>
-        <a  href="/committees/{{$committee->id}}" class="w-full font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-2">
-            View
-        </a>
-         </li>
-        </div>
+                    <p class="text-gray-900 text-4xl w-1/3"> Name : {{$committee->name}}</p>
+
+
+                <a  href="/committees/{{$committee->id}}/edit" class="w-1/6 h-10 font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-2">
+                    Edit
+                </a>
+                <a  href="/committees/{{$committee->id}}" class="w-1/6 h-10 font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-500 text-white hover:bg-gray-900 m-2">
+                    View
+                </a>
+            </div>
+
+
 
 
 
         @endforeach
-    </div>
 
+</div>
 </div>

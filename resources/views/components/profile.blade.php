@@ -29,48 +29,42 @@
 
 <body id="page-top">
 
-        <nav class="flex items-center justify-between flex-wrap bg-teal-200 p-10" id="mainNav">
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a>
-                    <span class="ml-2 font-semibold text-xl tracking-tight text-blue-900 ">Personal Profile</span>
-                </div>
-                <div class="block lg:hidden">
-                    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-white">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                    </button>
-
-                </div>
-                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto flex justify-center">
-                    <div class="text-sm lg:flex-grow flex justify-end">
-                        <a href="/profile/{{auth()->user()->id}}" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900 font-bold ml-10 text-2xl  hover:text-black mr-4">
-                            Home
-                        </a>
-
-                        <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900 font-bold ml-10 text-2xl  hover:text-black">
-                            Duty
-                        </a>
-
-                        <a href="/home" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900  font-bold ml-10 text-2xl hover:text-black m-4">
-                            Back to Website
-                        </a>
-                        <a href="/logout" class="block mt-4 lg:inline-block lg:mt-0 text-blue-900  font-bold ml-10 text-2xl  hover:text-black m-4">
-                            logout
-                        </a>
-                    </div>
-
-                </div>
-        </nav>
 
 
 
-<div id="home" class="intro route bg-image" style="background-image: url(../../storage/images/cover.jpg)">
+
+<div id="home" class="intro route bg-image bg-no-repeat bg-center bg-cover h-screen" style="background-image: url(../../storage/images/cover.jpg)">
+    <nav class="bg-transparent   flex-wrap opacity-100 z-50 overlay-itro" id="mainNav">
+
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto flex justify-center bg-transparent m-10">
+            <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a>
+            <span class="ml-2 font-semibold text-xl tracking-tight text-blue-200 ">Personal Profile</span>
+            <div class="text-sm lg:flex-grow flex justify-end bg-transparent">
+                <a href="/profile/{{auth()->user()->id}}" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 font-bold ml-10 text-2xl  hover:text-black mr-4 bg-transparent">
+                    Home
+                </a>
+
+                <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 font-bold ml-10 text-2xl  hover:text-black bg-transparent">
+                    Duty
+                </a>
+
+                <a href="/home" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200  font-bold ml-10 text-2xl hover:text-black m-4 bg-transparent">
+                    Back to Website
+                </a>
+                <a href="/logout" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200  font-bold ml-10 text-2xl  hover:text-black m-4 bg-transparent">
+                    logout
+                </a>
+            </div>
+
+        </div>
+    </nav>
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
         <div class="table-cell">
-            <div class="container mx-auto sm:px-4">
-                <p class="display-6 color-d">Hello, world!</p>
-                <h1 class="intro-title mb-4">I am {{$user->name}}</h1>
-                <p class="intro-subtitle"><span class="text-slider-items">
+            <div class="container mx-auto sm:px-4 text-blue-200">
+                <p class="display-6 color-d  text-blue-200">Hello, world!</p>
+                <h1 class="text-6xl mb-4  text-blue-200">I am {{$user->name}}</h1>
+                <p class="intro-subtitle  text-blue-200"><span class="text-slider-items">
                         @foreach($user->roles as $role)
                             {{$role->name}} ,
 
