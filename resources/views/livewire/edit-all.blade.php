@@ -21,7 +21,7 @@
     @livewire('search')
 
 
-    <table class="w-3/4 mx-auto border-2  bg-blue-200 ">
+    <table class="w-3/4 mx-auto border-2  ">
         <div class ="flex justify-center text-4xl text-blue-800">Here are all users </div>
 
         <tr>
@@ -32,8 +32,8 @@
         </tr>
         @foreach($users as $user)
 
-            <tr class="border-2 rounded-full border-blue-400 bg-blue-100 text-2xl ">
-                <td>{{$user->name}}</td>
+            <tr class="border-2 rounded-full border-blue-100  text-2xl p-10">
+                <td class="p-10">{{$user->name}}</td>
                 <td>
                     @foreach($user->committees as $committee)
                         {{$committee->name}},
@@ -45,7 +45,7 @@
                     @endforeach
                 </td>
                 <td class="w-30">
-                    <button wire:click="edit({{$user->id}})" class="bg-blue-900 text-white hover:bg-gray-900 w-full text-white">Edit</button>
+                    <button wire:click="edit({{$user->id}})" class="bg-blue-400 text-white hover:bg-gray-900 w-full text-white">Edit</button>
                     @if($updateMode && $selected_id==$user->id)
                         @include('livewire.update')
 
@@ -63,7 +63,7 @@
                         </div>
                     @endif
                     <button onclick="confirm('Confirm delete?') || event.stopImmediatePropagation()" wire:click="destroy({{$user->id}})"
-                            class="bg-red-500 text-white hover:bg-gray-900 w-full text-white bg-red-600 text-white hover:bg-red-700 w-full">
+                            class="bg-red-500 text-white hover:bg-gray-900   bg-red-800  hover:bg-red-900 w-full ">
                         Delete
                     </button>
                 </td>

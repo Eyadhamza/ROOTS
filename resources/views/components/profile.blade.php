@@ -33,8 +33,8 @@
 
 
 
-<div id="home" class="intro route bg-image bg-no-repeat bg-center bg-cover h-screen" style="background-image: url(../../storage/images/cover.jpg)">
-    <nav class="bg-transparent   flex-wrap opacity-100 z-50 overlay-itro" id="mainNav">
+<div id="home" class="intro route bg-image bg-no-repeat bg-center bg-cover h-screen " style="background-image: url(../../storage/images/roots_cover1.png)">
+    <nav class="bg-transparent flex-wrap opacity-100 z-50 overlay-itro" id="mainNav">
 
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto flex justify-center bg-transparent m-10">
             <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a>
@@ -44,7 +44,7 @@
                     Home
                 </a>
 
-                <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 font-bold ml-10 text-2xl  hover:text-black bg-transparent">
+                <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-blue-200 font-bold ml-10 text-2xl  hover:text-black bg-transparent">
                     Duty
                 </a>
 
@@ -58,13 +58,13 @@
 
         </div>
     </nav>
-    <div class="overlay-itro"></div>
+    <div class="overlay-itro text-black"></div>
     <div class="intro-content display-table">
         <div class="table-cell">
-            <div class="container mx-auto sm:px-4 text-blue-200">
-                <p class="display-6 color-d  text-blue-200">Hello, world!</p>
-                <h1 class="text-6xl mb-4  text-blue-200">I am {{$user->name}}</h1>
-                <p class="intro-subtitle  text-blue-200"><span class="text-slider-items">
+            <div class="container mx-auto sm:px-4 text-white">
+                <p class="display-6 color-d  text-white">Hello, world!</p>
+                <h1 class="text-6xl mb-4  text-white">I am {{$user->name}}</h1>
+                <p class="intro-subtitle  text-white"><span class="text-slider-items">
                         @foreach($user->roles as $role)
                             {{$role->name}} ,
 

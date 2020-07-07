@@ -5,8 +5,9 @@
         <div class="flex flex-wrap  flex justify-center">
             <div class="menu-content pb-70 lg:w-2/3 pr-4 pl-4">
                 <div class="title text-center">
-                    <h1 class="mb-10">Our Events.. </h1>
-                    <p>it's all about the first move !</p>
+                  
+                    <h1 class="mb-10 text-3xl lg:text-6xl font-bold">Our Events</h1>
+                    <p class="text-xl font-bold font-mono">it's all about the first move !</p>
                 </div>
             </div>
         </div>

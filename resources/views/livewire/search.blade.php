@@ -2,8 +2,8 @@
 <div class=" mx-auto">
 
 
-    <div class="p-8 w-1/2 mx-auto">
-        <p class ="mx-auto text-4xl text-blue-800 m-4"> Search users :</p>
+    <div class="p-8 w-full mx-auto lg:w-1/2">
+            <p class ="mx-auto text-2xl text-blue-800 m-4 flex justify-center lg:text-4xl"> Search users :</p>
 
         <div class="bg-white flex items-center rounded-full shadow-xl">
 

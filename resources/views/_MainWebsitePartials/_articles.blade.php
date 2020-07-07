@@ -1,8 +1,9 @@
 <div class="flex flex-wrap  flex justify-center">
     <div class="menu-content pb-70 lg:w-2/3 pr-4 pl-4">
         <div class="title text-center">
-            <h1 class="mb-10">latest Articles from our Blog.. </h1>
-            <p>learn while you are here  !</p>
+            <h1 class="mb-10 text-3xl lg:text-6xl font-bold">latest Articles from our Blog</h1>
+            <p class="text-xl font-bold font-mono mx-auto flex justify-center">learn while you are here  !</p>
+
         </div>
     </div>
 </div>

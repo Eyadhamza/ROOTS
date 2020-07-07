@@ -10,7 +10,7 @@
 ======================================*/
 
 body {
-  background-color: #f5f5f5;
+    background: -webkit-linear-gradient(left, lightskyblue, white);
   color: #4e4e4e;
 }
 

@@ -1,7 +1,7 @@
 <div class="w-full">
 
 
-    <a class="mx-auto flex justify-center w-1/2 title-s flex justify-center inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 text-white m-2" wire:click="Performance()">Performance</a>
+    <a class="mx-auto flex justify-center w-full title-s flex justify-center inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 text-white m-2" wire:click="Performance()">Performance</a>
     @if($updateMode)
     <div class="m-12 w-2/3 mx-auto">
         <div class="flex justify-around">
