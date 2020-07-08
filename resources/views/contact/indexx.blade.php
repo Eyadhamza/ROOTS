@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="flex-col size2">
-						<span class="txt1 p-b-20">
+						<span class="txt1 p-b-20 te">
 							Address
 						</span>
 
@@ -126,7 +126,7 @@
 
 						</span>
 
-                    <a href=""> <span class="txt4 ">
+                    <a href=""> <span class="text-gray-500-700 hover:text-gray-700 text-2xl" >
 							rootscommunity7@gmail.com
                     </span></a>
                 </div>
@@ -144,8 +144,8 @@
 						</span>
 
                     <a href="https://www.facebook.com/rootscommunity1">
-                        <span class="txt4 ">
-                            facebook.com/rootscommunity1
+                        <span class="text-blue-700 hover:text-blue-900 text-2xl" >
+                            rootscommunity1
                         </span></a>
 
 
@@ -164,7 +164,7 @@
 						</span>
 
                     <a href="https://twitter.com/rootscommunity1">
-                        <span class="txt4 ">
+                        <span  class="text-blue-700 hover:text-blue-900 text-2xl" >
                             @rootscommunity1
                         </span></a>
 

@@ -8,7 +8,7 @@
                    </div>
                </div>
           </div>
-        <div class="container mx-auto sm:px-4 bg-white">
+        <div class="container mx-auto sm:px-4 ">
             <div class="flex flex-wrap ">
                     <div class="active-popular-carusel">
                         @foreach($achievements as $achievement)
@@ -18,10 +18,10 @@
                                     <div class="thumb relative">
 
                                         <div class="overlay overlay-bg"></div>
-                                        <img class="max-w-full h-auto" src="{{($achievement->image)}}" alt="">
+                                        <img class="w-1/3 h-64" src="{{($achievement->image)}}" alt="">
                                     </div>
 
-                                    <h4>
+                                    <h4 class="text-2xl mt-3">
                                         {{$achievement->title}}
                                     </h4>
                                 </div>
@@ -29,7 +29,7 @@
                                     <a href="#">
 
                                     </a>
-                                    <p style="width:200px; height: fit-content;  word-break: break-all;">
+                                    <p class="space-y-10 w-3/4 h-64" style="width:200px; height: fit-content;  word-break: break-all;">
                                         {{$achievement->description}}
                                     </p>
                                 </div>

@@ -21,39 +21,27 @@ class UserTableSeeder extends Seeder
         $faker = Faker::create();
         //seeding user of three roles
        $AdminUser = User::firstOrCreate([
-            'name'=>'eyad hamza 4',
+            'name'=>'Eyad hamza',
             'avatar'=>'/images/me.jpg',
             'email'=>'eyadhamza0@outlook.com',
-            'tasks_performance'=>$faker->numberBetween(0,100),
-            'interaction_performance'=>$faker->numberBetween(0,100),
-            'knowledge_performance'=>$faker->numberBetween(0,100),
             'password'=>bcrypt('123456789')
         ]);
         $RRUser = User::firstOrCreate([
-            'name'=>'eyad hamza 3',
-            'avatar'=>'/images/me.jpg',
-            'email'=>'eyadhasdasdamza00100@outlook.com',
-            'tasks_performance'=>$faker->numberBetween(0,100),
-            'interaction_performance'=>$faker->numberBetween(0,100),
-            'knowledge_performance'=>$faker->numberBetween(0,100),
+            'name'=>'John Doe ',
+            'avatar'=>'/images/default_avatar.png',
+            'email'=>$faker->email,
             'password'=>bcrypt('123456789')
         ]);
         $InstructorUser = User::firstOrCreate([
-            'name'=>'eyad Hamza',
+            'name'=>'John Smith',
             'email'=>$faker->email,
-            'avatar'=>'/images/me.jpg',
-            'tasks_performance'=>$faker->numberBetween(0,100),
-            'interaction_performance'=>$faker->numberBetween(0,100),
-            'knowledge_performance'=>$faker->numberBetween(0,100),
+            'avatar'=>'/images/default_avatar.png',
             'password'=>bcrypt('123456789')
         ]);
         $MemberUser = User::firstOrCreate([
-            'name'=>'eyad hamza 2',
-            'avatar'=>'/images/me.jpg',
-            'email'=>'eyadhasdasdsddssaamza000000@outlook.com',
-            'tasks_performance'=>$faker->numberBetween(0,100),
-            'interaction_performance'=>$faker->numberBetween(0,100),
-            'knowledge_performance'=>$faker->numberBetween(0,100),
+            'name'=>'Johny ',
+            'avatar'=>'/images/default_avatar.png',
+            'email'=>$faker->email,
             'password'=>bcrypt('123456789')
         ]);
 
@@ -63,7 +51,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>1,
             'committee_id'=>1,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -71,7 +59,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>1,
             'committee_id'=>1,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -79,7 +67,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>1,
             'committee_id'=>1,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -87,7 +75,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>2,
             'committee_id'=>2,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -95,7 +83,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>2,
             'committee_id'=>2,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -103,7 +91,7 @@ class UserTableSeeder extends Seeder
             'user_id'=>3,
             'committee_id'=>3,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_article.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -111,28 +99,28 @@ class UserTableSeeder extends Seeder
         DB::table('achievements')->insert([
             'user_id'=>1,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_achievement.png',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('achievements')->insert([
             'user_id'=>1,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_achievement.png',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('achievements')->insert([
             'user_id'=>2,
             'title'=>'my first achievement',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_achievement.png',
             'description'=>'this iadsdaskdaskldjaslkdjaslkdjaslkdjaslkdaskldlakdsaklsdjalskdjaksdj'
 
         ]);
         DB::table('achievements')->insert([
             'user_id'=>3,
             'title'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_achievement.png',
             'description'=>$faker->paragraph,
 
         ]);
@@ -140,34 +128,32 @@ class UserTableSeeder extends Seeder
 //seeding committees
             $committe1 =Committee::firstOrCreate([
             'name'=>'Security',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/security.png',
             'description'=>$faker->paragraph,
 
         ]);
         $committe2 =Committee::firstOrCreate([
             'name'=>'Network',
-
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/networks.jpg',
             'description'=>$faker->paragraph,
 
         ]);
         $committe3 =Committee::firstOrCreate([
             'name'=>'UI/UX',
 
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/ui.jpg',
             'description'=>$faker->paragraph,
 
         ]);
         $committe4 =Committee::firstOrCreate([
             'name'=>'IOS',
-
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/IOS.png',
             'description'=>$faker->paragraph,
 
         ]);
         $committe5 =Committee::firstOrCreate([
             'name'=>'Android',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/android.png',
             'description'=>$faker->paragraph,
 
         ]);
@@ -182,31 +168,31 @@ class UserTableSeeder extends Seeder
         //seeding tracks
         DB::table('tracks')->insert([
             'name'=>'Android',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/android.png',
             'description'=>$faker->paragraph,
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Security',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/security.png',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Network',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/networks.jpg',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'UI/UX',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/ui.jpg',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Graphics',
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/graphic.png',
             'description'=>$faker->paragraph
 
         ]);
@@ -214,13 +200,13 @@ class UserTableSeeder extends Seeder
         //seeding events
         DB::table('events')->insert([
             'name'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_event.png',
             'description'=>$faker->paragraph
 
         ]);
         DB::table('events')->insert([
             'name'=>$faker->title,
-            'image'=>'/images/logo1.png',
+            'image'=>'/images/default_event.png',
             'description'=>$faker->title
 
         ]);

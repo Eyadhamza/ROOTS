@@ -11,19 +11,18 @@
                         <div class="lg:w-1/4 pr-4 pl-4  md:w-1/4 pr-4 pl-4 meta-details">
 
                             <div class="user-details flex flex-wrap ">
-                                <p class="user-name lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#">{{$article->user->name}}</a> <span class="lnr lnr-user"></span></p>
-                                <p class="date lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#">{{$article->created_at}}</a> <span class="lnr lnr-calendar-full"></span></p>
+                                <a href="#" class="m-2 font-bold font-mono ">{{@$article->user->name}}</a> <span class="lnr lnr-user"></span>
                                 @foreach($article->user->committees as $committee)
-                                    <p class="view lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 w-3/4 text-white">
+                                    <a href="#" class="py-2 px-4 bg-blue-900 text-white rounded-lg">
 
-                                            {{$committee->name}}
-                                        </a> <span class="lnr lnr-eye"></span></p>
+                                        {{$committee->name}}
+                                    </a> <span class="lnr lnr-eye"></span>
                                 @endforeach
                             </div>
                         </div>
                         <div class="lg:w-3/4 pr-4 pl-4 md:w-3/4 pr-4 pl-4 ">
                             <div class="feature-img">
-                                <img class="max-w-full h-auto" src="{{$article->image}}" alt="">
+                                <img class="max-w-full h-auto" src="../../../{{$article->image}}" alt="">
                             </div>
 
                             <a class="posts-title" href="blog-single.html"><h3>{{$article->title}}</h3></a>
@@ -36,18 +35,20 @@
                 <div class="lg:w-1/3 pr-4 pl-4 sidebar-widgets">
                     <div class="widget-wrap">
                         <div class="single-sidebar-widget search-widget">
-                            <form class="search-form" action="#">
-                                <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
+                        @livewire('search-article')
                         </div>
                         <div class="single-sidebar-widget user-info-widget">
-                            <img src="{{$article->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
+                            <div class="lg:flex">
+                                <img src="{{@$article->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
+                                <p class="p-2 ml-3 overflow-hidden h-24">
+                                    {{@$article->user->bio}}
+                                </p>
+                            </div>
                             <a href="#"><h4> {{@$article->user->name}}</h4></a>
 
                             <p>
                                 @foreach(@$article->user->roles as $role)
-                                    {{$role->name}} Member,
+                                    {{$role->name}}
 
                                 @endforeach
 
@@ -56,6 +57,7 @@
                                         {{@$committee->name}}
                                     </a> <span class="lnr lnr-eye"></span></p>
                                 </p>
+                               @endforeach
                                 <ul class="social-links">
                                     <li><a href="  {{@$article->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="{{@$article->user->google_id}}"><i class="fa fa-twitter"></i></a></li>
@@ -81,14 +83,16 @@
 
                             </div>
                         </div>
-                    </div>
+
                 </div>
-                @endforeach
+
+            </div>
 
 
 
               @livewire('comment',['article'=>$article])
 {{--    end comment--}}
+        </div>
 
 </section>
 <!-- End post-content Area -->

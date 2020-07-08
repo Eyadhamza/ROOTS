@@ -1,17 +1,22 @@
 
 <div class="comment-form">
-    <h4>Leave a Comment</h4>
+    <h4 class="text-xl lg:text-4xl">Leave a Comment</h4>
     <form wire:submit.prevent="submit"  >
-        <div class="desc"  wire:model="comments">
+        <div class="desc "  wire:model="comments">
 
             @foreach($comments as $comment)
-                <div class="comment-list ">
+                <div class="comment-list flex justify-center mb-5 border-2 border-blue-300 p-3">
                     <div class="single-comment justify-between flex">
                         <div class="user justify-between flex">
                             <div class="desc">
-                                <h5><a href="#">{{@$comment->user->name}}</a></h5>
-                                <p class="date">{{@$comment->created_at}} </p>
-                                <p class="comment">
+
+                                <div class="flex justify-center mb-8">
+                                    <img src="{{@$comment->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
+
+                                    <h5 class="text-xl text-blue-800 hover:text-gray-700 p-3"><a href="#">{{@$comment->user->name}} <span class="flex block text-xs">{{@$comment->created_at}}</span></a></h5>
+                                </div>
+
+                                <p class="comment text-2xl ">
                                     {{@$comment->body}}
                                 </p>
                             </div>

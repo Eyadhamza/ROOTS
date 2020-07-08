@@ -5,7 +5,7 @@
         <div class="flex flex-wrap  flex justify-center">
             <div class="menu-content pb-70 lg:w-2/3 pr-4 pl-4">
                 <div class="title text-center">
-                  
+
                     <h1 class="mb-10 text-3xl lg:text-6xl font-bold">Our Events</h1>
                     <p class="text-xl font-bold font-mono">it's all about the first move !</p>
                 </div>
@@ -21,7 +21,7 @@
                         <div class="thumb-wrap relative">
                             <div class="thumb relative" style="width: 300px; height: 300px">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="max-w-full h-auto" src="{{($event1->image)}}" alt="" >
+                                <img class="w-1/3 h-64" src="{{($event1->image)}}" alt="" >
                             </div>
                             <div class="meta flex justify-between">
 
@@ -30,7 +30,7 @@
                         @endif
                         <div class="details p-6">
                             <a href="/events">
-                                <h4>
+                                <h4 class="text-2xl">
                                     {{$event1->name}}
                                 </h4>
                             </a>

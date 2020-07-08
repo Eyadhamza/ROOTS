@@ -18,9 +18,8 @@
                     <div class="single-popular-carusel">
 
                         <div class="thumb-wrap relative">
-                            <div class="thumb relative w-1/2 h-50">
-                                <div class="overlay overlay-bg"></div>
-                                <img class="max-w-full h-auto  " src="{{$track1->image}}" alt="">
+                            <div class="thumb relative w-full h-48">
+                                <img class=" w-full " src="{{$track1->image}}" alt="">
                             </div>
                             <div class="meta flex justify-between">
 
@@ -28,11 +27,11 @@
                         </div>
                         <div class="details">
                             <a href="#">
-                                <h4 class="p-6">
+                                <h4 class="p-6 text-2xl">
                                     {{$track1->name}}
                                 </h4>
                             </a>
-                            <p style="width:200px; height: fit-content;  word-break: break-all;">
+                            <p class="w-3/4 h-64 ">
                                 {{$track1->description}}
                             </p>
                         </div>

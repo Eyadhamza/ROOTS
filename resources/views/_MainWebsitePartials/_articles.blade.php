@@ -18,17 +18,13 @@
 
 
                     <div class="title justify-start flex">
-                        <a href="/article/{{$article->id}}"><h4> {{$article->title }}</h4></a>
+                        <a href="/article/{{$article->id}}"><h4 class="text-3xl"> {{$article->title }}</h4></a>
 
                     </div>
                     @if(@$article->user->name)
-                    <p>Written by :  {{@$article->user->name}}</p>
+                    <p class="font-bold  text-xl ">Written by :  {{@$article->user->name}}</p>
                     @endif
-                    <p style=" ;
-                     width: 200px;
-                     height: fit-content;
-                     word-break: break-all;
-                    ">
+                    <p class="w-3/4 h-48">
                         {{$article->description}}
                     </p>
                 </div>

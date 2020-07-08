@@ -49,7 +49,7 @@
 
             <div class="flex justify-around p-4 rounded-lg border-2 border-blue-300 w-3/4 mx-auto">
 
-                    <p class="text-gray-900 text-2xl lg:text-4xl w-full lg:w-1/3"> Name : {{$committee->name}}</p>
+                    <p class="text-gray-900 text-2xl lg:text-4xl w-full lg:w-1/3"> {{$committee->name}}</p>
 
 
                 <a  href="/committees/{{$committee->id}}/edit" class="w-full lg:w-1/6  h-10 font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-2">

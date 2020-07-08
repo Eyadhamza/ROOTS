@@ -7,7 +7,7 @@
     <ul class="" >
         @foreach ($notifications as $notification)
 
-            <div class="text-2xl font-bold p-6 border-2 border-blue-800 rounded-lg w-full lg:w-3/4 mx-auto m-2 ">
+            <div class="text-2xl font-bold p-6 border-2 border-blue-800 bg-blue-100 rounded-lg w-full lg:w-3/4 mx-auto m-2 mb-12">
                 <div class="flex justify-center font-bold text-2xl m-4 text-blue-900"> You have a new Notification !</div>
 
                 <div class="flex justify-center p-4 m-4 text-blue-900">

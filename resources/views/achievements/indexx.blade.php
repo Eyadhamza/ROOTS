@@ -15,13 +15,12 @@
                     <div class="lg:w-1/4 pr-4 pl-4  md:w-1/4 pr-4 pl-4 meta-details">
 
                         <div class="user-details flex flex-wrap ">
-                            <p class="user-name lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#">{{@$achievement->user->name}}</a> <span class="lnr lnr-user"></span></p>
-                            <p class="date lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#">{{$achievement->created_at}}</a> <span class="lnr lnr-calendar-full"></span></p>
+                            <a href="#" class="m-2 font-bold font-mono ">{{@$achievement->user->name}}</a> <span class="lnr lnr-user"></span>
                             @foreach($achievement->user->committees as $committee)
-                            <p class="view lg:w-full pr-4 pl-4 md:w-full pr-4 pl-4 w-1/2"><a href="#" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 w-3/4 text-white">
+                            <a href="#" class="py-2 px-4 bg-black text-white rounded-lg w-75 flex justify-center">
 
                                         {{$committee->name}}
-                                </a> <span class="lnr lnr-eye"></span></p>
+                                </a> <span class="lnr lnr-eye"></span>
                             @endforeach
                         </div>
                     </div>
@@ -29,24 +28,27 @@
                         <div class="feature-img">
                             <img class="max-w-full h-auto" src="{{$achievement->image}}" alt="">
                         </div>
-                        <a class="posts-title" href="blog-single.html"><h3>{{$achievement->title}}</h3></a>
+                        <a class="posts-title" href="/achievement/{{$achievement->id}}"><h3 class="text-3xl">{{$achievement->title}}</h3></a>
                         <p class="excert">
                             {{$achievement->description}}
                         </p>
-                        <a href="/achievement/{{$achievement->id}}" class="primary-btn">View More</a>
+                       <a href="/achievement/{{$achievement->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-1/3 rounded-lg">View More</a>
                     </div>
                 </div>
             </div>
             <div class="lg:w-1/3 pr-4 pl-4 sidebar-widgets">
                 <div class="widget-wrap">
                     <div class="single-sidebar-widget search-widget">
-                        <form class="search-form" action="#">
-                            <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+                        @livewire('search-achievement')
+
                     </div>
                     <div class="single-sidebar-widget user-info-widget">
-                        <img src="{{$achievement->user->avatar}}" style="width:70px; height: 70px;border-radius: 100% " alt="">
+                        <div class="lg:flex">
+                            <img src="{{@$achievement->user->avatar}}"  style="width:70px; height: 70px;border-radius: 100% "  alt="">
+                            <p class="p-2 ml-3 overflow-hidden h-24">
+                                {{@$achievement->user->bio}}
+                            </p>
+                        </div>
                         <a href="#"><h4> {{$achievement->user->name}}</h4></a>
                         <p>
                             {{$achievement->user->role}} of @foreach($achievement->user->committees as $committee)
@@ -66,45 +68,19 @@
                         </p>
                     </div>
                     <div class="single-sidebar-widget popular-post-widget">
-                        <h4 class="popular-title">Popular Posts</h4>
+                        <h4 class="popular-title">Latest Achievements</h4>
                         <div class="popular-post-list">
                             <div class="single-post-list flex flex-row items-center">
-                                <div class="thumb">
-                                    <img class="max-w-full h-auto" src="" alt="">
-                                </div>
+
                                 <div class="details">
-                                    <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-                                    <p>02 Hours ago</p>
+                                    <a href="/achievement/{{$achievement->id}}"><h6>{{$achievement->name}}</a>
+                                    <p>{{$achievement->created_at}}</p>
                                 </div>
                             </div>
-                            <div class="single-post-list flex flex-row items-center">
-                                <div class="thumb">
-                                    <img class="max-w-full h-auto" src="img/blog/pp2.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-post-list flex flex-row items-center">
-                                <div class="thumb">
-                                    <img class="max-w-full h-auto" src="img/blog/pp3.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-post-list flex flex-row items-center">
-                                <div class="thumb">
-                                    <img class="max-w-full h-auto" src="img/blog/pp4.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="blog-single.html"><h6>Asteroids telescope</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
+
                         </div>
+
+                    </div>
                     </div>
         </div>
     </div>
