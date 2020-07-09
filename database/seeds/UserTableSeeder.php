@@ -18,7 +18,6 @@ class UserTableSeeder extends Seeder
 
     public function run()
     {
-        $faker = Faker::create();
         //seeding user of three roles
        $AdminUser = User::firstOrCreate([
             'name'=>'Eyad hamza',
@@ -50,64 +49,64 @@ class UserTableSeeder extends Seeder
         DB::table('articles')->insert([
             'user_id'=>1,
             'committee_id'=>1,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('articles')->insert([
             'user_id'=>1,
             'committee_id'=>1,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('articles')->insert([
             'user_id'=>1,
             'committee_id'=>1,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('articles')->insert([
             'user_id'=>2,
             'committee_id'=>2,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('articles')->insert([
             'user_id'=>2,
             'committee_id'=>2,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('articles')->insert([
             'user_id'=>3,
             'committee_id'=>3,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_article.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         //seeding achievements of certain users
         DB::table('achievements')->insert([
             'user_id'=>1,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_achievement.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('achievements')->insert([
             'user_id'=>1,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_achievement.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('achievements')->insert([
@@ -119,9 +118,9 @@ class UserTableSeeder extends Seeder
         ]);
         DB::table('achievements')->insert([
             'user_id'=>3,
-            'title'=>$faker->title,
+            'title'=>'this text is for testing',
             'image'=>'/images/default_achievement.png',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
 
@@ -129,32 +128,32 @@ class UserTableSeeder extends Seeder
             $committe1 =Committee::firstOrCreate([
             'name'=>'Security',
             'image'=>'/images/security.png',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
         $committe2 =Committee::firstOrCreate([
             'name'=>'Network',
             'image'=>'/images/networks.jpg',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
         $committe3 =Committee::firstOrCreate([
             'name'=>'UI/UX',
 
             'image'=>'/images/ui.jpg',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
         $committe4 =Committee::firstOrCreate([
             'name'=>'IOS',
             'image'=>'/images/IOS.png',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
         $committe5 =Committee::firstOrCreate([
             'name'=>'Android',
             'image'=>'/images/android.png',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
 
@@ -169,45 +168,45 @@ class UserTableSeeder extends Seeder
         DB::table('tracks')->insert([
             'name'=>'Android',
             'image'=>'/images/android.png',
-            'description'=>$faker->paragraph,
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing ',
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Security',
             'image'=>'/images/security.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Network',
             'image'=>'/images/networks.jpg',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'UI/UX',
             'image'=>'/images/ui.jpg',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
         DB::table('tracks')->insert([
             'name'=>'Graphics',
             'image'=>'/images/graphic.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing '
 
         ]);
 
         //seeding events
         DB::table('events')->insert([
-            'name'=>$faker->title,
+            'name'=>'this text is for testing',
             'image'=>'/images/default_event.png',
-            'description'=>$faker->paragraph
+            'description'=>'This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing This text is just for testing'
 
         ]);
         DB::table('events')->insert([
-            'name'=>$faker->title,
+            'name'=>'this text is for testing',
             'image'=>'/images/default_event.png',
-            'description'=>$faker->title
+            'description'=>'this text is for testing'
 
         ]);
         //authorization system
