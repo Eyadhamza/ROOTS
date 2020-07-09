@@ -19,8 +19,8 @@ class EditAll  extends Edit
     public function render()
     {
     $users=User::paginate(10);
-    $this->committees=Committee::all();
-    $this->roles=Role::all();
+        $committees=$this->committees=Committee::all();
+    $roles= $this->roles=Role::all();
     return view('livewire.edit-all',compact('users','committees','roles'));
     }
 }
