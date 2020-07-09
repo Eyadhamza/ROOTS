@@ -29,15 +29,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        try {
-            view()->share('events',Event::all());
-            view()->share('articles',Article::all());
-            view()->share('achievements',Achievement::all());
-        }
-        catch (Exception $exception)
-        {
-
-        }
-
     }
 }
