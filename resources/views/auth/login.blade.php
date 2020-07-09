@@ -16,7 +16,7 @@
                                 <input id="email" type="email" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded @error('email') bg-red-700 @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
-                                    <span class="hidden mt-1 text-sm text-red" role="alert">
+                                <span class=" mt-1 text-sm text-red-900" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -29,13 +29,16 @@
                             <div class="md:w-1/2 pr-4 pl-4 mt-1">
                                 <input id="password" type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded @error('password') bg-red-700 @enderror" name="password" required autocomplete="current-password">
 
-                                @error('password')
-                                    <span class="hidden mt-1 text-sm text-red" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
+
+
                         </div>
+                        @error('password')
+                        <span class=" mt-1 text-sm text-red-900" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
 
                         <div class="w-full flex justify-start ml-16 mb-6">
                             <input class="mt-2 mr-2 p-1"  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>

@@ -15,12 +15,12 @@
                     <div class="lg:w-1/4 pr-4 pl-4  md:w-1/4 pr-4 pl-4 meta-details">
 
                         <div class="user-details flex flex-wrap ">
-                            <a href="#" class="m-2 font-bold font-mono ">{{@$achievement->user->name}}</a> <span class="lnr lnr-user"></span>
+                            <a href="#" class="m-2 font-bold font-mono text-2xl">{{@$achievement->user->name}}</a> <span class="lnr lnr-user"></span>
                             @foreach($achievement->user->committees as $committee)
-                            <a href="#" class="py-2 px-4 bg-black text-white rounded-lg w-75 flex justify-center">
+                                <button href="#" class="border-2 border-blue-300 text-black hover:text-blue-900 no-underline rounded-lg bg-blue-300 w-3/4 mx-auto mb-4 flex justify-center mt-2">
 
-                                        {{$committee->name}}
-                                </a> <span class="lnr lnr-eye"></span>
+                                    {{$committee->name}}
+                                </button> <span class="lnr lnr-eye"></span>
                             @endforeach
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <p class="excert">
                             {{$achievement->description}}
                         </p>
-                       <a href="/achievement/{{$achievement->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-1/3 rounded-lg">View More</a>
+                       <a href="/achievement/{{$achievement->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-1/3 rounded-lg w-full lg:w-1/3">View More</a>
                     </div>
                 </div>
             </div>

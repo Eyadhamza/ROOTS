@@ -12,17 +12,15 @@
         <div class="flex flex-wrap ">
             <div class="lg:w-2/3 pr-4 pl-4 posts-list">
                 <div class="single-post flex flex-wrap ">
-                    <div class="lg:w-1/4 pr-4 pl-4  md:w-1/4 pr-4 pl-4 meta-details">
+                    <div class="sm:w-full mx-auto lg:w-1/4 pr-4 pl-4  md:w-1/4 pr-4 pl-4 meta-details  ">
 
-                        <div class="user-details flex flex-wrap ">
-                            <a href="#" class="m-2 font-bold font-mono ">{{@$article->user->name}}</a> <span class="lnr lnr-user"></span>
+                            <a href="#" class=" font-bold font-mono text-2xl ">{{@$article->user->name}}</a>
                             @foreach($article->user->committees as $committee)
-                                <a href="#" class="py-2 px-4 bg-blue-900 text-white rounded-lg w-75 flex justify-center">
+                                <button href="#" class="border-2 border-blue-300 text-black hover:text-blue-900 no-underline rounded-lg bg-blue-300 w-3/4 mx-auto mb-4 flex justify-center mt-2">
 
                                     {{$committee->name}}
-                                </a> <span class="lnr lnr-eye"></span>
+                                </button> <span class="lnr lnr-eye"></span>
                             @endforeach
-                        </div>
                     </div>
                     <div class="lg:w-3/4 pr-4 pl-4 md:w-3/4 pr-4 pl-4 ">
                         <div class="feature-img">
@@ -33,7 +31,7 @@
                         <p class="excert">
                             {{$article->description}}
                         </p>
-                        <a href="/article/{{$article->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-1/3 rounded-lg" >View More</a>
+                        <a href="/article/{{$article->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-full lg:w-1/3 rounded-lg" >View More</a>
                     </div>
                 </div>
             </div>
