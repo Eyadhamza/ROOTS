@@ -28,7 +28,7 @@ class AchievementController extends Controller
         $attributes=request()->validate([
             'title'=>'required',
             'description'=>'required',
-            'image'=>'required|image',
+            'image'=>'nullable|image',
             'committee'=>'required'
         ]);
         $imagepath=null;
