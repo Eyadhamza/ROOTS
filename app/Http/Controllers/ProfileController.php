@@ -34,7 +34,7 @@ class ProfileController extends Controller
             'telegram_url'=>'nullable',
             'avatar'=>'file|image',
             'email'=>'required', 'string', 'email', 'max:255', 'unique:users',
-            'password'=>'nullable', 'string', 'min:8', 'confirmed'
+            'phone'=>'required', 'string', 'max:255',
         ]);
         if (\request('avatar'))
         {
@@ -42,7 +42,11 @@ class ProfileController extends Controller
 
         }
 
-        $user->update($data);
+        $user->save();
+        $user->update($data,[
+            'password'=> $user->password=bcrypt(\request('password'))
+        ]);
+        dd($user);
         return redirect('/profile/'.$user->id)->with('success','Your Info was Updated successfully');
     }
     public function index()
