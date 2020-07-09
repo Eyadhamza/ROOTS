@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->string('avatar')->nullable();
             $table->string('bio')->nullable();
-            $table->bigInteger('phone')->nullable();
+            $table->bigInteger('number')->nullable();
             $table->string('tasks_performance')->default(0);
             $table->string('interaction_performance')->default(0);
             $table->string('knowledge_performance')->default(0);

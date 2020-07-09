@@ -46,7 +46,6 @@ class ProfileController extends Controller
         $user->update($data,[
             'password'=> $user->password=bcrypt(\request('password'))
         ]);
-        dd($user);
         return redirect('/profile/'.$user->id)->with('success','Your Info was Updated successfully');
     }
     public function index()

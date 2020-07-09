@@ -92,20 +92,6 @@
                                                             @enderror
                                                         </div>
                                                         <div class="flex flex-wrap ">
-                                                            <div class="relative flex-grow max-w-full flex-1 px-4">
-                                                                <div class="mb-4">
-                                                                    <label>Phone</label>
-                                                                    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
-                                                                           type="text" placeholder="01111111111"
-                                                                           name="phone"
-                                                                           value="{{$user->phone}}">
-                                                                </div>
-                                                            </div>
-                                                            @error('telegram_url')
-                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
-                                                            @enderror
-                                                        </div>
-                                                        <div class="flex flex-wrap ">
                                                             <div class="flex flex-wrap ">
 
                                                                 <label for="avatar " class="block mb-2 uppercase font-bold text-sm text-white">
