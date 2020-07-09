@@ -5,7 +5,7 @@
     <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact V17</title>
+    <title>Contact Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -38,7 +38,7 @@
     <div class="wrap-contact100">
         <form class="contact100-form validate-form" method="post" action="/contact">
             @csrf
-				<span class="contact100-form-title">
+				<span class="contact100-form-title font-mono">
 					Send Us A Message
 				</span>
 
@@ -71,7 +71,7 @@
             </div>
 
             <div class="container-contact100-form-btn">
-                <button class="contact100-form-btn">
+                <button class="text-white bg-blue-800 hover:bg-blue-900 px-4 py-3 rounded-lg font-bold font-mono">
                     Send Message
                 </button>
             </div>

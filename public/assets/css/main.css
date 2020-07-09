@@ -1,10 +1,10 @@
 ::-moz-selection {
-    background-color: #f7631b;
+    background-color: darkblue;
     color: #fff
 }
 
 ::selection {
-    background-color: #f7631b;
+    background-color: darkblue;
     color: #fff
 }
 
@@ -773,7 +773,7 @@ th {
 
 .generic-banner {
     margin-top: 60px;
-    background-color: #f7631b;
+    background-color: darkblue;
     text-align: center
 }
 
@@ -873,7 +873,7 @@ sup,
 sub,
 u,
 del {
-    color: #f7631b
+    color: darkblue;
 }
 
 h1 {
@@ -1018,25 +1018,25 @@ h6 {
 
 .genric-btn.primary {
     color: #fff;
-    background: #f7631b;
+    background: darkblue;
     border: 1px solid transparent
 }
 
 .genric-btn.primary:hover {
-    color: #f7631b;
-    border: 1px solid #f7631b;
+    color: darkblue;
+    border: 1px solid darkblue;
     background: #fff
 }
 
 .genric-btn.primary-border {
-    color: #f7631b;
-    border: 1px solid #f7631b;
+    color: darkblue;
+    border: 1px solid darkblue;
     background: #fff
 }
 
 .genric-btn.primary-border:hover {
     color: #fff;
-    background: #f7631b;
+    background: darkblue;
     border: 1px solid transparent
 }
 
@@ -1172,7 +1172,7 @@ h6 {
 .generic-blockquote {
     padding: 30px 50px 30px 30px;
     background: #fff;
-    border-left: 2px solid #f7631b
+    border-left: 2px solid darkblue;
 }
 
 @media (max-width: 991px) {
@@ -1312,7 +1312,7 @@ h6 {
     position: absolute;
     width: 14px;
     height: 14px;
-    border: 3px solid #f7631b;
+    border: 3px solid darkblue;
     background: #fff;
     top: 4px;
     left: 0;
@@ -1325,7 +1325,7 @@ h6 {
 
 .ordered-list li {
     list-style-type: decimal-leading-zero;
-    color: #f7631b;
+    color: darkblue;
     font-weight: 500;
     line-height: 1.82em !important
 }
@@ -1338,7 +1338,7 @@ h6 {
 .ordered-list-alpha li {
     margin-left: 30px;
     list-style-type: lower-alpha;
-    color: #f7631b;
+    color: darkblue;
     font-weight: 500;
     line-height: 1.82em !important
 }
@@ -1351,7 +1351,7 @@ h6 {
 .ordered-list-roman li {
     margin-left: 30px;
     list-style-type: lower-roman;
-    color: #f7631b;
+    color: darkblue;
     font-weight: 500;
     line-height: 1.82em !important
 }
@@ -1423,7 +1423,7 @@ h6 {
 
 .single-input-primary:focus {
     outline: none;
-    border: 1px solid #f7631b
+    border: 1px solid darkblue;
 }
 
 .single-input-accent {
@@ -1484,7 +1484,7 @@ h6 {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #f7631b;
+    background: darkblue;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -1571,7 +1571,7 @@ h6 {
 }
 
 .primary-switch input:checked+label:before {
-    background: #f7631b
+    background: darkblue;
 }
 
 .confirm-switch {
@@ -1920,12 +1920,12 @@ h6 {
 }
 
 .default-select .nice-select .list .option.selected {
-    color: #f7631b;
+    color: darkblue;
     background: transparent
 }
 
 .default-select .nice-select .list .option:hover {
-    color: #f7631b;
+    color: darkblue;
     background: transparent
 }
 
@@ -1981,12 +1981,12 @@ h6 {
 }
 
 .form-select .nice-select .list .option.selected {
-    color: #f7631b;
+    color: darkblue;
     background: transparent
 }
 
 .form-select .nice-select .list .option:hover {
-    color: #f7631b;
+    color: darkblue;
     background: transparent
 }
 
@@ -2037,7 +2037,7 @@ h6 {
 }
 
 .header-top .header-top-left a:hover i {
-    color: #f7631b
+    color: darkblue;
 }
 
 .header-top .header-top-right {
@@ -2063,7 +2063,7 @@ h6 {
 }
 
 .top-head-btn {
-    background: #f7631b;
+    background: darkblue;
     padding: 9px 26px
 }
 
@@ -2110,7 +2110,7 @@ h6 {
 #header #logo h1 a:hover {
     color: #000;
     padding-left: 10px;
-    border-left: 4px solid #f7631b
+    border-left: 4px solid darkblue;
 }
 
 #header #logo img {
@@ -2228,7 +2228,7 @@ h6 {
 }
 
 .nav-menu ul li:hover>a {
-    color: #f7631b
+    color: darkblue;
 }
 
 .nav-menu ul ul {
@@ -2319,7 +2319,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #f7631b
+    color: darkblue;
 }
 
 #mobile-nav ul .menu-has-children li a {
@@ -2327,7 +2327,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-    color: #f7631b
+    color: darkblue;
 }
 
 #mobile-body-overly {
@@ -2362,7 +2362,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn {
-    background: #f7631b;
+    background: darkblue;
     line-height: 42px;
     padding-left: 30px;
     padding-right: 30px;
@@ -2415,11 +2415,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .primary-btn.white:hover {
     background: #fff;
-    color: #f7631b
+    color: darkblue;
 }
 
 .primary-btn.white:hover span {
-    color: #f7631b
+    color: darkblue;
 }
 
 .primary-btn.wh {
@@ -2516,7 +2516,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-content .primary-btn {
-    background-color: #f7631b;
+    background-color: darkblue;
     color: #fff;
     font-weight: 600;
     font-size: 14px
@@ -2524,7 +2524,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-content .primary-btn:hover {
     background-color: #fff;
-    color: #f7631b
+    color: darkblue;
 }
 
 .feature-area {
@@ -2660,7 +2660,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-popular-carusel .details h4:hover {
-    color: #f7631b !important
+    color: darkblue !important
 }
 
 @media (max-width: 576px) {
@@ -2738,7 +2738,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .search-course-area .details-content .single-detials span {
-    color: #f7631b;
+    color: darkblue;
     font-size: 30px
 }
 
@@ -2787,7 +2787,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background: #f7631b
+    background: darkblue;
 }
 
 @media (max-width: 1024px) {
@@ -2832,7 +2832,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-carusel .detials h4:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .single-carusel .detials p {
@@ -2884,7 +2884,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background: #f7631b
+    background: darkblue;
 }
 
 .single-review .title {
@@ -2922,7 +2922,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-blog:hover h5 {
-    color: #f7631b
+    color: darkblue;
 }
 
 .single-blog h5 {
@@ -2984,7 +2984,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .single-blog .details-btn:hover {
     width: 140px;
-    background: #f7631b;
+    background: darkblue;
     box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2)
 }
 
@@ -3028,7 +3028,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .cta-two-area {
-    background: #f7631b;
+    background: darkblue;
     padding: 90px 0px
 }
 
@@ -3296,8 +3296,8 @@ dl.accordion.time-line:before {
 }
 
 .toggle>dt>a.active {
-    color: #f7631b;
-    border-color: #f7631b
+    color: darkblue;
+    border-color: darkblue;
 }
 
 .toggle>dt>a:after {
@@ -3324,7 +3324,7 @@ dl.accordion.time-line:before {
 .toggle>dt>a.active:after,
 .toggle>dt>a.active:hover:after {
     content: "\f106";
-    color: #f7631b
+    color: darkblue;
 }
 
 .toggle>dt>a:hover:after {
@@ -3439,8 +3439,8 @@ dl.toggle.time-line:before {
 
 .courses-page .primary-btn:hover {
     background: transparent;
-    border-color: #f7631b;
-    color: #f7631b
+    border-color: darkblue;
+    color: darkblue;
 }
 
 .left-contents .jq-tab-wrapper {
@@ -3495,9 +3495,9 @@ dl.toggle.time-line:before {
 
 .left-contents .jq-tab-menu .jq-tab-title:hover,
 .left-contents .jq-tab-menu .jq-tab-title.active {
-    color: #f7631b;
+    color: darkblue;
     background: transparent;
-    border-bottom: 1px solid #f7631b
+    border-bottom: 1px solid darkblue;
 }
 
 .left-contents .horizontal-tab .jq-tab-menu {
@@ -3547,7 +3547,7 @@ dl.toggle.time-line:before {
 }
 
 .left-contents .course-list li .primary-btn:hover {
-    background: #f7631b;
+    background: darkblue;
     color: #fff
 }
 
@@ -3617,7 +3617,7 @@ dl.toggle.time-line:before {
 }
 
 .left-contents .comments-area .desc h5:hover a {
-    color: #f7631b !important
+    color: darkblue !important
 }
 
 .left-contents .comments-area .date {
@@ -3643,7 +3643,7 @@ dl.toggle.time-line:before {
 }
 
 .left-contents .comments-area .btn-reply:hover {
-    background: #f7631b;
+    background: darkblue;
     color: #fff
 }
 
@@ -3652,7 +3652,7 @@ dl.toggle.time-line:before {
 }
 
 .left-contents .star .checked {
-    color: #f7631b
+    color: darkblue;
 }
 
 .left-contents .reviews span,
@@ -3672,7 +3672,7 @@ dl.toggle.time-line:before {
 
 .left-contents .avg-review span {
     font-size: 18px;
-    color: #f7631b
+    color: darkblue;
 }
 
 @media (max-width: 991px) {
@@ -3707,7 +3707,7 @@ dl.toggle.time-line:before {
 }
 
 .right-contents ul li .or {
-    color: #f7631b !important
+    color: darkblue !important
 }
 
 .right-contents .primary-btn {
@@ -3732,8 +3732,8 @@ dl.toggle.time-line:before {
 }
 
 .event-page-lists .primary-btn:hover {
-    color: #f7631b;
-    border-color: #f7631b;
+    color: darkblue;
+    border-color: darkblue;
     background: transparent
 }
 
@@ -3810,7 +3810,7 @@ dl.toggle.time-line:before {
 }
 
 .event-details-area .social-nav .navs a:hover {
-    background: #f7631b;
+    background: darkblue;
     color: #fff
 }
 
@@ -4017,7 +4017,7 @@ dl.toggle.time-line:before {
 }
 
 .post-content-area .single-post .meta-details .tags li a:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 @media (max-width: 1024px) {
@@ -4042,7 +4042,7 @@ dl.toggle.time-line:before {
 .post-content-area .single-post .date a:hover,
 .post-content-area .single-post .view a:hover,
 .post-content-area .single-post .comments a:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .post-content-area .single-post .user-name .lnr,
@@ -4076,7 +4076,7 @@ dl.toggle.time-line:before {
 }
 
 .post-content-area .single-post .primary-btn:hover {
-    background: #f7631b !important;
+    background: darkblue !important;
     color: #fff !important
 }
 
@@ -4088,7 +4088,7 @@ dl.toggle.time-line:before {
 }
 
 .posts-list .posts-title h3:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .blog-pagination {
@@ -4110,7 +4110,7 @@ dl.toggle.time-line:before {
 }
 
 .blog-pagination .page-item.active .page-link {
-    background-color: #f7631b;
+    background-color: darkblue;
     border-color: transparent;
     color: #fff
 }
@@ -4137,7 +4137,7 @@ dl.toggle.time-line:before {
 .blog-pagination .page-link:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #f7631b;
+    background-color: darkblue;
     border-color: #eee
 }
 
@@ -4177,7 +4177,7 @@ dl.toggle.time-line:before {
     width: 80%;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    background: #f7631b
+    background: darkblue;
 }
 
 .widget-wrap .search-widget ::-webkit-input-placeholder {
@@ -4200,7 +4200,7 @@ dl.toggle.time-line:before {
     float: left;
     width: 20%;
     padding: 10px;
-    background: #f7631b;
+    background: darkblue;
     color: #fff;
     font-size: 17px;
     border: none;
@@ -4244,7 +4244,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .user-info-widget .social-links li a:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .widget-wrap .popular-post-widget .popular-title {
@@ -4280,7 +4280,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .popular-post-widget .single-post-list .details h6:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .widget-wrap .popular-post-widget .single-post-list .details p {
@@ -4292,7 +4292,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .post-category-widget .category-title {
-    background: #f7631b;
+    background: darkblue;
     color: #fff;
     text-align: center;
     padding: 12px 0px
@@ -4323,15 +4323,15 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .post-category-widget .cat-list li:hover {
-    border-color: #f7631b
+    border-color: darkblue;
 }
 
 .widget-wrap .post-category-widget .cat-list li:hover p {
-    color: #f7631b
+    color: darkblue;
 }
 
 .widget-wrap .newsletter-widget .newsletter-title {
-    background: #f7631b;
+    background: darkblue;
     color: #fff;
     text-align: center;
     padding: 12px 0px
@@ -4347,7 +4347,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .newsletter-widget .bbtns {
-    background: #f7631b;
+    background: darkblue;
     color: #fff;
     font-size: 12px;
     font-weight: 500;
@@ -4406,7 +4406,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .tag-cloud-widget .tagcloud-title {
-    background: #f7631b;
+    background: darkblue;
     color: #fff;
     text-align: center;
     padding: 12px 0px;
@@ -4426,7 +4426,7 @@ dl.toggle.time-line:before {
 }
 
 .widget-wrap .tag-cloud-widget ul li:hover {
-    background: #f7631b
+    background: darkblue;
 }
 
 .widget-wrap .tag-cloud-widget ul li:hover a {
@@ -4463,7 +4463,7 @@ dl.toggle.time-line:before {
 }
 
 .single-post-area .social-links li a:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .single-post-area .quotes {
@@ -4642,7 +4642,7 @@ dl.toggle.time-line:before {
 }
 
 .comments-area .btn-reply:hover {
-    background-color: #f7631b;
+    background-color: darkblue;
     color: #fff
 }
 
@@ -4723,8 +4723,8 @@ dl.toggle.time-line:before {
 
 .comment-form .primary-btn:hover {
     background: transparent;
-    border-color: #f7631b !important;
-    color: #f7631b !important
+    border-color: darkblue !important;
+    color: darkblue !important
 }
 
 .contact-page-area {
@@ -4786,8 +4786,8 @@ dl.toggle.time-line:before {
 }
 
 .contact-page-area .form-area .genric-btn:hover {
-    border: 1px solid #f7631b;
-    color: #f7631b !important
+    border: 1px solid darkblue;
+    color: darkblue !important
 }
 
 @media (max-width: 991px) {
@@ -4809,7 +4809,7 @@ dl.toggle.time-line:before {
 .contact-page-area .address-wrap .single-contact-address .lnr {
     font-size: 30px;
     font-weight: 500;
-    color: #f7631b;
+    color: darkblue;
     margin-right: 30px
 }
 
@@ -4853,11 +4853,11 @@ dl.toggle.time-line:before {
 }
 
 .single-footer-widget ul li a:hover {
-    color: #f7631b
+    color: darkblue;
 }
 
 .single-footer-widget .bb-btn {
-    color: #f7631b;
+    color: darkblue;
     color: #fff;
     font-weight: 300;
     border-radius: 0;
@@ -4882,7 +4882,7 @@ dl.toggle.time-line:before {
 .single-footer-widget .btn {
     font-size: 1.2rem;
     border-radius: 0;
-    background: #f7631b;
+    background: darkblue;
     color: #fff
 }
 
@@ -4952,7 +4952,7 @@ dl.toggle.time-line:before {
 
 .footer-bottom .lnr,
 .footer-bottom a {
-    color: #f7631b
+    color: darkblue;
 }
 
 .footer-bottom .footer-social a {
@@ -4973,5 +4973,5 @@ dl.toggle.time-line:before {
 }
 
 .footer-bottom .footer-social a:hover {
-    background-color: #f7631b
+    background-color: darkblue;
 }

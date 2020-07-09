@@ -55,6 +55,7 @@
                     </div>
 
                 @endforeach
+            {{$tracks->links()}}
         </div>
     </section>
     <!-- End popular-course Area -->

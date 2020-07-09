@@ -11,8 +11,8 @@ class EditCommittee extends Edit
 
     public function render()
     {
-        $this->committees=Committee::all();
-        $this->roles=Role::all();
+       $committees= $this->committees=Committee::all();
+       $roles= $this->roles=Role::all();
         return view('livewire.edit-committee',compact('committees','roles'));
 
     }

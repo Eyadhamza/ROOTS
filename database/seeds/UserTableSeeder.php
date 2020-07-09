@@ -29,19 +29,19 @@ class UserTableSeeder extends Seeder
         $RRUser = User::firstOrCreate([
             'name'=>'John Doe ',
             'avatar'=>'/images/default_avatar.png',
-            'email'=>$faker->email,
+            'email'=>'eyadhamza00@outlook.com',
             'password'=>bcrypt('123456789')
         ]);
         $InstructorUser = User::firstOrCreate([
             'name'=>'John Smith',
-            'email'=>$faker->email,
+            'email'=>'eyadhamza000@outlook.com',
             'avatar'=>'/images/default_avatar.png',
             'password'=>bcrypt('123456789')
         ]);
         $MemberUser = User::firstOrCreate([
             'name'=>'Johny ',
             'avatar'=>'/images/default_avatar.png',
-            'email'=>$faker->email,
+            'email'=>'eyadhamza0000@outlook.com',
             'password'=>bcrypt('123456789')
         ]);
 

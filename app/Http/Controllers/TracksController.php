@@ -45,7 +45,7 @@ class TracksController extends Controller
     }
     public function index()
     {
-        $tracks=Track::all();
+        $tracks=Track::paginate(5);
         return view('tracks.indexx',compact('tracks'));
     }
 }

@@ -24,10 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tracks= Track::all();
-        $events= Event::all();
-        $articles=Article::all();
-        $achievements=Achievement::all();
+        $tracks= Track::latest()->take(10)->get();
+        $events= Event::latest()->take(10)->get();
+        $articles=Article::latest()->take(10)->get();
+        $achievements=Achievement::latest()->take(10)->get();
         return view('Home.home',compact('tracks','events','achievements','articles'));
     }
 }

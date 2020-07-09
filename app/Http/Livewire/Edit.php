@@ -90,7 +90,7 @@ abstract class Edit  extends Component
                 'name' => $this->name,
 
                 'email' => $this->email,
-                'password' => $this->password,
+                'password' => bcrypt($this->password),
             ]);
 
             $allcommittees = Committee::whereIn('id', [$this->id1, $this->id2])->get();

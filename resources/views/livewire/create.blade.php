@@ -35,7 +35,7 @@
             email
             <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="email" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
+                <input wire:model="email" autocomplete="off" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
             </div>
             password
             <div class="relative flex items-stretch w-full m-6">

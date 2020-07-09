@@ -45,9 +45,10 @@
             <img class="max-w-full h-auto" src="{{$event1->image}}" alt="">
 
         </div>
-
     </section>
+
             @endforeach
+        {{$events->links()}}
 
     <!-- End popular-course Area -->
 </x-app>
