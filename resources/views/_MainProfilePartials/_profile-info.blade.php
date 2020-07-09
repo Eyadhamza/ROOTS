@@ -20,10 +20,13 @@
                                 <div class="sm:w-1/2 pr-4 pl-4 md:w-3/5 pr-4 pl-4">
                                     <div class="about-info">
                                         <p class="m-2 text-blue-800 font-bold">Name: <span class="font-medium text-black">{{$user->name}}</span></p>
-                                        <p class="m-2 text-blue-800 font-bold"><span  class="font-medium text-black">Committee: All Committees </span></p>
-                                        <p class="m-2 text-blue-800 font-bold">Telegram:  <span  class="font-medium text-black">{{$user->telegram_url}}</span></p>
+                                        <p class="m-2 text-blue-800 font-bold">Committee: <span  class="font-medium text-black"> @foreach($user->committees as $committee)
+                                            {{$committee->name}}
+                                                                                                                                    @endforeach
+                                            </span></p>
+                                        <p class="m-2 text-blue-800 font-bold">Telegram:  <a href="{{$user->telegram_url}}" class="font-medium text-black">{{$user->telegram_url}}</a></p>
                                         <p class="m-2 text-blue-800 font-bold">Email:  <span  class="font-medium text-black">{{$user->email}}</span></p>
-                                        <p class="m-2 text-blue-800 font-bold">Phone:  <span  class="font-medium text-black">{{$user->number}}</span></p>
+                                        <p class="m-2 text-blue-800 font-bold">Phone:  <span  class="font-medium text-black">{{$user->phone}}</span></p>
                                         @can('edit',$user)
                                             <a href="/profile/{{$user->id}}/edit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 a-btn-slide-text w-3/4">
                                                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
