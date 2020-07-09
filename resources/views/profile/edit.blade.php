@@ -65,12 +65,19 @@
                                                                     <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="text" name="name" placeholder="Name" value="{{$user->name}}">
                                                                 </div>
                                                             </div>
+                                                            @error('name')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
                                                             <div class="relative flex-grow max-w-full flex-1 px-4">
                                                                 <div class="mb-4">
                                                                     <label>Username</label>
                                                                     <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="text" name="username" placeholder="Username" value="{{$user->username}}">
                                                                 </div>
                                                             </div>
+                                                            @error('username')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
+
                                                         </div>
                                                         <div class="flex flex-wrap ">
                                                             <div class="relative flex-grow max-w-full flex-1 px-4">
@@ -79,6 +86,9 @@
                                                                     <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="text" placeholder="user@example.com" name="email" value="{{$user->email}}">
                                                                 </div>
                                                             </div>
+                                                            @error('email')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
                                                         </div>
                                                         <div class="flex flex-wrap ">
                                                             <div class="relative flex-grow max-w-full flex-1 px-4">
@@ -88,6 +98,17 @@
                                                                 </div>
                                                             </div>
                                                             @error('telegram_url')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="flex flex-wrap ">
+                                                            <div class="relative flex-grow max-w-full flex-1 px-4 mb-3">
+                                                                <div class="mb-4">
+                                                                    <label>phone</label>
+                                                                    <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="text" placeholder="011111" name="phone" value="{{$user->phone}}">
+                                                                </div>
+                                                            </div>
+                                                            @error('bio')
                                                             <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
                                                             @enderror
                                                         </div>
@@ -122,6 +143,9 @@
                                                                     <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" rows="5" placeholder="My Bio" name="bio" ></textarea>
                                                                 </div>
                                                             </div>
+                                                            @error('bio')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -136,6 +160,9 @@
                                                                     <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="password" placeholder="••••••" name="password">
                                                                 </div>
                                                             </div>
+                                                            @error('password')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
                                                         </div>
                                                         <div class="flex flex-wrap ">
                                                             <div class="relative flex-grow max-w-full flex-1 px-4">
@@ -143,6 +170,9 @@
                                                                     <label>Confirm <span class="hidden xl:inline">Password</span></label>
                                                                     <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" type="password" placeholder="••••••" name="password_confirmation"></div>
                                                             </div>
+                                                            @error('password_confirmation')
+                                                            <p class="text-red-600 text-sm mt-2 ">{{$message}}</p>
+                                                            @enderror
                                                         </div>
 
                                                     </div>

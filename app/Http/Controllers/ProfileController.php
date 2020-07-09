@@ -28,13 +28,13 @@ class ProfileController extends Controller
     public function update(User $user)
     {
         $data=\request()->validate([
-            'name'=>'required', 'string', 'max:255',
-            'username'=>'required', 'string', 'max:255',
+            'name'=>'required', 'string', 'max:191',
+            'username'=>'required', 'string', 'max:191',
             'bio'=>'nullable',
             'telegram_url'=>'nullable',
             'avatar'=>'file|image',
-            'email'=>'required', 'string', 'email', 'max:255', 'unique:users',
-            'phone'=>'required', 'string', 'max:255',
+            'email'=>'required', 'string', 'email', 'max:191', 'unique:users',
+            'phone'=>'required', 'string', 'max:191',
         ]);
         if (\request('avatar'))
         {
@@ -42,7 +42,6 @@ class ProfileController extends Controller
 
         }
 
-        $user->save();
         $user->update($data,[
             'password'=> $user->password=bcrypt(\request('password'))
         ]);
