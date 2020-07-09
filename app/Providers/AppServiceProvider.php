@@ -6,6 +6,7 @@ use App\Achievement;
 use App\Article;
 use App\Event;
 use Illuminate\Support\ServiceProvider;
+use mysql_xdevapi\Exception;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,9 +27,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('events',Event::all());
-        view()->share('articles',Article::all());
-        view()->share('achievements',Achievement::all());
+        Schema::defaultStringLength(191);
+        try {
+            view()->share('events',Event::all());
+            view()->share('articles',Article::all());
+            view()->share('achievements',Achievement::all());
+        }
+        catch (Exception $exception)
+        {
+
+        }
 
     }
 }
