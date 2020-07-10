@@ -79,16 +79,18 @@
 
         <div class="contact100-more flex-col-c-m" style="background-image: url('storage/images/logo1.png');">
             <div class="flex-w size1 p-b-47">
-                <div class="txt1 p-r-25">
-                    <span class="lnr lnr-map-marker"></span>
-                </div>
 
-                <div class="flex-col size2">
-						<span class="txt1 p-b-20 te">
+
+                <div class="flex-col size2 ml-12">
+                    <div class="txt1 p-r-25">
+                    </div>
+						<span class="text-white text-2xl mb-6">
+                            <span class="lnr lnr-map-marker"></span>
+
 							Address
 						</span>
 
-                           <span class="txt2 ">
+                           <span class="text-white text-2xl">
 						          	Mansoura University
 						    </span>
                 </div>
@@ -100,51 +102,44 @@
                 </div>
 
                 <div class="flex-col size2">
-						<span class="txt1 p-b-20">
+						<span class="txt1 p-b-20 text-white">
 							Lets Talk
 						</span>
 
 
-                    <a href="https://t.me/Roots_of_roots"><span class="txt2">
-                         <i class="fa fa-telegram" style="font-size:36px;color:white "> </i> +1 310 693-4613
+                    <a href="https://t.me/Roots_of_roots" class="text-white text-2xl"><span >
+                         <i class="fa fa-telegram" style="font-size:36px;color:white "> </i>
+                            +1 310 693-4613</span>
 
 
-						</span></a>
+						</a>
 
 
                 </div>
             </div>
 
             <div class="dis-flex size1 p-b-47">
-                <div class="txt1 p-r-25">
-                    <span class="lnr lnr-envelope"></span>
-                </div>
-
-                <div class="flex-col size2">
-						<span class="txt1 p-b-20">
 
 
-						</span>
-
-                    <a href=""> <span class="text-gray-500-700 hover:text-gray-700 text-2xl" >
+                <div class="flex justify-center ">
+                    <span class="lnr lnr-envelope text-3xl text-white mr-4"></span>
+                    <a href=""> <span class="text-white hover:text-gray-700 text-2xl" >
 							rootscommunity7@gmail.com
                     </span></a>
                 </div>
 
             </div>
+
             <div class="dis-flex size1 p-b-47">
                 <div class="txt1 p-r-25">
-                    <i class="fa fa-facebook-f" style="font-size:36px;color: darkblue"></i>
+                    <i class="fa fa-facebook-f ml-2" style="font-size:36px;color: darkblue"></i>
                 </div>
 
                 <div class="flex-col size2">
-						<span class="txt1 p-b-20">
 
 
-						</span>
-
-                    <a href="https://www.facebook.com/rootscommunity1">
-                        <span class="text-blue-700 hover:text-blue-900 text-2xl" >
+                    <a href="https://twitter.com/rootscommunity1">
+                        <span  class="text-white hover:text-blue-900 text-2xl" >
                             rootscommunity1
                         </span></a>
 
@@ -158,13 +153,10 @@
                 </div>
 
                 <div class="flex-col size2">
-						<span class="txt1 p-b-20">
 
-
-						</span>
 
                     <a href="https://twitter.com/rootscommunity1">
-                        <span  class="text-blue-700 hover:text-blue-900 text-2xl" >
+                        <span  class="text-white hover:text-blue-900 text-2xl" >
                             @rootscommunity1
                         </span></a>
 

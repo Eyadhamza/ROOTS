@@ -5,9 +5,7 @@
 @livewire('notifications')
 <a href="#" class="font-bold text-gray-900 flex justify-center text-2xl lg:text-6xl p-4 m-4" >
     Performance
-</a>
-
-<div class="border-2 border-blue-800 w-full lg:w-3/4 mx-auto">
+<div class="border-2 border-blue-800 w-fulldas lg:w-3/4 mx-auto">
 
     <div class="m-12 w-2/3 mx-auto">
         <div class="inline-block text-3xl w-1/3 flex justify-center mx-auto">Required Tasks</div>
