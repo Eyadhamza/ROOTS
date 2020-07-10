@@ -18,8 +18,15 @@ class Achievement extends Model
 
     public function getImageAttribute($value)
     {
+        if ($value)
+        {
+            return asset('storage/' . $value);
 
-        return "storage/". $value;
+        }
+        else
+        {
+            return asset('storage/' . 'images/default_achievement.png');
+        }
     }
     public function comments()
     {

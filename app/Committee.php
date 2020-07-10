@@ -21,9 +21,15 @@ class Committee extends Model
         return $this->belongsTo(Track::class);
     }
     public function getImageAttribute($value)
+    {if ($value)
     {
+        return asset('storage/' . $value);
 
-        return "storage/". $value;
+    }
+    else
+    {
+        return asset('storage/' . 'images/default_committee.png');
+    }
     }
 
 }

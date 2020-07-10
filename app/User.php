@@ -57,7 +57,15 @@ class User extends Authenticatable
     }
     public function getAvatarAttribute($value)
     {
-        return asset('storage/' . $value);
+        if ($value)
+        {
+            return asset('storage/' . $value);
+
+        }
+        else
+        {
+            return asset('storage/' . 'images/default_avatar.png');
+        }
     }
     public function roles()
     {

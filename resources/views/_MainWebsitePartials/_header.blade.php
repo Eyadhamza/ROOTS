@@ -2,18 +2,25 @@
 
     <div class="container mx-auto sm:px-4 main-menu">
         <div class="flex flex-wrap  items-center justify-between flex">
+            <button class="mr-56" type="button" id="mobile-nav-toggle"><img   src="https://img.icons8.com/android/24/000000/menu.png"/></button>
+
             <div id="logo">
-                <a  href="#"><img class="w-12 rounded-full lg:w-12 " src="../../../../storage/images/logo11.jpg" alt="" title=""  /></a>
-                <strong class="inline-block bold text-white">ROOTS</strong>
-                <button type="button" id="mobile-nav-toggle"><img src="https://img.icons8.com/android/24/000000/menu.png"/></button>
+                <a  href="#"><img class="w-12 rounded-full lg:w-12 " src="../../../../storage/images/logo11.jpg" alt="" title=""  />
+
+                </a>
+
+                <strong class="inline-block bold text-white">ROOTS </strong>
 
             </div>
 
 
             <nav id="nav-menu-container">
+
                 <ul class="nav-menu " >
+
                     <li><a href="/home">Home</a></li>
-                    @auth()
+
+                @auth()
                     <li><a href="/profile/{{auth()->user()->id}}">My Profile</a>
                     <ul>
                         <li><a href="/logout">Logout</a>
