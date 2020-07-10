@@ -1,5 +1,5 @@
 
-
+<x-app>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,36 +29,48 @@
 
 <body id="page-top">
 
+<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll" href="#page-top">Personal Profile</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+            <ul class="navbar-nav lg:flex justify-between">
+                <li class="nav-item">
+                    <a href="/profile/{{auth()->user()->id}}" class="nav-link js-scroll text-black">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
 
+                    <a href="/profile/{{auth()->user()->id}}/duty" class="nav-link js-scroll">
+                        Duty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/home" class="nav-link js-scroll">
+                        Back to Website
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link js-scroll">
+                        logout
+                    </a>
+                </li>
 
-
-
-<div id="home" class="intro route bg-image bg-no-repeat bg-center bg-cover h-screen " style="background-image: url(../../storage/images/roots_cover1.png)">
-    <nav class="bg-transparent flex-wrap opacity-100 z-50 overlay-itro" id="mainNav">
-
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto flex justify-center bg-transparent m-10">
-            <a href="index.html"><img src="../../../../storage/images/logo11.jpg" alt="" title="" style="width: 52px; height: 48px ;border-radius: 150%" /></a>
-            <span class="ml-2 font-semibold text-xl tracking-tight text-blue-200 ">Personal Profile</span>
-            <div class="text-sm lg:flex-grow flex justify-end bg-transparent">
-                <a href="/profile/{{auth()->user()->id}}" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 font-bold ml-10 text-2xl  hover:text-black mr-4 bg-transparent">
-                    Home
-                </a>
-
-                <a href="/profile/{{auth()->user()->id}}/duty" class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-blue-200 font-bold ml-10 text-2xl  hover:text-black bg-transparent">
-                    Duty
-                </a>
-
-                <a href="/home" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200  font-bold ml-10 text-2xl hover:text-black m-4 bg-transparent">
-                    Back to Website
-                </a>
-                <a href="/logout" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200  font-bold ml-10 text-2xl  hover:text-black m-4 bg-transparent">
-                    logout
-                </a>
-            </div>
-
+            </ul>
         </div>
-    </nav>
-    <div class="overlay-itro text-black"></div>
+    </div>
+</nav>
+<!--/ Nav End /-->
+
+<!--/ Intro Skew Star /-->
+<div id="home" class="intro route bg-image" style="background-image: url(../../storage/images/roots_cover1.png)">
+    <div class="overlay-itro"></div>
     <div class="intro-content display-table">
         <div class="table-cell">
             <div class="container mx-auto sm:px-4 text-white">
@@ -69,9 +81,9 @@
                             {{$role->name}} ,
 
                         @endforeach
-                            @foreach($user->committees as $committee)
-                               Of {{$committee->name}},
-                            @endforeach
+                        @foreach($user->committees as $committee)
+                            Of {{$committee->name}},
+                        @endforeach
                     </span><strong class="text-slider"></strong></p>
 
             </div>
@@ -134,3 +146,4 @@
 </body>
 </html>
 
+</x-app>

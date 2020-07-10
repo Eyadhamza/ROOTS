@@ -3,12 +3,12 @@
 
     <a class="mx-auto flex justify-center w-full title-s flex justify-center inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-gray-900 text-white m-2 w-full lg:w-1/2" wire:click="Performance()">Performance</a>
     @if($updateMode)
-    <div class="m-12 w-2/3 mx-auto">
-        <div class="flex justify-around">
+    <div class="m-12 w-full lg:w-2/3 mx-auto">
+        <div class="lg:flex justify-around flex justify-between">
             <div class="inline-block text-2xl w-1/3">
                 <button type="button" wire:click="decreament_tasks_performance" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-red-600  hover:bg-red-700 text-white " style="width: 50px;">-</button>
             </div>
-            <div class="inline-block text-3xl w-1/3 flex justify-center">Required Tasks</div>
+            <div class="inline-block text-3xl w-1/3 flex justify-center"> Tasks</div>
             <div class="inline-block text-2xl w-1/3 flex justify-end">
                 <button type="button" wire:click="increament_tasks_performance" wire:model="tasks_performance" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-black hover:bg-gray-900 text-white " style="width: 50px;">+</button>
 
@@ -24,13 +24,13 @@
 
     </div>
 
-    <div class="m-12 w-2/3 mx-auto">
+    <div class="m-12 w-full lg:w-2/3 mx-auto">
 
-        <div class="flex justify-around">
+        <div class="lg:flex justify-around flex justify-between">
             <div class="inline-block text-2xl w-1/3">
                 <button type="button" wire:click="decreament_interaction_performance" class="w-1/3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-red-600 text-white hover:bg-red-700 text-white" style="width: 50px;">-</button>
             </div>
-            <div class="inline-block text-3xl w-1/3 flex justify-center">Interaction</div>
+            <div class="inline-block text-2xl lg:text-3xl w-1/3 flex justify-center">Interaction</div>
             <div class="inline-block text-2xl w-1/3 flex justify-end">
                 <button type="button" wire:click="increament_interaction_performance" wire:model="interaction_performance" class= " w-1/3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 text-white" style="width: 50px;">+</button>
 
@@ -45,12 +45,12 @@
         </div>
     </div>
 
-    <div class="m-12 w-2/3 mx-auto">
-        <div class="flex justify-around">
+    <div class="m-12 w-full lg:w-2/3 mx-auto">
+        <div class="lg:flex justify-around flex justify-between">
             <div class="inline-block text-2xl w-1/3">
                 <button type="button" wire:click="decreament_knowledge_performance" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-red-600 text-white hover:bg-red-700 text-white" style="width: 50px;">-</button>
             </div>
-            <div class="inline-block text-3xl w-1/3 flex justify-center">Knowledge</div>
+            <div class="inline-block text-2xl lg:text-3xl w-1/3 flex justify-center">Knowledge</div>
             <div class="inline-block text-2xl w-1/3 flex justify-end">
                 <button type="button" wire:click="increament_knowledge_performance" wire:model="knowledge_performance" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 text-white" style="width: 50px;">+</button>
 

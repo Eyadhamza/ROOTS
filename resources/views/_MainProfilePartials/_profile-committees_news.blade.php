@@ -17,7 +17,7 @@
             <div class="md:w-1/3 pr-4 pl-4 w-full">
                 <div class="service-box">
                     <div class="work-img">
-                        <img src="/../../{{$committee->image}}" alt="" class="max-w-full h-auto " style="height: 250px;width: 300px;">
+                        <img src="{{$committee->image}}" alt="" class="max-w-full h-auto " style="height: 250px;width: 300px;">
                     </div>
                     <div class="service-content">
                         <h2 class="s-title">{{$committee->name}}</h2>

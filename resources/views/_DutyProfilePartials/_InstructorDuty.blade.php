@@ -1,5 +1,5 @@
 
-<div class="font-bold text-gray-900  fullwidth p-6 flex justify-center text-3xl lg:text-5xl " >
+<div class="font-bold text-gray-900  w-full lg:w-1/2 mx-auto p-6 flex justify-center text-2xl lg:text-6xl " >
     My Duty as an Instructor
 </div>
 

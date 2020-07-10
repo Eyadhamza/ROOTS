@@ -40,7 +40,7 @@
                         <div class=" rounded overflow-hidden shadow-lg block mx-auto m-4 w-1/2">
 
                             <a href="/achievements/{{$achievement->id}}" class=" h-75">
-                                <img class="h-30 w-50" src="../../{{$achievement->image}}" alt="Achievement">
+                                <img class="h-30 w-50" src="{{$achievement->image}}" alt="Achievement">
                             </a>
                             <div class="px-6 py-4">
                                 <div class="font-bold text-xl mb-2 block">{{$achievement->title}}</div>
