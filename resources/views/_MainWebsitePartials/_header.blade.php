@@ -49,19 +49,7 @@
                             @endauth
                         </ul>
                     </li>
-{{--                    <li class="menu-has-children"><a href="">Pages</a>--}}
-{{--                        <ul>--}}
-{{--                            <li><a href="course-details.html">Course Details</a></li>--}}
-{{--                            <li><a href="event-details.html">Event Details</a></li>--}}
-{{--                            <li><a href="elements.html">Elements</a></li>--}}
-{{--                            <li class="menu-has-children"><a href="">Level 2 </a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="#">Item One</a></li>--}}
-{{--                                    <li><a href="#">Item Two</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
+
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->

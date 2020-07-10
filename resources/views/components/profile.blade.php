@@ -28,44 +28,54 @@
 </head>
 
 <body id="page-top">
+<header id="header" id="home">
 
-<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll" href="#page-top">Personal Profile</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-            <ul class="navbar-nav lg:flex justify-between">
-                <li class="nav-item">
-                    <a href="/profile/{{auth()->user()->id}}" class="nav-link js-scroll text-black">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
+    <div class="container mx-auto sm:px-4 main-menu">
+        <div class="flex flex-wrap  items-center justify-between flex">
+            <button class="" type="button" id="mobile-nav-toggle"><img class="mr-12" src="https://img.icons8.com/android/24/000000/menu.png"/></button>
 
-                    <a href="/profile/{{auth()->user()->id}}/duty" class="nav-link js-scroll">
-                        Duty
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/home" class="nav-link js-scroll">
-                        Back to Website
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/logout" class="nav-link js-scroll">
-                        logout
-                    </a>
-                </li>
+            <div id="logo">
+                <a  href="#"><img class="w-12 rounded-full lg:w-12 " src="../../../../storage/images/logo11.jpg" alt="" title=""  />
 
-            </ul>
+                </a>
+
+                <strong class="inline-block bold text-white">ROOTS </strong>
+
+            </div>
+
+
+            <nav id="nav-menu-container">
+
+                <ul class="nav-menu " >
+
+                    <li class="nav-item">
+                        <a href="/profile/{{auth()->user()->id}}" class="nav-link js-scroll active text-black">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="/profile/{{auth()->user()->id}}/duty" class="nav-link js-scroll">
+                            Duty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link js-scroll">
+                            Back to Website
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link js-scroll">
+                            logout
+                        </a>
+                    </li>
+
+                </ul>
+            </nav><!-- #nav-menu-container -->
         </div>
     </div>
-</nav>
+</header><!-- #header -->
+
 <!--/ Nav End /-->
 
 <!--/ Intro Skew Star /-->
