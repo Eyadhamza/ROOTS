@@ -29,7 +29,7 @@
                             <img class="max-w-full h-auto" src="{{$achievement->image}}" alt="">
                         </div>
                         <a class="posts-title" href="/achievement/{{$achievement->id}}"><h3 class="text-3xl">{{$achievement->title}}</h3></a>
-                        <p class="excert">
+                        <p class="excert overflow-hidden " style="word-break: break-all">
                             {{$achievement->description}}
                         </p>
                        <a href="/achievement/{{$achievement->id}}" class="py-2 px-4 bg-blue-600 text-white hover:bg-blue-900 flex justify-center mx-auto w-1/3 rounded-lg w-full lg:w-1/3">View More</a>
@@ -56,7 +56,6 @@
                                     {{$committee->name}}
                                 </a> <span class="lnr lnr-eye"></span></p>
                             @endforeach
-                        </p>
                         <ul class="social-links">
                             <li><a href="  {{$achievement->user->facebook_id}}"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="{{$achievement->user->google_id}}"><i class="fa fa-twitter"></i></a></li>

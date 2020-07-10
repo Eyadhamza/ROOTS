@@ -2167,7 +2167,7 @@ h6 {
 
 .sf-arrows .sf-with-ul {
     padding-right: 30px;
-    color :white;
+    color :#2673AA;
 }
 
 .sf-arrows .sf-with-ul:after {
@@ -2318,7 +2318,7 @@ h6 {
     padding: 15px;
     padding-right: 1000px;
     cursor: pointer;
-    color: white;
+    color: darkblue;
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
