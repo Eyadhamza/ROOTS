@@ -1,5 +1,5 @@
 
-<div class="p-6 flex justify-center  lg:text-4xl text-2xl" >
+<div class="p-6 flex justify-center  lg:text-4xl text-2xl " >
     Content Management
 
 </div>
