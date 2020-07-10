@@ -29,10 +29,10 @@
 
 <body id="page-top">
 <header id="header" id="home">
+    <button class="" type="button" id="mobile-nav-toggle"><img class="mr-24" src="https://img.icons8.com/android/24/000000/menu.png"/></button>
 
     <div class="container mx-auto sm:px-4 main-menu">
         <div class="flex flex-wrap  items-center justify-between flex">
-            <button class="" type="button" id="mobile-nav-toggle"><img class="mr-24" src="https://img.icons8.com/android/24/000000/menu.png"/></button>
 
             <div id="logo">
                 <a  href="#"><img class="w-12 rounded-full lg:w-12 " src="../../../../storage/images/logo11.jpg" alt="" title=""  />

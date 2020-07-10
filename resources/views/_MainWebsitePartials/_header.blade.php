@@ -38,6 +38,7 @@
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="/events">Events</a></li>
                     <li class="menu-has-children"><a href="">Blog</a>
+
                         <ul>
                             <li><a href="/articles">Articles</a></li>
                             @auth
