@@ -2,15 +2,16 @@
 
     <div class="container mx-auto sm:px-4 main-menu">
         <div class="flex flex-wrap  items-center justify-between flex">
-            <button class="" type="button" id="mobile-nav-toggle"><img   src="https://img.icons8.com/android/24/000000/menu.png"/></button>
 
-            <div id="logo">
-                <a  href="#"><img class="w-12 rounded-full lg:w-12 " src="../../../../storage/images/logo11.jpg" alt="" title=""  />
+            <div id="logo" class="mt-6">
+                <a  href="#"><img class="w-12 rounded-full lg:w-12  " src="../../../../storage/images/logo11.jpg" alt="" title=""  />
 
                 </a>
 
                 <strong class="inline-block bold text-white">ROOTS </strong>
-
+            </div>
+            <div class="mt-16">
+                <button class=""  type="button" id="mobile-nav-toggle"><img  src="https://img.icons8.com/android/24/000000/menu.png"/></button>
             </div>
 
 
@@ -37,7 +38,7 @@
                     <li ><a href="/aboutus" >About</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="/events">Events</a></li>
-                    <li class="menu-has-children"><a href="">Blog</a>
+                    <li class="menu-has-children ml-4"><a href="">Blog</a>
 
                         <ul>
                             <li><a href="/articles">Articles</a></li>

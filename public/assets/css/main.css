@@ -2144,7 +2144,8 @@ h6 {
 
 .nav-menu li {
     position: relative;
-    white-space: nowrap
+    white-space: nowrap;
+
 }
 
 .nav-menu>li {
@@ -2167,7 +2168,8 @@ h6 {
 
 .sf-arrows .sf-with-ul {
     padding-right: 30px;
-    color :#2673AA;
+    color :#317FCA;
+
 }
 
 .sf-arrows .sf-with-ul:after {
@@ -2193,9 +2195,10 @@ h6 {
     padding: 0 8px 0px 8px;
     text-decoration: none;
     display: inline-block;
-    color: #2673AA;
-    font-weight: 500;
+    color: #317FCA;
+    font-weight: 700;
     font-size: 16px;
+
     text-transform: uppercase;
     outline: none
 }
