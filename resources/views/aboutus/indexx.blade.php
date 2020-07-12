@@ -4,8 +4,8 @@
 @include('_MainWebsitePartials._banner')
 			<!-- Start info Area -->
 			<section class="info-area pb-120">
-                <h1 class="p-2 text-6xl font-mono mx-auto flex justify-center font-bold ">Our Story</h1>
-                <p class="font-mono font-bold flex justify-center mb-12">Here you might know a few things about us </p>
+                <h1 class="p-2 text-3xl lg:text-6xl font-mono mx-auto flex justify-center font-bold ">Our Story</h1>
+                <p class="font-mono font-bold flex justify-center w-full lg:w-full mb-12">Here you might know a few things about us </p>
 
                 <div class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
 
