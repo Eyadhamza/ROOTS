@@ -22,7 +22,7 @@
                         </div>
                         <div class="lg:w-3/4 pr-4 pl-4 md:w-3/4 pr-4 pl-4 ">
                             <div class="feature-img">
-                                <img class="max-w-full h-auto" src="../../../{{$article->image}}" alt="">
+                                <img class="max-w-full h-auto" src="{{$article->image}}" alt="">
                             </div>
 
                             <a class="posts-title" href="blog-single.html"><h3>{{$article->title}}</h3></a>

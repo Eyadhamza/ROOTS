@@ -22,7 +22,7 @@ class ContactController extends Controller
            'message'=>'required'
 
        ]);
-        Mail::send('email',
+        Mail::send('_MainWebsitePartials.email',
             array(
                 'first_name' => \request()->get('first_name'),
                 'last_name' => \request()->get('last_name'),
@@ -36,6 +36,6 @@ class ContactController extends Controller
             });
 
             Contact::create($data);
-            return view('_thank-you');
+            return view('_MainWebsitePartials._thank-you');
     }
 }
