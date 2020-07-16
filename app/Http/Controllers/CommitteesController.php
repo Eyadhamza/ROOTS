@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CheckList;
 use App\Committee;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,12 @@ class CommitteesController extends Controller
     }
     public function edit(Committee $committee)
     {
-
-
-        return view('committees.edit',compact('committee'));
+       $checklist= CheckList::firstOrCreate([
+            'name'=>$committee->name,
+            'committee_id'=>$committee->id
+        ]);
+       $committee->checklist()->associate($checklist)->save();
+       $checklist=$committee->checklist;
+       return view('committees.edit',compact('committee','checklist'));
     }
 }

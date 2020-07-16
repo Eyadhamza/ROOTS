@@ -1,18 +1,18 @@
 <section id="about" class="about-mf sect-pt4 route">
-    <div class="container mx-auto sm:px-4">
+    <div class="container mx-auto ">
         <div class="flex flex-wrap ">
-            <div class="sm:w-full pr-4 pl-4">
+            <div class="w-full ">
 
                 <div class="box-shadow-full">
-                    <div class="p-6 " style="font-size: 50px ">
+                    <div class="p-6 text-4xl lg:text-6xl" >
                         @if(isset($title))
                             {{ $title }}
                         @endif
                     </div>
                     <div class="flex flex-wrap ">
-                        <div class="md:w-1/2 pr-4 pl-4">
-                            <div class="flex flex-wrap ">
-                                <div class="sm:w-1/2 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+                        <div class="w-full lg:w-1/2">
+                            <div class="">
+                                <div class="w-full lg:w-1/2 pr-4 pl-4 md:w-2/5 pr-4 pl-4 flex justify-center">
                                     <div class="about-img">
                                         <img src="{{$user->avatar}}" class="max-w-full h-auto rounded b-shadow-a" alt="">
                                     </div>
@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="skill-mf">
+                            <div class="m-4 ">
 
                                 <p class="title-s">Performance</p>
                                 <span>Required Tasks</span> <span class="pull-right">{{$user->tasks_performance}}%</span>

@@ -18,6 +18,7 @@ class CreateCommitteesTable extends Migration
             $table->string('name');
             $table->string('telegram_id')->nullable();
             $table->foreignId('track_id')->nullable();
+            $table->foreignId('checklist_id')->nullable();
             $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();

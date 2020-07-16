@@ -26,5 +26,5 @@
     </section>
 
     @livewire('edit-committee', ['committee' => $committee])
-
+    @livewire('check-list',['checklist'=> $checklist])
 </x-app>

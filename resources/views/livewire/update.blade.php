@@ -29,16 +29,19 @@
                     @endforeach
                 </select>
             </div>
-            email
-            <div class="relative flex items-stretch w-full m-6">
+            @if(auth()->user()->all_roles()->contains('Admin'))
+                email
+                <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="email" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
-            </div>
-            password
-            <div class="relative flex items-stretch w-full m-6">
+                    <input wire:model="email" type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
+                </div>
+                password
+                <div class="relative flex items-stretch w-full m-6">
 
-                <input wire:model="password" type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
-            </div>
+                    <input wire:model="password" type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded input-sm">
+                </div>
+            @endif
+
             First Committee
             <div class="m-6">
                 <label class="inline-block w-32 font-bold">Committee1:</label>

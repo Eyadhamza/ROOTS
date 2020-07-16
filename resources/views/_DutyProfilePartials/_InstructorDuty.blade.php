@@ -7,7 +7,7 @@
 
 
 @foreach($user->committees as $committee)
-    <div class="p-10 m-4  rounded-lg w-3/4 mx-auto mt-16">
+    <div class=" m-4  rounded-lg w-full lg:w-3/4 mx-auto mt-16">
         <div class="bg-blue-100 border-2 border-blue-800">
             <a href="#" class="font-bold text-gray-900  flex justify-center text-2xl lg:text-4xl ">
                 MEMBERS OF {{$committee->name}}
@@ -21,7 +21,7 @@
         </div>
 
         @foreach($committee->users as $user)
-            <div class="p-10 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg w-full mx-auto">
+            <div class="p-2 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg w-full mx-auto">
                 <div class="flex flex-col pl-0 mb-0  border-b">
 
                     <a href="/profile/{{$user->id}}" class="text-2xl lg:text-4xl font-bold text-black inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-gray flex justify-center" >Name :  {{$user->name}}</a>

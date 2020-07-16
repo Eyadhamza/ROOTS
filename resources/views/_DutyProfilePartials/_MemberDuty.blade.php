@@ -47,7 +47,7 @@
 @foreach($user->committees as $committee)
     @foreach($committee->users as $user)
         @if($user->all_roles()->contains('Instructor'))
-            <div class="p-10 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg w-3/4 mx-auto">
+            <div class="p-2 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg w-3/4 mx-auto">
                 <div class="flex flex-col pl-0 mb-0 0 border-b">
 
                     <a href="/profile/{{$user->id}}" class=" font-bold text-black inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-gray " style="font-size: 30px">Name :  {{$user->name}}</a>

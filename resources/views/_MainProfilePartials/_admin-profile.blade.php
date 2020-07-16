@@ -20,7 +20,7 @@
 
         @php($committees =\App\Committee::paginate(1))
         @foreach($committees as $committee)
-            <div class="p-10 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg">
+            <div class="p-2 m-4 border-2 border-blue-800 bg-blue-100 rounded-lg">
                 <a href="#" class="p-3 m-2 flex justify-center lg:text-2xl sm:text-base text-blue-900 ">
                     My members of {{$committee->name}}
                 </a>

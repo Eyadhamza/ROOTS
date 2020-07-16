@@ -3,7 +3,7 @@
     <div class="sm:w-full pr-4 pl-4">
         <div class="title-box text-center">
             <h3 class="title-a mt-6">
-                My Committees..
+                My Committees
             </h3>
             <p class="subtitle-a ">
                 in here you can know more about your committee news

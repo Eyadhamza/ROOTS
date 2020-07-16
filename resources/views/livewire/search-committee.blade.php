@@ -47,24 +47,26 @@
         <h2 class="font-bold p-6 flex justify-center text-2xl lg:text-4xl">Find and modify Committees Here..</h2>
         @foreach($all_committees as $committee)
 
-            <div class="flex justify-around p-4 rounded-lg border-2 border-blue-300 w-3/4 mx-auto">
+            <div class="flex justify-around p-4 rounded-lg border-2 border-blue-300 w-full lg:w-3/4 mx-auto">
+                <div class="w-1/3">
+                    <p class="text-gray-900 text-2xl lg:text-4xl "> {{$committee->name}}</p>
 
-                    <p class="text-gray-900 text-2xl lg:text-4xl w-full lg:w-1/3"> {{$committee->name}}</p>
+                </div>
 
+                <div class="w-2/3  lg:w-1/6 flex justify-around">
+                    <a  href="/committees/{{$committee->id}}/edit" class="block lg:inline-block py-2 px-4 m-2 font-bold bg-blue-700 hover:bg-blue-900 text-white rounded-lg  flex justify-center ">
+                        Edit
+                    </a>
+                    <a  href="/committees/{{$committee->id}}" class="block lg:inline-block py-2 px-4 m-2 font-bold bg-black text-white rounded-lg  flex justify-center " >
+                        View
+                    </a>
+                </div>
 
-                <a  href="/committees/{{$committee->id}}/edit" class="w-full lg:w-1/6  h-10 font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-2">
-                    Edit
-                </a>
-                <a  href="/committees/{{$committee->id}}" class="w-full lg:w-1/6 h-10 font-bold text-white inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-500 text-white hover:bg-gray-900 m-2">
-                    View
-                </a>
             </div>
-
 
 
 
 
         @endforeach
 
-</div>
 </div>

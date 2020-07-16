@@ -29,7 +29,7 @@
             <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mb-10" rows="5" name="body" wire:model.lazy="body" placeholder="Messege"></textarea>
 
         </div>
-        <button class="primary-btn uppercase" wire:ac >Post A Comment</button>
+        <button class="primary-btn uppercase"  >Post A Comment</button>
     </form>
     @if (session()->has('message'))
         <div class="relative px-3 py-3 mb-4 border rounded bg-green-200 border-green-300 text-green-800">

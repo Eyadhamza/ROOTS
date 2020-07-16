@@ -19,25 +19,31 @@
             </ul>
         </div>
     @endif
-    <table class="w-full max-w-full mb-4 bg-transparent table-bordered table-condensed">
+    <table class="w-3/4 mx-auto border-2  ">
+        <div class ="flex justify-center text-4xl text-blue-800">Here are all users </div>
 
+        <tr>
+            <td class="font-bold text-2xl text-blue-800">NAME</td>
+            <td class="font-bold text-2xl text-blue-800">Committees</td>
+            <td class="font-bold text-2xl text-blue-800">Roles</td>
+            <td class="font-bold text-2xl text-blue-800">ACTION</td>
+        </tr>
         @foreach($data as $user)
-            <tr>
-                <td>ID</td>
-                <td>NAME</td>
-                <td>Committees</td>
-                <td>ACTION</td>
-            </tr>
-            <tr>
-                <td>{{$user->id}}</td>
-                <td>{{$user->name}}</td>
+
+            <tr class="border-2 rounded-full border-blue-100  text-2xl p-10">
+                <td class="p-10">{{$user->name}}</td>
                 <td>
                     @foreach($user->committees as $committee)
                         {{$committee->name}},
                     @endforeach
                 </td>
-                <td width="300">
-                    <button wire:click="edit({{$user->id}})" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-xs bg-gray-900 text-white hover:bg-gray-900 w-full text-white">Edit</button>
+                <td>
+                    @foreach($user->roles as $role)
+                        {{$role->name}},
+                    @endforeach
+                </td>
+                <td class="w-30">
+                    <button wire:click="edit({{$user->id}})" class="bg-blue-400 text-white hover:bg-gray-900 w-full text-white">Edit</button>
                     @if($updateMode && $selected_id==$user->id)
                         @include('livewire.update')
 
@@ -54,13 +60,14 @@
                             </ul>
                         </div>
                     @endif
-                    <button onclick="confirm('Confirm delete?') || event.stopImmediatePropagation()" wire:click="destroy({{$user->id}})" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-xs bg-red-600 text-white hover:bg-red-700 w-full">Delete</button>
+                    <button onclick="confirm('Confirm delete?') || event.stopImmediatePropagation()" wire:click="destroy({{$user->id}})"
+                            class="bg-red-500 text-white hover:bg-gray-900   bg-red-800  hover:bg-red-900 w-full ">
+                        Delete
+                    </button>
                 </td>
 
             </tr>
 
         @endforeach
-
     </table>
-
 </div>
