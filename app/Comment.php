@@ -20,4 +20,11 @@ class Comment extends Model
     {
         return $this->belongsTo(Article::class);
     }
+    public function checklist()
+    {
+        return $this->belongsTo(CheckList::class);
+    }
+
+    //
+
 }

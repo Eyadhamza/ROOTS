@@ -22,6 +22,7 @@ class CreateCommentsTable extends Migration
             $table->foreignId('user_id')->nullable();
             $table->foreignId('article_id')->nullable();
             $table->foreignId('achievement_id')->nullable();
+
         });
 
     }
@@ -36,3 +37,4 @@ class CreateCommentsTable extends Migration
         Schema::dropIfExists('comments');
     }
 }
+

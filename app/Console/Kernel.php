@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
          $schedule->call(function (){
-             DB::table('check_lists')->delete();
+             DB::table('checklists')->delete();
          })->daily();
     }
 

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CheckList extends Model
+class Checklist extends Model
 {
     protected $guarded=[];
     public function user()
@@ -14,6 +14,9 @@ class CheckList extends Model
     public function committee()
     {
         return $this->belongsTo(Committee::class);
-
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

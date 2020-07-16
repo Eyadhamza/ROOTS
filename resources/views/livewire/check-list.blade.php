@@ -55,6 +55,8 @@
                         {{ session('message') }}
                     </div>
                 @endif
+                @livewire('notes-comment',['checklist'=> $checklist])
+
             </div>
 
         </div>

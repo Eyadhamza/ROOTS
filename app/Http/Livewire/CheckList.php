@@ -8,7 +8,7 @@ class CheckList extends Component
 {
     //any property of those will be directly accesible to the view , which means i recive the request
     // through wire model
-    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup;
+    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup,$notes;
     public function mount(\App\CheckList $checklist)
     {
         $this->checklist=$checklist;
@@ -31,6 +31,7 @@ class CheckList extends Component
             'problem_followup'=>'boolean|nullable',
             'activity_followup'=>'boolean|nullable',
             'interaction_followup'=>'boolean|nullable',
+           'notes'=>'nullable'
 
         ]);
         $this->checklist->update($data);
