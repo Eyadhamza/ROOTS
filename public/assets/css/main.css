@@ -2084,7 +2084,7 @@ h6 {
 
 #header.header-scrolled {
     transition: all 0.5s;
-    background-color: rgba(4, 9, 30, 0.9)
+    background-color: #111111
 }
 
 #header.header-scrolled .main-menu {
@@ -2197,7 +2197,7 @@ h6 {
     display: inline-block;
     color: #317FCA;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
 
     text-transform: uppercase;
     outline: none
@@ -2244,7 +2244,6 @@ h6 {
     position: fixed;
     right: 15px;
     z-index: 999;
-    top: 62px;
     border: 0;
     background: none;
     font-size: 24px;
