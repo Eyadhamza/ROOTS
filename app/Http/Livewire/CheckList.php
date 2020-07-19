@@ -2,16 +2,23 @@
 
 namespace App\Http\Livewire;
 
+use App\Taask;
 use Livewire\Component;
+use function GuzzleHttp\Promise\task;
 
 class CheckList extends Component
 {
     //any property of those will be directly accesible to the view , which means i recive the request
     // through wire model
-    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup,$notes;
+    public $taasks;
+
+    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup,$notes,$body;
+    public $updatemode=false;
     public function mount(\App\CheckList $checklist)
     {
         $this->checklist=$checklist;
+        $this->taasks=$checklist->taasks;
+        $this->body=$checklist->body;
         $this->chat_followup=$checklist->chat_followup;
         $this->task_followup=$checklist->task_followup;
         $this->problem_followup=$checklist->problem_followup;
@@ -21,7 +28,8 @@ class CheckList extends Component
     }
     public function render()
     {
-        return view('livewire.check-list');
+        $taasks=$this->taasks;
+        return view('livewire.check-list',compact('taasks'));
     }
     public function update()
     {
@@ -31,11 +39,20 @@ class CheckList extends Component
             'problem_followup'=>'boolean|nullable',
             'activity_followup'=>'boolean|nullable',
             'interaction_followup'=>'boolean|nullable',
-           'notes'=>'nullable'
+            'notes'=>'nullable',
 
         ]);
+
+
         $this->checklist->update($data);
+
         session()->flash('message', 'List successfully updated');
+
+    }
+    public function create()
+    {
+        $this->updatemode=true;
+
 
     }
 }

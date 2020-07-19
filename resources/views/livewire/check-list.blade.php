@@ -45,11 +45,26 @@
                     </div>
                     <span class="select-none"> interaction followup</span>
                 </label>
+                @foreach($taasks as $taask)
 
-                <div class="flex justify-center mx-auto mt-4">
-                    <br>
-                    <button wire:click="update()" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default bg-blue-900 text-white">Update</button>
-                </div>
+                @livewire('taask',['taask'=>$taask])
+                @endforeach
+
+
+                @if(auth()->user()->all_roles()->contains('Admin'))
+                    <div class="flex justify-center mx-auto mt-4">
+                        <br>
+                        <button wire:click="create()" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-default bg-blue-900 text-white">Create a checklist</button>
+                    </div>
+                        @if($updatemode)
+                        <div class="mb-4">
+                            <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded mb-10" rows="5" name="body" wire:model.lazy="body" placeholder="Messege"></textarea>
+
+                        </div>
+                        <button class="primary-btn uppercase"  >Set a task </button>
+                        @endif
+                @endif
+
                 @if (session()->has('message'))
                     <div class="relative px-3 py-3 mb-4 border rounded bg-green-200 border-green-300 text-green-800">
                         {{ session('message') }}

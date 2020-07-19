@@ -19,4 +19,8 @@ class Checklist extends Model
     {
         return $this->hasMany(Comment::class);
     }
+    public function taasks()
+    {
+        return $this->hasMany(Taask::class);
+    }
 }
