@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Taask;
+use Illuminate\Support\Facades\Request;
 use Livewire\Component;
 use function GuzzleHttp\Promise\task;
 
@@ -11,14 +12,13 @@ class CheckList extends Component
     //any property of those will be directly accesible to the view , which means i recive the request
     // through wire model
     public $taasks;
-
-    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup,$notes,$body;
-    public $updatemode=false;
-    public function mount(\App\CheckList $checklist)
+    public $name;
+    public $checklist, $chat_followup,$task_followup,$problem_followup,$activity_followup ,$interaction_followup,$notes;
+    public function mount(\App\CheckList $checklist,Taask $taask)
     {
         $this->checklist=$checklist;
         $this->taasks=$checklist->taasks;
-        $this->body=$checklist->body;
+        $this->name=$taask->name;
         $this->chat_followup=$checklist->chat_followup;
         $this->task_followup=$checklist->task_followup;
         $this->problem_followup=$checklist->problem_followup;
@@ -28,12 +28,7 @@ class CheckList extends Component
     }
     public function render()
     {
-        $taasks=$this->taasks;
-        return view('livewire.check-list',compact('taasks'));
-    }
-    public function update()
-    {
-       $data= $this->validate([
+        $data= $this->validate([
             'task_followup'=>'boolean|nullable',
             'chat_followup'=>'boolean|nullable',
             'problem_followup'=>'boolean|nullable',
@@ -42,17 +37,11 @@ class CheckList extends Component
             'notes'=>'nullable',
 
         ]);
-
-
         $this->checklist->update($data);
+        $taasks=$this->taasks;
 
-        session()->flash('message', 'List successfully updated');
-
+        return view('livewire.check-list',compact('taasks'));
     }
-    public function create()
-    {
-        $this->updatemode=true;
 
 
-    }
 }
