@@ -9,15 +9,15 @@
           <form class="flex justify-center" action="/achievements" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="lg:flex flex-wrap lg:border-2 rounded-lg border-blue-800 lg:p-5 lg:m-3 w-full">
-            <div class="w-full">
-                <span class="text-xl m-1 font-bold font-mono">Title</span>
-                <input type="text"  name="title" class="p-4 m-2 border-2 border-blue-300 w-full rounded-lg shadow-inner" placeholder="The Title *" value="" />
+                <div class="w-full">
+                    <span class="text-xl m-1 font-bold font-mono">Title</span>
+                    <input type="text"  name="title" class="p-4 m-2 border-2 border-blue-300 w-full rounded-lg shadow-inner" placeholder="The Title *" value="" />
 
 
-            </div>
-                                    @error('title')
-                <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
-                @enderror
+                </div>
+                                        @error('title')
+                    <p class="text-red-500 text-sm mt-2 ">{{$message}}</p>
+                    @enderror
             <div class="w-full">
                 <span class="text-xl m-1 font-bold font-mono">Committee</span>
                 <input type="text" name="committee" class="p-4 m-2 border-2 border-blue-300 w-full rounded-lg shadow-inner" placeholder="Your Committee *" value="" />
