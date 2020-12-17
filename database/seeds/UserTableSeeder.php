@@ -226,7 +226,7 @@ class UserTableSeeder extends Seeder
         //seeding the abilities now
 
         DB::table('abilities')->insert([
-            'name'=>'AdminAbility',
+            'name'=>'AdminAbility' ,
         ]);
         DB::table('abilities')->insert([
             'name'=>'RRAbility',
